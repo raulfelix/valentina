@@ -1,13 +1,23 @@
 import * as React from "react";
 import { Link, graphql } from "gatsby";
+import type { PageProps } from "gatsby"
 
 import Layout from "../../components/layout";
 
-type Props = {
-  data: any;
-};
-const BlogPage = ({ data }: Props) => {
-  console.log(data);
+type DataProps = {
+  allMdx: {
+    nodes: {
+      id: string;
+      slug: string;
+      frontmatter: {
+        title: string;
+        date: string;
+      }
+    }[]
+  }
+}
+
+const BlogPage = ({ data }: PageProps<DataProps>) => {
   return (
     <Layout pageTitle="My Blog Posts">
       <p>My cool posts will go in here</p>
@@ -36,4 +46,5 @@ export const query = graphql`
     }
   }
 `;
+
 export default BlogPage;

@@ -1,7 +1,8 @@
 import * as React from 'react';
-import { Link, useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 
 import { container } from './layout.module.css'
+import Header from './header';
 
 
 type Props = {
@@ -10,7 +11,6 @@ type Props = {
 }
 
 const Layout = ({ pageTitle, children }: Props) => {
-  
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -22,16 +22,10 @@ const Layout = ({ pageTitle, children }: Props) => {
   `)
 
   return (
-    <div className={container}>
+    <div>
       <title>{data.site.siteMetadata.title}</title>
-      <nav>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/blog">Blog</Link></li>
-        </ul>
-      </nav>
+      <Header />
       <main>
-        <h1>{pageTitle}</h1>
         {children}
       </main>
     </div>
