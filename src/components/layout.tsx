@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import { container } from './layout.module.css'
 import Header from './header';
+import { GlobalStyle } from '../styles/global.styles';
 
 
 type Props = {
@@ -23,6 +23,7 @@ const Layout = ({ pageTitle, children }: Props) => {
 
   return (
     <div>
+      <GlobalStyle />
       <title>{data.site.siteMetadata.title}</title>
       <Header />
       <main>

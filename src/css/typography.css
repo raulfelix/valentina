@@ -6,7 +6,3 @@
     url("../fonts/calibre-r-school-web-regular.woff"),
     url("../fonts/calibre-r-school-web-regular.woff2");
 }
-
-:root {
-  --secondary-font: 'calibre';
-}
