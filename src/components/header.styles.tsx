@@ -2,18 +2,23 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 
 import { black } from "../styles/colour.styles";
-import { secondaryFont } from "../styles/typography";
+import {
+  fontSize16,
+  fontSizeLineHeight16,
+  secondaryFont,
+} from "../styles/typography";
+import { rem } from "../styles/styles";
 
 export const Header = styled.header`
   display: flex;
   align-items: center;
-  height: 80px;
+  height: ${rem(80)};
   position: relative;
   justify-content: center;
 `;
 
 export const HeaderLogo = styled.div`
-  font-size: 72px;
+  font-size: ${rem(72)};
   font-family: "Major Mono Display";
   text-align: center;
 `;
@@ -33,7 +38,7 @@ export const HeaderNav = styled.nav`
     padding: 0;
 
     li {
-      padding: 0 8px;
+      padding: 0 ${rem(16)};
     }
   }
 `;
@@ -41,7 +46,8 @@ export const HeaderNav = styled.nav`
 export const HeaderNavLink = styled(Link)`
   color: ${black};
   font-family: ${secondaryFont};
-  line-height: 20px;
+  font-size: ${fontSize16};
+  line-height: ${fontSizeLineHeight16};
   text-decoration: none;
 
   &:hover {
