@@ -10,6 +10,7 @@ import { Heading46 } from "../styles/typography";
 import { Contact } from "../components/contact";
 import * as Styled from "../components/home/home.styles";
 import { Categories } from "../components/categories/categories";
+import { PublicationsList } from "../components/home/publications-list";
 
 type DataProps = {
   allMdx: {
@@ -50,6 +51,7 @@ const IndexPage = ({ data }: PageProps<DataProps>) => {
             <Col md={5}>
               {" "}
               <Heading46 as="h2">publicAtions</Heading46>
+              <PublicationsList />
             </Col>
           </Row>
         </Grid>
@@ -61,7 +63,7 @@ const IndexPage = ({ data }: PageProps<DataProps>) => {
 
 export const query = graphql`
   query {
-    allMdx(limit: 3, sort: { order: DESC, fields: frontmatter___date }) {
+    allMdx(limit: 3, sort: { order: DESC, fields: frontmatter___date }, filter: {fileAbsolutePath: {regex: "/(blog)/"}}) {
       nodes {
         id
         slug
