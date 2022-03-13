@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@fontsource/major-mono-display": "^4.5.4",
+    "@fontsource/merriweather": "^4.5.6",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "babel-plugin-styled-components": "^2.0.6",

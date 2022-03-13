@@ -5,6 +5,7 @@ import { black } from "../styles/colour.styles";
 import {
   fontSize16,
   fontSizeLineHeight16,
+  headlineFont,
   secondaryFont,
 } from "../styles/typography";
 import { rem } from "../styles/styles";
@@ -19,7 +20,7 @@ export const Header = styled.header`
 
 export const HeaderLogo = styled.div`
   font-size: ${rem(72)};
-  font-family: "Major Mono Display";
+  font-family: ${headlineFont};
   text-align: center;
 `;
 

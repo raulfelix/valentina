@@ -1,16 +1,15 @@
-import * as React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import * as React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 
-import Header from './header';
-import { GlobalStyle } from '../styles/global.styles';
-
+import { GlobalStyle } from "../styles/global.styles";
+import Header from "./header";
+import * as Styled from './layout.styles';
 
 type Props = {
-  pageTitle: string;
   children: React.ReactNode;
-}
+};
 
-const Layout = ({ pageTitle, children }: Props) => {
+const Layout = ({ children }: Props) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -19,17 +18,15 @@ const Layout = ({ pageTitle, children }: Props) => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <div>
       <GlobalStyle />
       <title>{data.site.siteMetadata.title}</title>
       <Header />
-      <main>
-        {children}
-      </main>
+      <Styled.Layout>{children}</Styled.Layout>
     </div>
-  )
-}
-export default Layout
+  );
+};
+export default Layout;

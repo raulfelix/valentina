@@ -6,3 +6,16 @@
     url("../fonts/calibre-r-school-web-regular.woff"),
     url("../fonts/calibre-r-school-web-regular.woff2");
 }
+
+@font-face {
+  font-style: normal;
+  font-family: "calibre-medium";
+  font-display: swap;
+  src: url("../fonts/calibre-r-school-web-medium.eot"),
+    url("../fonts/calibre-r-school-web-medium.woff"),
+    url("../fonts/calibre-r-school-web-medium.woff2");
+}
+
+p {
+  margin: 0 0 16px 0;
+}
