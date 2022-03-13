@@ -1,17 +1,18 @@
 import * as React from "react";
 import { graphql, PageProps } from "gatsby";
-import { TagLine } from "../components/home/tag-line";
 
 import Layout from "../components/layout";
 import { Grid, Col, Row } from "../styles/grid.styles";
+import { Heading46 } from "../styles/typography";
 import { PostCard } from "../components/blog/post-card";
 import { PostCardLarge } from "../components/blog/post-card-large";
-import { Heading46 } from "../styles/typography";
 import { Contact } from "../components/contact";
-import * as Styled from "../components/home/home.styles";
 import { Categories } from "../components/categories/categories";
 import { PublicationsList } from "../components/home/publications-list";
-import { UsydFashion } from "../components/home/usyd-fashion";
+import { TagLine } from "../components/home/tag-line";
+import { UsydFashion } from "../components/home/usyd-fashion/usyd-fashion";
+import * as Styled from "../components/home/home.styles";
+
 
 type DataProps = {
   allMdx: {
@@ -65,7 +66,11 @@ const IndexPage = ({ data }: PageProps<DataProps>) => {
 
 export const query = graphql`
   query {
-    allMdx(limit: 3, sort: { order: DESC, fields: frontmatter___date }, filter: {fileAbsolutePath: {regex: "/(blog)/"}}) {
+    allMdx(
+      limit: 3
+      sort: { order: DESC, fields: frontmatter___date }
+      filter: { fileAbsolutePath: { regex: "/(blog)/" } }
+    ) {
       nodes {
         id
         slug

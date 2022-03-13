@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Grid, Row } from "../../styles/grid.styles";
+import { Col, Grid, Row } from "../../../styles/grid.styles";
 
 import * as Styled from "./usyd-fashion.styles";
 import usyd1 from "./usyd1.jpeg";
