@@ -11,6 +11,7 @@ import { Contact } from "../components/contact";
 import * as Styled from "../components/home/home.styles";
 import { Categories } from "../components/categories/categories";
 import { PublicationsList } from "../components/home/publications-list";
+import { UsydFashion } from "../components/home/usyd-fashion";
 
 type DataProps = {
   allMdx: {
@@ -56,6 +57,7 @@ const IndexPage = ({ data }: PageProps<DataProps>) => {
           </Row>
         </Grid>
       </Styled.HomeSection>
+      <UsydFashion />
       <Contact />
     </Layout>
   );

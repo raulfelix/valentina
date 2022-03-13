@@ -29,7 +29,7 @@ export const HeaderNav = styled.nav`
   align-items: center;
   height: 100%;
   position: absolute;
-  right: 0;
+  right: ${rem(40)};
   top: 0;
 
   ul {
@@ -61,6 +61,6 @@ export const HeaderSearch = styled.div`
   align-items: center;
   height: 100%;
   position: absolute;
-  left: 0;
+  left: ${rem(40)};
   top: 0;
 `;
