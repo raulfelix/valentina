@@ -13,7 +13,7 @@ import { rem } from "../styles/styles";
 export const Header = styled.header`
   display: flex;
   align-items: center;
-  height: ${rem(80)};
+  height: ${rem(100)};
   position: relative;
   justify-content: center;
 `;

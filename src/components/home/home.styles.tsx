@@ -2,6 +2,10 @@ import styled from 'styled-components';
 
 import { mediaUp, rem } from '../../styles/styles';
 
+export const HomeSection = styled.div`
+  margin-bottom: ${rem(80)};
+`;
+
 export const PrimaryPost = styled.div`
   display: flex;
   margin-bottom: ${rem(24)};

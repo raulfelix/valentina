@@ -5,9 +5,11 @@ import { TagLine } from "../components/home/tag-line";
 import Layout from "../components/layout";
 import { Grid, Col, Row } from "../styles/grid.styles";
 import { PostCard } from "../components/blog/post-card";
-import { PrimaryPost, SecondaryPosts } from "../components/home/home.styles";
 import { PostCardLarge } from "../components/blog/post-card-large";
 import { Heading46 } from "../styles/typography";
+import { Contact } from "../components/contact";
+import * as Styled from "../components/home/home.styles";
+import { Categories } from "../components/categories/categories";
 
 type DataProps = {
   allMdx: {
@@ -30,26 +32,29 @@ const IndexPage = ({ data }: PageProps<DataProps>) => {
   return (
     <Layout>
       <TagLine />
-
-      <Grid>
-        <Row>
-          <Col md={8}>
-            <Heading46 as="h2">lAtest blog</Heading46>
-            <PrimaryPost>
-              <PostCardLarge {...firstPost} />
-            </PrimaryPost>
-            <SecondaryPosts>
-              {data.allMdx.nodes.map(
-                (m) => m !== firstPost && <PostCard key={m.id} {...m} />
-              )}
-            </SecondaryPosts>
-          </Col>
-          <Col md={4}>
-            {" "}
-            <Heading46 as="h2">publicAtions</Heading46>
-          </Col>
-        </Row>
-      </Grid>
+      <Categories />
+      <Styled.HomeSection>
+        <Grid>
+          <Row>
+            <Col md={7}>
+              <Heading46 as="h2">lAtest blog</Heading46>
+              <Styled.PrimaryPost>
+                <PostCardLarge {...firstPost} />
+              </Styled.PrimaryPost>
+              <Styled.SecondaryPosts>
+                {data.allMdx.nodes.map(
+                  (m) => m !== firstPost && <PostCard key={m.id} {...m} />
+                )}
+              </Styled.SecondaryPosts>
+            </Col>
+            <Col md={5}>
+              {" "}
+              <Heading46 as="h2">publicAtions</Heading46>
+            </Col>
+          </Row>
+        </Grid>
+      </Styled.HomeSection>
+      <Contact />
     </Layout>
   );
 };
