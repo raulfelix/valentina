@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { black } from "../../../styles/colour.styles";
+import { black } from "../../styles/colour.styles";
 
-import { rem } from "../../../styles/styles";
-import { fontSize20, fontSizeLineHeight20, headlineFont, secondaryFont } from "../../../styles/typography";
+import { rem } from "../../styles/styles";
+import { fontSize20, fontSizeLineHeight20, headlineFont, secondaryFont } from "../../styles/typography";
 
 export const UsydBlade = styled.div`
   background-color: #FFE3E3;

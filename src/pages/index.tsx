@@ -10,7 +10,7 @@ import { Contact } from "../components/contact";
 import { Categories } from "../components/categories/categories";
 import { PublicationsList } from "../components/home/publications-list";
 import { TagLine } from "../components/home/tag-line";
-import { UsydFashion } from "../components/home/usyd-fashion/usyd-fashion";
+import { UsydFashion } from "../components/usyd-fashion/usyd-fashion";
 import * as Styled from "../components/home/home.styles";
 
 
