@@ -96,3 +96,8 @@ export const BlogContent = styled.div`
     }
   }
 `;
+
+export const BlogList = styled.div`
+  margin: auto;
+  max-width: ${rem(800)};
+`

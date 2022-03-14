@@ -1,8 +1,13 @@
 import * as React from "react";
-import { Link, graphql } from "gatsby";
-import type { PageProps } from "gatsby"
+import { graphql } from "gatsby";
+import type { PageProps } from "gatsby";
 
 import Layout from "../../components/layout";
+import { Col, Grid, Row } from "../../styles/grid.styles";
+import { ListCard } from "../../components/list-card";
+import { BlogList } from "../../components/blog/blog.styles";
+import { Categories } from "../../components/categories/categories";
+import { LayoutContent } from "../../components/layout.styles";
 
 type DataProps = {
   allMdx: {
@@ -12,36 +17,64 @@ type DataProps = {
       frontmatter: {
         title: string;
         date: string;
-      }
-    }[]
-  }
-}
+      };
+    }[];
+  };
+};
 
 const BlogPage = ({ data }: PageProps<DataProps>) => {
   return (
-    <Layout pageTitle="My Blog Posts">
-      <p>My cool posts will go in here</p>
-      {data.allMdx.nodes.map((node) => (
-        <article key={node.id}>
-          <h2>{node.frontmatter.title}</h2>
-          <p>Posted: {node.frontmatter.date}</p>
-          <Link to={`/blog/${node.slug}`}>{node.frontmatter.title}</Link>
-        </article>
-      ))}
+    <Layout>
+      <LayoutContent>
+        <Categories />
+        <BlogList>
+          <Grid>
+            <Row>
+              <Col>
+                {data.allMdx.nodes.map((node) => (
+                  <ListCard
+                    key={node.id}
+                    excerpt={node.excerpt}
+                    slug={node.slug}
+                    frontmatter={node.frontmatter}
+                  />
+                ))}
+              </Col>
+            </Row>
+          </Grid>
+        </BlogList>
+      </LayoutContent>
     </Layout>
   );
 };
 
 export const query = graphql`
   query {
-    allMdx(sort: { fields: frontmatter___date, order: DESC }) {
+    allMdx(
+      sort: { order: DESC, fields: frontmatter___date }
+      filter: { fileAbsolutePath: { regex: "/(blog)/" } }
+    ) {
       nodes {
-        frontmatter {
-          date(formatString: "MMMM D, YYYY")
-          title
-        }
         id
         slug
+        excerpt
+        frontmatter {
+          hero_image_credit_link
+          hero_image_credit_text
+          date
+          title
+          subtitle
+          categories
+          hero_image {
+            childImageSharp {
+              fixed(width: 800) {
+                srcWebp
+                srcSetWebp
+                originalName
+              }
+            }
+          }
+        }
       }
     }
   }

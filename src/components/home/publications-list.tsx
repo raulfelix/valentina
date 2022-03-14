@@ -1,7 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 
-import * as Styled from "./tag-line.styles";
 import { PublicationCard } from "../publications/publication-card";
 
 export const PublicationsList = () => {

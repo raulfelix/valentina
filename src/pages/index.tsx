@@ -3,10 +3,9 @@ import { graphql, PageProps } from "gatsby";
 
 import Layout from "../components/layout";
 import { Grid, Col, Row } from "../styles/grid.styles";
-import { Heading46 } from "../styles/typography";
+import { Heading46, StrongLink } from "../styles/typography";
 import { PostCard } from "../components/blog/post-card";
 import { PostCardLarge } from "../components/blog/post-card-large";
-import { Contact } from "../components/contact";
 import { Categories } from "../components/categories/categories";
 import { PublicationsList } from "../components/home/publications-list";
 import { TagLine } from "../components/home/tag-line";
@@ -49,17 +48,18 @@ const IndexPage = ({ data }: PageProps<DataProps>) => {
                   (m) => m !== firstPost && <PostCard key={m.id} {...m} />
                 )}
               </Styled.SecondaryPosts>
+              <StrongLink to="/blog">See all blog posts</StrongLink>
             </Col>
             <Col md={5}>
               {" "}
               <Heading46 as="h2">publicAtions</Heading46>
               <PublicationsList />
+              <StrongLink to="/publications">See all publications</StrongLink>
             </Col>
           </Row>
         </Grid>
       </Styled.HomeSection>
       <UsydFashion />
-      <Contact />
     </Layout>
   );
 };

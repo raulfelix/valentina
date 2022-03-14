@@ -1,4 +1,6 @@
+import { Link } from 'gatsby';
 import styled, { css } from 'styled-components';
+import { black, yellow } from './colour.styles';
 
 import { rem } from "./styles";
 
@@ -56,4 +58,16 @@ export const font40 = css`
 
 export const Text = styled.p`
   ${font20}
+`
+
+export const StrongLink = styled(Link)`
+  ${font20} 
+  background-color: ${yellow};
+  color: ${black};
+  padding: ${rem(2)};
+  text-decoration: none;
+  &:hover {
+    background-color: ${black};
+    color: #fff;
+  }
 `

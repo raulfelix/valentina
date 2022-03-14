@@ -16,6 +16,7 @@ export const SecondaryPosts = styled.div`
   flex-wrap: wrap;
   margin-left: -${rem(12)};
   margin-right: -${rem(12)};
+  margin-bottom: ${rem(24)};
 
   ${mediaUp.sm`
     & > div {

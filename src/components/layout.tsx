@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import { GlobalStyle } from "../styles/global.styles";
 import Header from "./header";
 import * as Styled from './layout.styles';
+import { Contact } from "./contact";
 
 type Props = {
   children: React.ReactNode;
@@ -26,7 +27,9 @@ const Layout = ({ children }: Props) => {
       <title>{data.site.siteMetadata.title}</title>
       <Header />
       <Styled.Layout>{children}</Styled.Layout>
+      <Contact />
     </div>
   );
 };
+
 export default Layout;

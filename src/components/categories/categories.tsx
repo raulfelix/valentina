@@ -38,9 +38,9 @@ export const Categories = () => {
 
   return (
     <Styled.CategoryList>
-      {data.allMdx.group.map((g: any) => {
+      {data.allMdx.group.map((g: any, i: number) => {
         return (
-          <Styled.Category to={`/category/${g.category}`}>
+          <Styled.Category key={i} to={`/category/${g.category}`}>
             <Styled.CategoryImage
               imageSrc={getImage(g.category)}
             ></Styled.CategoryImage>
