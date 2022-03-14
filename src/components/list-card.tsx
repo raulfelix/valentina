@@ -32,9 +32,9 @@ export const ListCard = ({ slug, frontmatter }: Props) => (
       <Styled.ListCardDescription>
         {frontmatter.subtitle}
       </Styled.ListCardDescription>
-      <Styled.ListCardCategory>
-        {frontmatter.categories[0]}
-      </Styled.ListCardCategory>
+      <Styled.ListCardDetails>
+      {frontmatter.categories[0]}{" · "} {frontmatter.date} 
+      </Styled.ListCardDetails>
     </Styled.ListCardContent>
   </Styled.ListCard>
 );

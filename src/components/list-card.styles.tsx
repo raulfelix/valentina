@@ -1,6 +1,6 @@
 import { Link } from "gatsby";
 import styled from "styled-components";
-import { black } from "../styles/colour.styles";
+import { black, grey } from "../styles/colour.styles";
 
 import { rem } from "../styles/styles";
 import {
@@ -64,12 +64,21 @@ export const ListCardDescription = styled.p`
   font-family: ${secondaryFont};
   font-size: ${fontSize16};
   line-height: ${fontSizeLineHeight16};
-  margin-bottom: 0;
+  margin-bottom: ${rem(8)};
 `;
 
-export const ListCardCategory = styled.div`
+
+export const ListCardDetails = styled.div`
+  color: ${grey};
+  font-family: ${secondaryFont};
+  font-size: ${rem(12)};
+`;
+
+export const ListCardCategory = styled.span`
   color: ${black};
-  font-family: ${secondaryFontMedium};
-  font-size: ${fontSize16};
-  line-height: ${fontSizeLineHeight16};
+  background-color: #eee;
+  border-radius: 2px;
+  padding: ${rem(2)};
+  font-family: ${secondaryFont};
+  font-size: ${rem(14)};
 `;

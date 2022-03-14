@@ -61,7 +61,7 @@ export const query = graphql`
         frontmatter {
           hero_image_credit_link
           hero_image_credit_text
-          date
+          date(formatString: "DD MMMM yyyy")
           title
           subtitle
           categories
