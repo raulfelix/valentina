@@ -1,9 +1,9 @@
 import React from "react";
 
 import { Heading30 } from "../../styles/typography";
-import instagram from "../../images/instagram.png";
-import twitter from "../../images/twitter.png";
-import linkedin from "../../images/linkedin.png";
+import instagram from "../social/instagram.png";
+import twitter from "../social/twitter.png";
+import linkedin from "../social/linkedin.png";
 import * as Styled from "./blog-shared.styles";
 
 export const BlogShare = () => (
