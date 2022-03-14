@@ -1,10 +1,10 @@
 import React from "react";
 
 import { Heading30 } from "../../styles/typography";
-import * as Styled from "./blog-shared.styles";
 import instagram from "../../images/instagram.png";
 import twitter from "../../images/twitter.png";
 import linkedin from "../../images/linkedin.png";
+import * as Styled from "./blog-shared.styles";
 
 export const BlogShare = () => (
   <Styled.BlogShare>
