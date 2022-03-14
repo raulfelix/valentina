@@ -14,7 +14,7 @@ export const BlogShare = () => (
       href="https://www.linkedin.com/in/valentinacarrizo/"
       target="_blank"
     >
-      <StaticImage src="../social/linkedin.png" alt="LinkedIn" />
+      <StaticImage src="../social/li.png" alt="LinkedIn" />
     </Styled.BlogShareIcon>
     <Styled.BlogShareIcon
       href="https://www.instagram.com/valentina_carrizo/"
