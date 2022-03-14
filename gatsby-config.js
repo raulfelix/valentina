@@ -5,9 +5,9 @@ module.exports = {
       siteUrl: `https://www.valentina.com`,
   },
   plugins: [
+    "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
-    "gatsby-plugin-image",
     "gatsby-plugin-mdx",
     "gatsby-plugin-styled-components",
     "gatsby-remark-images",
