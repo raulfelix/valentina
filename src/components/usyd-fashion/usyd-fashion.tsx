@@ -1,11 +1,8 @@
 import React from "react";
-import { Col, Grid, Row } from "../../styles/grid.styles";
+import { StaticImage } from "gatsby-plugin-image";
 
+import { Col, Grid, Row } from "../../styles/grid.styles";
 import * as Styled from "./usyd-fashion.styles";
-import usyd1 from "./usyd1.jpeg";
-import usyd2 from "./usyd2.jpeg";
-import usyd3 from "./usyd3.jpeg";
-import usyd4 from "./usyd4.jpg";
 
 export const UsydFashion = () => (
   <Styled.UsydBlade>
@@ -28,16 +25,16 @@ export const UsydFashion = () => (
             </Styled.UsydBladeText>
             <Styled.UsydBladeImages>
               <div>
-                <img src={usyd1} alt="" />
+                <StaticImage src="./usyd1.jpeg" alt="" />
               </div>
               <div>
-                <img src={usyd2} alt="" />
+                <StaticImage src="./usyd2.jpeg" alt="" />
               </div>
               <div>
-                <img src={usyd3} alt="" />
+                <StaticImage src="./usyd3.jpeg" alt="" />
               </div>
               <div>
-                <img src={usyd4} alt="" />
+                <StaticImage src="./usyd4.jpg" alt="" />
               </div>
             </Styled.UsydBladeImages>
           </Styled.UsydBladeContent>

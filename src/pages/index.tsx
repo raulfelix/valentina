@@ -83,7 +83,11 @@ export const query = graphql`
           categories
           hero_image {
             childImageSharp {
-              gatsbyImageData
+              fixed(width: 800) {
+                srcWebp
+                srcSetWebp
+                originalName
+              }
             }
           }
         }

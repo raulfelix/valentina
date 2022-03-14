@@ -39,7 +39,6 @@ export const PublicationsList = () => {
     }
   `);
 
-  console.log(data);
   return (
     <>
       {data.allMdx.nodes.map((n) => {
