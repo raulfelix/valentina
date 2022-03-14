@@ -33,12 +33,11 @@ const BlogPost = ({ data }: Props) => {
               />
             </Styled.BlogHeroImage>
             <Styled.BlogContent>
-            <Styled.BlogSideText>
-              <BlogShare />
-            </Styled.BlogSideText>
+              <Styled.BlogSideText>
+                <BlogShare />
+              </Styled.BlogSideText>
               <Styled.BlogContentText>
-              <MDXRenderer>{data.mdx.body}</MDXRenderer>
-
+                <MDXRenderer>{data.mdx.body}</MDXRenderer>
               </Styled.BlogContentText>
             </Styled.BlogContent>
           </Col>

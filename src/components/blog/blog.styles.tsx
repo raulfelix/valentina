@@ -95,6 +95,14 @@ export const BlogContent = styled.div`
       margin-bottom: ${rem(8)};
     }
   }
+
+  // caption an image
+  .gatsby-resp-image-wrapper + em {
+    display: block;
+    font-size: ${rem(14)};
+    font-style: italic;
+    text-align: right;
+  }
 `;
 
 export const BlogList = styled.div`

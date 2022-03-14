@@ -23,6 +23,7 @@ type DataProps = {
         title: string;
         categories: string[];
         date: string;
+        hero_image: any
       };
       timeToRead: string;
     }[];
