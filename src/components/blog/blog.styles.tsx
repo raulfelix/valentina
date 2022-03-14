@@ -10,7 +10,7 @@ import {
 
 export const BlogHeader = styled.div`
   margin: auto;
-  max-width: ${rem(600)};
+  max-width: ${rem(700)};
   text-align: center;
 `;
 
