@@ -1,18 +1,24 @@
 import styled from "styled-components";
 
-import { rem } from "../../styles/styles";
+import { mediaUp, rem } from "../../styles/styles";
 import {
   font20,
   font40,
   readingFont,
   secondaryFontMedium,
 } from "../../styles/typography";
-import { Category } from "../categories/categories.styles";
+import { Category, CategoryLink } from "../categories/categories.styles";
 
 export const BlogHeader = styled.div`
   margin: auto;
   max-width: ${rem(800)};
   text-align: center;
+
+  ${CategoryLink} {
+    ${mediaUp.md`
+      display: none;
+    `};
+  }
 `;
 
 export const BlogTitle = styled.h1`
@@ -36,6 +42,10 @@ export const BlogSideText = styled.div`
   flex-shrink: 0;
   padding-right: ${rem(24)};
   width: ${rem(280)};
+  display: none;
+  ${mediaUp.md`
+    display: block;
+  `};
 
   ${Category} {
     margin-bottom: ${rem(32)};
@@ -46,8 +56,13 @@ export const BlogContentText = styled.div``;
 
 export const BlogContent = styled.div`
   display: flex;
+  flex-direction: column;
   max-width: ${rem(1080)};
   margin: auto;
+
+  ${mediaUp.md`
+    flex-direction: row;
+  `};
 
   p, li {
     color: #2d2b29;

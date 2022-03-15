@@ -9,7 +9,7 @@ import Layout from "../../components/layout";
 import { Col, Grid, Row } from "../../styles/grid.styles";
 import { Text } from "../../styles/typography";
 import { BlogShare } from "../../components/blog/blog-share";
-import { Category } from "../../components/categories/categories";
+import { Category, CategoryTextLink } from "../../components/categories/categories";
 
 type Props = {
   data: any;
@@ -26,6 +26,7 @@ const BlogPost = ({ data }: Props) => {
             <Styled.BlogHeader>
               <Styled.BlogTitle>{data.mdx.frontmatter.title}</Styled.BlogTitle>
               <Text>{data.mdx.frontmatter.subtitle}</Text>
+              <CategoryTextLink category={data.mdx.frontmatter.categories[0]} />
             </Styled.BlogHeader>
             <Styled.BlogHeroImage>
               <GatsbyImage

@@ -24,6 +24,12 @@ function getImage(cat: string) {
   }
 }
 
+export const CategoryTextLink = ({ category }: { category: string }) => (
+  <Styled.CategoryLink to={`/category/${category}`}>
+    <Styled.CategoryLabel>{category}</Styled.CategoryLabel>
+  </Styled.CategoryLink>
+);
+
 export const Category = ({ category }: { category: string }) => (
   <Styled.Category to={`/category/${category}`}>
     <Styled.CategoryImage imageSrc={getImage(category)}></Styled.CategoryImage>

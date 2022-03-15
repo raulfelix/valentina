@@ -46,3 +46,11 @@ export const CategoryLabel = styled.div`
   line-height: ${fontSizeLineHeight16};
   text-decoration: none;
 `;
+
+export const CategoryLink = styled(Link)`
+  background-color: #eee;
+  border-radius: 2px;
+  display: inline-block;
+  padding: 0 ${rem(4)};
+  text-decoration: none !important;
+`
