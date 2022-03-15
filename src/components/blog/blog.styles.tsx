@@ -7,10 +7,11 @@ import {
   readingFont,
   secondaryFontMedium,
 } from "../../styles/typography";
+import { Category } from "../categories/categories.styles";
 
 export const BlogHeader = styled.div`
   margin: auto;
-  max-width: ${rem(700)};
+  max-width: ${rem(800)};
   text-align: center;
 `;
 
@@ -33,7 +34,12 @@ export const BlogHeroImage = styled.div`
 
 export const BlogSideText = styled.div`
   flex-shrink: 0;
+  padding-right: ${rem(24)};
   width: ${rem(280)};
+
+  ${Category} {
+    margin-bottom: ${rem(32)};
+  }
 `;
 
 export const BlogContentText = styled.div``;

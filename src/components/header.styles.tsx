@@ -14,12 +14,13 @@ export const Header = styled.header`
   display: flex;
   align-items: center;
   height: ${rem(100)};
+  padding-left: ${rem(40)};
   position: relative;
-  justify-content: center;
+  justify-content: space-between;
 `;
 
 export const HeaderLogo = styled.div`
-  font-size: ${rem(72)};
+  font-size: ${rem(46)};
   font-family: ${headlineFont};
   text-align: center;
 `;

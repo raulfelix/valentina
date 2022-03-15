@@ -23,12 +23,14 @@ export const fontSizeLineHeight40 = rem(54);
 export const Heading30 = styled.h1`
   font-size: ${rem(30)};
   font-family: ${headlineFont};
+  font-weight: normal;
   margin: 0 0 ${rem(24)} 0;
 `
 
 export const Heading46 = styled.h1`
   font-size: ${rem(46)};
   font-family: ${headlineFont};
+  font-weight: normal;
   margin: 0 0 ${rem(32)} 0;
 `
 

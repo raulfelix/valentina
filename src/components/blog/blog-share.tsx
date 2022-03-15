@@ -1,12 +1,13 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
-import { Heading30 } from "../../styles/typography";
+import { Text } from "../../styles/typography";
 import * as Styled from "./blog-shared.styles";
 
 export const BlogShare = () => (
   <Styled.BlogShare>
-    <Heading30>shAre</Heading30>
+    <Text>shAre</Text>
+    <div>
     <Styled.BlogShareIcon href="" target="_blank">
       <StaticImage src="../social/twitter.png" alt="Twitter" />
     </Styled.BlogShareIcon>
@@ -22,5 +23,6 @@ export const BlogShare = () => (
     >
       <StaticImage src="../social/instagram.png" alt="Instagram" />
     </Styled.BlogShareIcon>
+    </div>
   </Styled.BlogShare>
 );

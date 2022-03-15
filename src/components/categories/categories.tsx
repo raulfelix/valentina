@@ -24,6 +24,13 @@ function getImage(cat: string) {
   }
 }
 
+export const Category = ({ category }: { category: string }) => (
+  <Styled.Category to={`/category/${category}`}>
+    <Styled.CategoryImage imageSrc={getImage(category)}></Styled.CategoryImage>
+    <Styled.CategoryLabel>{category}</Styled.CategoryLabel>
+  </Styled.Category>
+);
+
 export const Categories = () => {
   const data = useStaticQuery(graphql`
     query Categories {
@@ -39,14 +46,7 @@ export const Categories = () => {
   return (
     <Styled.CategoryList>
       {data.allMdx.group.map((g: any, i: number) => {
-        return (
-          <Styled.Category key={i} to={`/category/${g.category}`}>
-            <Styled.CategoryImage
-              imageSrc={getImage(g.category)}
-            ></Styled.CategoryImage>
-            <Styled.CategoryLabel>{g.category}</Styled.CategoryLabel>
-          </Styled.Category>
-        );
+        return <Category key={i} category={g.category} />;
       })}
     </Styled.CategoryList>
   );

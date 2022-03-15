@@ -5,7 +5,6 @@ import * as Styled from './header.styles';
 const Header = () => {
   return (
     <Styled.Header>
-      <Styled.HeaderSearch>Search</Styled.HeaderSearch>
       <Styled.HeaderLogo>Valentina</Styled.HeaderLogo>
       <Styled.HeaderNav>
         <ul>

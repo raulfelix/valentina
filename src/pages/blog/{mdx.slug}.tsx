@@ -9,6 +9,7 @@ import Layout from "../../components/layout";
 import { Col, Grid, Row } from "../../styles/grid.styles";
 import { Text } from "../../styles/typography";
 import { BlogShare } from "../../components/blog/blog-share";
+import { Category } from "../../components/categories/categories";
 
 type Props = {
   data: any;
@@ -34,6 +35,7 @@ const BlogPost = ({ data }: Props) => {
             </Styled.BlogHeroImage>
             <Styled.BlogContent>
               <Styled.BlogSideText>
+                <Category category={data.mdx.frontmatter.categories[0]}/>
                 <BlogShare />
               </Styled.BlogSideText>
               <Styled.BlogContentText>
@@ -53,6 +55,7 @@ export const query = graphql`
       frontmatter {
         title
         subtitle
+        categories
         date(formatString: "MMMM D, YYYY")
         hero_image {
           childImageSharp {

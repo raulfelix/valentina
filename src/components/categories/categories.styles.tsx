@@ -20,9 +20,9 @@ export const Category = styled(Link)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 ${rem(8)};
+  padding: 0 ${rem(16)};
   position: relative;
-  text-decoration: none;
+  text-decoration: none !important;
 `;
 
 type CategoryImageProps = {
@@ -34,11 +34,12 @@ export const CategoryImage = styled.div<CategoryImageProps>`
   background-image: url(${({ imageSrc }) => imageSrc });
   background-size: 100%;
   background-position: center;
+  margin-bottom: ${rem(8)};
   width: ${rem(66)};
   height: ${rem(66)};
 `;
 
-export const CategoryLabel = styled.nav`
+export const CategoryLabel = styled.div`
   color: ${black};
   font-family: ${secondaryFont};
   font-size: ${fontSize16};
