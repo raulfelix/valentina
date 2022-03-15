@@ -5,7 +5,7 @@ import * as Styled from './header.styles';
 const Header = () => {
   return (
     <Styled.Header>
-      <Styled.HeaderLogo>Valentina</Styled.HeaderLogo>
+      <Styled.HeaderLogo to="/">Valentina</Styled.HeaderLogo>
       <Styled.HeaderNav>
         <ul>
           <li>
@@ -13,6 +13,9 @@ const Header = () => {
           </li>
           <li>
             <Styled.HeaderNavLink to="/blog">Blog</Styled.HeaderNavLink>
+          </li>
+          <li>
+            <Styled.HeaderNavLink to="/publications">Publications</Styled.HeaderNavLink>
           </li>
         </ul>
       </Styled.HeaderNav>

@@ -34,6 +34,13 @@ export const Heading46 = styled.h1`
   margin: 0 0 ${rem(32)} 0;
 `
 
+export const Heading40 = styled.h1`
+  font-size: ${rem(40)};
+  font-family: ${headlineFont};
+  font-weight: normal;
+  margin: 0 0 ${rem(32)} 0;
+`
+
 export const font20 = css`
   font-size: ${fontSize20};
   line-height: ${fontSizeLineHeight20};

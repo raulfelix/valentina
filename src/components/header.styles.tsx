@@ -1,37 +1,61 @@
 import styled from "styled-components";
 import { Link } from "gatsby";
 
-import { black } from "../styles/colour.styles";
+import { black, white, yellow } from "../styles/colour.styles";
 import {
   fontSize16,
   fontSizeLineHeight16,
   headlineFont,
   secondaryFont,
 } from "../styles/typography";
-import { rem } from "../styles/styles";
+import { mediaUp, rem } from "../styles/styles";
 
 export const Header = styled.header`
   display: flex;
   align-items: center;
-  height: ${rem(100)};
-  padding-left: ${rem(40)};
+  flex-direction: column;
+  padding: ${rem(24)};
   position: relative;
   justify-content: space-between;
+
+  ${mediaUp.md`
+    flex-direction: row;
+    height: ${rem(100)};
+    padding-left: ${rem(40)};
+  `}
 `;
 
-export const HeaderLogo = styled.div`
-  font-size: ${rem(46)};
+export const HeaderLogo = styled(Link)`
+  background-color: ${black};
+  color: ${white};
+  font-size: ${rem(30)};
   font-family: ${headlineFont};
+  padding: 0 2px 5px 2px;
   text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    background-color: ${yellow};
+    color: ${black};
+  }
+
+  ${mediaUp.md`
+    font-size: ${rem(46)};
+  `}
 `;
 
 export const HeaderNav = styled.nav`
   display: flex;
   align-items: center;
   height: 100%;
-  position: absolute;
-  right: ${rem(40)};
-  top: 0;
+  margin-top: ${rem(16)};
+
+  ${mediaUp.md`
+    position: absolute;
+    right: ${rem(40)};
+    top: 0;
+    margin-top: 0;
+  `}
 
   ul {
     display: flex;

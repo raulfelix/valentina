@@ -3,7 +3,7 @@ import { graphql, PageProps } from "gatsby";
 
 import Layout from "../components/layout";
 import { Grid, Col, Row } from "../styles/grid.styles";
-import { Heading46, StrongLink } from "../styles/typography";
+import { Heading40, StrongLink } from "../styles/typography";
 import { PostCard } from "../components/blog/post-card";
 import { PostCardLarge } from "../components/blog/post-card-large";
 import { Categories } from "../components/categories/categories";
@@ -39,8 +39,8 @@ const IndexPage = ({ data }: PageProps<DataProps>) => {
       <Styled.HomeSection>
         <Grid>
           <Row>
-            <Col md={7}>
-              <Heading46 as="h2">lAtest blog</Heading46>
+            <Col lg={7}>
+              <Heading40 as="h2">lAtest blog</Heading40>
               <Styled.PrimaryPost>
                 <PostCardLarge {...firstPost} />
               </Styled.PrimaryPost>
@@ -51,9 +51,9 @@ const IndexPage = ({ data }: PageProps<DataProps>) => {
               </Styled.SecondaryPosts>
               <StrongLink to="/blog">See all blog posts</StrongLink>
             </Col>
-            <Col md={5}>
+            <Col lg={5}>
               {" "}
-              <Heading46 as="h2">publicAtions</Heading46>
+              <Heading40 as="h2">publicAtions</Heading40>
               <PublicationsList />
               <StrongLink to="/publications">See all publications</StrongLink>
             </Col>

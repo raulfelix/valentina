@@ -148,6 +148,6 @@ export const Row = styled.div`
 export const Grid = styled.div`
   margin: auto;
   max-width: 1400px;
-  padding-left: ${rem(spacing12)};
-  padding-right: ${rem(spacing12)};
+  padding-left: ${rem(24)};
+  padding-right: ${rem(24)};
 `
