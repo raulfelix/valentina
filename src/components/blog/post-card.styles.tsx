@@ -1,10 +1,14 @@
 import { Link } from "gatsby";
 import styled from "styled-components";
 
-import { rem } from "../../styles/styles";
+import { mediaUp, rem } from "../../styles/styles";
 import {
+  fontSize14,
   fontSize16,
+  fontSize20,
+  fontSizeLineHeight14,
   fontSizeLineHeight16,
+  fontSizeLineHeight20,
   readingFont,
   secondaryFont,
   secondaryFontMedium,
@@ -46,17 +50,23 @@ export const PostCardContent = styled.div`
 export const PostCardTitle = styled.h2`
   font-family: ${readingFont};
   font-weight: 700;
-  font-size: ${rem(30)};
-  line-height: ${rem(38)};
+  font-size: ${fontSize20};
+  line-height: ${fontSizeLineHeight20};
   margin: 0;
-  margin-bottom: ${rem(4)};
+
+  ${mediaUp.md`
+    font-size: ${rem(30)};
+    line-height: ${rem(38)};
+    margin-bottom: ${rem(4)};
+  `}
 `;
 
 export const PostCardCategory = styled(Link)`
   display: block;
-  font-size: ${fontSize16};
+  font-size: ${fontSize14};
+  line-height: ${fontSizeLineHeight14};
   font-family: ${secondaryFontMedium};
-  margin-bottom: ${rem(16)};
+  margin-bottom: 0;
   position: relative;
   z-index: 2;
 
@@ -64,24 +74,35 @@ export const PostCardCategory = styled(Link)`
     cursor: pointer;
     text-decoration: underline;
   }
+
+  ${mediaUp.md`
+    font-size: ${fontSize16};
+    line-height: ${fontSizeLineHeight16};
+    margin-bottom: ${rem(16)};
+  `}
 `;
 
 export const PostCardExcerpt = styled.p`
   font-family: ${secondaryFont};
-  font-size: ${fontSize16};
-  line-height: ${fontSizeLineHeight16};
+  font-size: ${fontSize14};
+  line-height: ${fontSizeLineHeight14};
+
+  ${mediaUp.md`
+    font-size: ${fontSize16};
+    line-height: ${fontSizeLineHeight16};
+  `}
 `;
 
 export const PostCard = styled.div`
   display: block;
   position: relative;
-  margin: 0 ${rem(12)};
+  margin: 0 ${rem(12)} ${rem(24)} ${rem(12)};
 `;
 
 export const PostCardHeader = styled.div`
   position: relative;
   padding-top: 46%;
-`
+`;
 export const PostCardLink = styled(Link)`
   position: absolute;
   top: 0;
@@ -94,10 +115,19 @@ export const PostCardLink = styled(Link)`
 export const PostCardLarge = styled.div`
   border-radius: ${rem(16)};
   display: block;
+  margin-bottom: ${rem(24)};
   position: relative;
   overflow: hidden;
-  padding-top: 46%;
+  padding-top: 60%;
   width: 100%;
+
+  ${mediaUp.sm`
+    margin-bottom: 0;
+  `}
+
+  ${mediaUp.md`
+    padding-top: 46%;
+  `}
 
   &:before {
     content: "";
@@ -129,6 +159,7 @@ export const PostCardLargeContent = styled.div`
   justify-content: center;
   flex-direction: column;
   position: absolute;
+  padding: ${rem(16)};
   left: 0;
   right: 0;
   bottom: 0;
@@ -142,13 +173,19 @@ export const PostCardTitleLarge = styled(Link)`
   display: block;
   font-family: ${readingFont};
   font-weight: 700;
-  font-size: ${rem(38)};
-  line-height: ${rem(50)};
+  font-size: ${rem(24)};
+  line-height: ${rem(32)};
   margin: 0;
-  margin-bottom: ${rem(16)};
+  margin-bottom: ${rem(8)};
   text-decoration: none;
 
   &:hover {
     text-decoration: underline;
   }
+
+  ${mediaUp.md`
+    font-size: ${rem(38)};
+    line-height: ${rem(50)};
+    margin-bottom: ${rem(16)};
+  `}
 `;

@@ -11,7 +11,7 @@ import { PublicationsList } from "../components/home/publications-list";
 import { TagLine } from "../components/home/tag-line";
 import { UsydFashion } from "../components/usyd-fashion/usyd-fashion";
 import * as Styled from "../components/home/home.styles";
-
+import { HomePostContent } from "../components/layout.styles";
 
 type DataProps = {
   allMdx: {
@@ -23,7 +23,7 @@ type DataProps = {
         title: string;
         categories: string[];
         date: string;
-        hero_image: any
+        hero_image: any;
       };
       timeToRead: string;
     }[];
@@ -34,25 +34,30 @@ const IndexPage = ({ data }: PageProps<DataProps>) => {
   const firstPost = data.allMdx.nodes[0];
   return (
     <Layout>
-      <TagLine />
-      <Categories />
       <Styled.HomeSection>
         <Grid>
           <Row>
+            <Col>
+              <TagLine />
+              <Categories />
+            </Col>
+          </Row>
+          <Row>
             <Col lg={7}>
-              <Heading40 as="h2">lAtest blog</Heading40>
-              <Styled.PrimaryPost>
-                <PostCardLarge {...firstPost} />
-              </Styled.PrimaryPost>
-              <Styled.SecondaryPosts>
-                {data.allMdx.nodes.map(
-                  (m) => m !== firstPost && <PostCard key={m.id} {...m} />
-                )}
-              </Styled.SecondaryPosts>
-              <StrongLink to="/blog">See all blog posts</StrongLink>
+              <HomePostContent>
+                <Heading40 as="h2">lAtest blog</Heading40>
+                <Styled.PrimaryPost>
+                  <PostCardLarge {...firstPost} />
+                </Styled.PrimaryPost>
+                <Styled.SecondaryPosts>
+                  {data.allMdx.nodes.map(
+                    (m) => m !== firstPost && <PostCard key={m.id} {...m} />
+                  )}
+                </Styled.SecondaryPosts>
+                <StrongLink to="/blog">See all blog posts</StrongLink>
+              </HomePostContent>
             </Col>
             <Col lg={5}>
-              {" "}
               <Heading40 as="h2">publicAtions</Heading40>
               <PublicationsList />
               <StrongLink to="/publications">See all publications</StrongLink>
