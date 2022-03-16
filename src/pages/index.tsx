@@ -3,7 +3,7 @@ import { graphql, PageProps } from "gatsby";
 
 import Layout from "../components/layout";
 import { Grid, Col, Row } from "../styles/grid.styles";
-import { Heading40, StrongLink } from "../styles/typography";
+import { Heading40, StrongLink } from "../styles/typography.styles";
 import { PostCard } from "../components/blog/post-card";
 import { PostCardLarge } from "../components/blog/post-card-large";
 import { Categories } from "../components/categories/categories";

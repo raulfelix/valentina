@@ -12,7 +12,7 @@ import {
   readingFont,
   secondaryFont,
   secondaryFontMedium,
-} from "../../styles/typography";
+} from "../../styles/typography.styles";
 
 export const PostCardImageWrapper = styled.div`
   border-radius: ${rem(16)};
@@ -120,6 +120,7 @@ export const PostCardLarge = styled.div`
   overflow: hidden;
   padding-top: 60%;
   width: 100%;
+  transform: translateZ(0);
 
   ${mediaUp.sm`
     margin-bottom: 0;

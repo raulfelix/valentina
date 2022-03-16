@@ -7,7 +7,7 @@ import {
   fontSizeLineHeight16,
   headlineFont,
   secondaryFont,
-} from "../styles/typography";
+} from "../styles/typography.styles";
 import { mediaUp, rem } from "../styles/styles";
 
 export const Header = styled.header`

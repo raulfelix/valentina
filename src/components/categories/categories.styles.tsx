@@ -4,15 +4,21 @@ import { black } from "../../styles/colour.styles";
 import { rem } from "../../styles/styles";
 
 import {
+  fontSize14,
   fontSize16,
   fontSizeLineHeight16,
   secondaryFont,
-} from "../../styles/typography";
+  secondaryFontMedium,
+} from "../../styles/typography.styles";
 
 export const CategoryList = styled.div`
   display: flex;
   justify-content: center;
-  margin-bottom: ${rem(80)}
+  margin-bottom: ${rem(80)};
+
+  & > a {
+    margin: 0 4px;
+  }
 `;
 
 export const Category = styled(Link)`
@@ -52,5 +58,22 @@ export const CategoryLink = styled(Link)`
   border-radius: 2px;
   display: inline-block;
   padding: 0 ${rem(4)};
+  text-decoration: none !important;
+`
+
+type CategoryPillProps = {
+  $colour: {
+    bg: string;
+    text: string;
+  }
+}
+export const CategoryPill = styled(Link)<CategoryPillProps>`
+  background-color: ${({ $colour }) => $colour.bg};
+  border-radius: ${rem(30)};
+  color: ${({ $colour }) => $colour.text};
+  font-size: ${fontSize14};
+  font-family: ${secondaryFontMedium};
+  display: inline-block;
+  padding: ${rem(4)} ${rem(8)};
   text-decoration: none !important;
 `

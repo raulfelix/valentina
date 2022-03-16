@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
+import { grey4 } from "../../styles/colour.styles";
 import { rem } from "../../styles/styles";
-import { Text, headlineFont } from "../../styles/typography";
+import { Text, headlineFont } from "../../styles/typography.styles";
 import { ContactIcon } from "../contact.styles";
 
 export const BlogShare = styled.div`
-  border-top: 1px solid #eee;
-  padding-top: ${rem(20)};
+  border-bottom: 1px solid ${grey4};
+  margin-bottom: ${rem(12)};
+  padding-bottom: ${rem(12)};
   text-align: center;
 
   & > div {

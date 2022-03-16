@@ -1,7 +1,7 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image"
 
-import { Heading46 } from "../styles/typography";
+import { Heading46 } from "../styles/typography.styles";
 import * as Styled from "./contact.styles";
 
 export const Contact = () => (

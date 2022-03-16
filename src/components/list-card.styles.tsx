@@ -10,7 +10,7 @@ import {
   readingFont,
   secondaryFont,
   secondaryFontMedium,
-} from "../styles/typography";
+} from "../styles/typography.styles";
 
 export const ListCardImageWrapper = styled.div`
   border-radius: ${rem(6)};

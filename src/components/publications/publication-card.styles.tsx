@@ -9,7 +9,7 @@ import {
   readingFont,
   secondaryFont,
   secondaryFontMedium,
-} from "../../styles/typography";
+} from "../../styles/typography.styles";
 
 export const PublicationCardImageWrapper = styled.div`
   border-radius: ${rem(6)};

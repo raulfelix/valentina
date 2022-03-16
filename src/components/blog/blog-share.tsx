@@ -1,7 +1,7 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
-import { Text } from "../../styles/typography";
+import { Text } from "../../styles/typography.styles";
 import * as Styled from "./blog-shared.styles";
 
 type Props = {

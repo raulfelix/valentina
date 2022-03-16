@@ -6,18 +6,16 @@ import {
   font40,
   readingFont,
   secondaryFontMedium,
-} from "../../styles/typography";
-import { Category, CategoryLink } from "../categories/categories.styles";
+} from "../../styles/typography.styles";
+import { Category, CategoryPill } from "../categories/categories.styles";
 
 export const BlogHeader = styled.div`
   margin: auto;
   max-width: ${rem(800)};
   text-align: center;
 
-  ${CategoryLink} {
-    ${mediaUp.md`
-      display: none;
-    `};
+  ${CategoryPill} {
+    margin-bottom: ${rem(16)};
   }
 `;
 

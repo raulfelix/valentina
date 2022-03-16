@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import { rem } from "../../styles/styles";
-import { fontSize20, fontSizeLineHeight20, headlineFont, secondaryFont } from "../../styles/typography";
+import { fontSize20, fontSizeLineHeight20, headlineFont, secondaryFont } from "../../styles/typography.styles";
 
 export const CategoriesBlade = styled.div`
   background-color: white;

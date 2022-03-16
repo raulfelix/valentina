@@ -3,16 +3,12 @@ import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-import * as Styled from "../../components/blog/blog.styles";
-
 import Layout from "../../components/layout";
 import { Col, Grid, Row } from "../../styles/grid.styles";
-import { Text } from "../../styles/typography";
+import { Text } from "../../styles/typography.styles";
 import { BlogShare } from "../../components/blog/blog-share";
-import {
-  Category,
-  CategoryTextLink,
-} from "../../components/categories/categories";
+import { CategoryPill } from "../../components/categories/categories";
+import * as Styled from "../../components/blog/blog.styles";
 
 type Props = {
   data: any;
@@ -27,11 +23,11 @@ const BlogPost = ({ data }: Props) => {
         <Row>
           <Col>
             <Styled.BlogHeader>
-              <Styled.BlogTitle>{data.mdx.frontmatter.title}</Styled.BlogTitle>
-              <Text>{data.mdx.frontmatter.subtitle}</Text>
-              <CategoryTextLink
+              <CategoryPill
                 category={data.mdx.frontmatter?.categories?.[0] || ""}
               />
+              <Styled.BlogTitle>{data.mdx.frontmatter.title}</Styled.BlogTitle>
+              <Text>{data.mdx.frontmatter.subtitle}</Text>
             </Styled.BlogHeader>
             <Styled.BlogHeroImage>
               <GatsbyImage
@@ -41,9 +37,6 @@ const BlogPost = ({ data }: Props) => {
             </Styled.BlogHeroImage>
             <Styled.BlogContent>
               <Styled.BlogSideText>
-                <Category
-                  category={data.mdx.frontmatter?.categories?.[0] || ""}
-                />
                 <BlogShare
                   title={data.mdx.frontmatter.title}
                   url={window.location.href}
