@@ -21,7 +21,7 @@ export const PublicationsList = () => {
             external_link
             publisher_name
             publisher_link
-            publisher_icon {
+            hero_image {
               childImageSharp {
                 fixed(width: 190) {
                   tracedSVG

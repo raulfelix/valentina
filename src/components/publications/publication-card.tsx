@@ -1,4 +1,3 @@
-import { GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image";
 import React from "react";
 
 import * as Styled from "./publication-card.styles";
@@ -11,7 +10,7 @@ type Props = {
     external_link: string;
     publisher_name: string;
     publisher_link: string;
-    publisher_icon: {
+    hero_image: {
       childImageSharp: {
         fixed: {
           srcWebp: string;
@@ -26,7 +25,7 @@ export const PublicationCard = ({ frontmatter }: Props) => {
     <Styled.PublicationCard>
       <Styled.PublicationCardImageWrapper>
         <Styled.PublicationCardImage
-          imageUrl={frontmatter.publisher_icon.childImageSharp.fixed.srcWebp}
+          imageUrl={frontmatter.hero_image.childImageSharp.fixed.srcWebp}
         />
       </Styled.PublicationCardImageWrapper>
       <Styled.PublicationCardContent>
