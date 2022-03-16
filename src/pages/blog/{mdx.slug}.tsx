@@ -26,7 +26,7 @@ const BlogPost = ({ data }: Props) => {
             <Styled.BlogHeader>
               <Styled.BlogTitle>{data.mdx.frontmatter.title}</Styled.BlogTitle>
               <Text>{data.mdx.frontmatter.subtitle}</Text>
-              <CategoryTextLink category={data.mdx.frontmatter?.categories?.[0]} />
+              <CategoryTextLink category={data.mdx.frontmatter?.categories?.[0] || ''} />
             </Styled.BlogHeader>
             <Styled.BlogHeroImage>
               <GatsbyImage
@@ -36,7 +36,7 @@ const BlogPost = ({ data }: Props) => {
             </Styled.BlogHeroImage>
             <Styled.BlogContent>
               <Styled.BlogSideText>
-                <Category category={data.mdx.frontmatter?.categories?.[0]}/>
+                <Category category={data.mdx.frontmatter?.categories?.[0] || ''}/>
                 <BlogShare />
               </Styled.BlogSideText>
               <Styled.BlogContentText>
