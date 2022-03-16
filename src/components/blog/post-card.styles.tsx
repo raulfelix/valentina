@@ -1,5 +1,6 @@
 import { Link } from "gatsby";
 import styled from "styled-components";
+import { grey1, grey10 } from "../../styles/colour.styles";
 
 import { mediaUp, rem } from "../../styles/styles";
 import {
@@ -62,6 +63,7 @@ export const PostCardTitle = styled.h2`
 `;
 
 export const PostCardCategory = styled(Link)`
+  color: ${grey10};
   display: block;
   font-size: ${fontSize14};
   line-height: ${fontSizeLineHeight14};
@@ -148,6 +150,10 @@ export const PostCardLarge = styled.div`
     left: 0;
     right: 0;
     z-index: 1;
+  }
+
+  ${PostCardCategory} {
+    color: ${grey1};
   }
 `;
 
