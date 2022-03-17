@@ -15,6 +15,9 @@ import {
   cyan1,
   cyan2,
   cyan8,
+  grey2,
+  grey4,
+  grey8,
   magenta1,
   magenta2,
   magenta8,
@@ -39,7 +42,7 @@ function getImage(cat: string) {
 }
 
 export function getColour(cat: string) {
-  switch (cat.toLowerCase()) {
+  switch (cat?.toLowerCase()) {
     case "sneakers":
       return {
         bg: purple1,
@@ -59,6 +62,7 @@ export function getColour(cat: string) {
     case "travel":
       return { bg: cyan1, bg2: cyan2, text: cyan8 };
   }
+  return { bg: grey2, bg2: grey4, text: grey8 };
 }
 
 export const CategoryPill = ({ category }: { category: string }) => (
