@@ -1,6 +1,7 @@
 import { IGatsbyImageData } from "gatsby-plugin-image";
 import React from "react";
 import { ROUTE_CATEGORY } from "../../constants";
+import { CategoryPill } from "../categories/categories";
 
 import * as Styled from "./post-card.styles";
 
@@ -25,9 +26,7 @@ export const PostCardLarge = ({ excerpt, slug, frontmatter }: Props) => {
         />
       </Styled.PostCardImageWrapper>
       <Styled.PostCardLargeContent>
-        <Styled.PostCardCategory to={`${ROUTE_CATEGORY}/${frontmatter?.categories?.[0]}`}>
-          {frontmatter?.categories.join(" ,")}
-        </Styled.PostCardCategory>
+        <CategoryPill category={frontmatter?.categories[0]} />
         <Styled.PostCardTitleLarge to={`/blog/${slug}`}>
           {frontmatter?.title}
         </Styled.PostCardTitleLarge>

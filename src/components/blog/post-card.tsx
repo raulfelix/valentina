@@ -1,6 +1,7 @@
 import { IGatsbyImageData } from "gatsby-plugin-image";
 import React from "react";
 import { ROUTE_CATEGORY } from "../../constants";
+import { CategoryPill, CategoryTextLink } from "../categories/categories";
 
 import * as Styled from "./post-card.styles";
 
@@ -25,14 +26,10 @@ export const PostCard = ({ excerpt, slug, frontmatter }: Props) => {
             imageUrl={frontmatter.hero_image.childImageSharp.fixed.srcWebp}
           />
         </Styled.PostCardImageWrapper>
+        <CategoryPill category={frontmatter.categories[0]} />
       </Styled.PostCardHeader>
 
       <Styled.PostCardContent>
-        <Styled.PostCardCategory
-          to={`${ROUTE_CATEGORY}/${frontmatter.categories[0]}`}
-        >
-          {frontmatter.categories[0]}
-        </Styled.PostCardCategory>
         <Styled.PostCardTitle>{frontmatter.title}</Styled.PostCardTitle>
         <Styled.PostCardExcerpt>{excerpt}</Styled.PostCardExcerpt>
       </Styled.PostCardContent>

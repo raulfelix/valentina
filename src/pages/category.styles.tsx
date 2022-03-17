@@ -20,12 +20,12 @@ export const CategoryHeader = styled.div<CategoryHeaderProps>`
   display: flex;
   justify-content: center;
   font-size: ${fontSize40};
-  padding: ${rem(40)};
+  padding: ${rem(24)};
   margin-top: -40px;
 
   ${CategoryImage} {
     ${mediaUp.md`
-      margin-top: -70px;
+      margin-top: -50px;
     `}
   }
 

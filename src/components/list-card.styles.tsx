@@ -71,7 +71,7 @@ export const ListCardDescription = styled.p`
 export const ListCardDetails = styled.div`
   color: ${grey};
   font-family: ${secondaryFont};
-  font-size: ${rem(12)};
+  font-size: ${rem(14)};
 `;
 
 export const ListCardCategory = styled.span`

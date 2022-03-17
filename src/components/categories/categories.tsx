@@ -71,8 +71,8 @@ export const CategoryPill = ({ category }: { category: string }) => (
 );
 
 export const CategoryTextLink = ({ category }: { category: string }) => (
-  <Styled.CategoryLink to={`/category/${category}`}>
-    <Styled.CategoryLabel>{category}</Styled.CategoryLabel>
+  <Styled.CategoryLink to={`/category/${category}`} $colour={getColour(category)}>
+    {category}
   </Styled.CategoryLink>
 );
 

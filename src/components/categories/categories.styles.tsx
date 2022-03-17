@@ -44,8 +44,8 @@ export const CategoryImage = styled.div<CategoryImageProps>`
   background-size: 100%;
   background-position: center;
   margin-bottom: ${rem(8)};
-  width: ${rem(100)};
-  height: ${rem(100)};
+  width: ${rem(120)};
+  height: ${rem(120)};
 `;
 
 export const CategoryImageLabel = styled.div`
@@ -63,13 +63,6 @@ export const CategoryLabel = styled.div`
   text-decoration: none;
 `;
 
-export const CategoryLink = styled(Link)`
-  background-color: #eee;
-  border-radius: 2px;
-  display: inline-block;
-  padding: 0 ${rem(4)};
-  text-decoration: none !important;
-`
 
 type CategoryPillProps = {
   $colour: {
@@ -77,6 +70,16 @@ type CategoryPillProps = {
     text: string;
   }
 }
+
+export const CategoryLink = styled(Link)<CategoryPillProps>`
+  color: ${({ $colour }) => $colour?.text};
+  display: inline-block;
+  font-family: ${secondaryFontMedium};
+  font-size: ${fontSize16};
+  line-height: ${fontSizeLineHeight16};
+  text-decoration: underline;
+`
+
 export const CategoryPill = styled(Link)<CategoryPillProps>`
   background-color: ${({ $colour }) => $colour?.bg2};
   border-radius: ${rem(30)};

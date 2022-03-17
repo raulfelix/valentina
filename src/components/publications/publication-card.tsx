@@ -35,12 +35,17 @@ export const PublicationCard = ({ frontmatter }: Props) => {
         >
           {frontmatter.publisher_name}
         </Styled.PublicationCardCategory>
-        <Styled.PublicationCardTitle>
+        <Styled.PublicationCardTitle
+          href={frontmatter.external_link}
+          target="_blank"
+        >
           {frontmatter.title}
         </Styled.PublicationCardTitle>
-        <Styled.PublicationCardDescription>
-          {frontmatter.subtitle}
-        </Styled.PublicationCardDescription>
+        {frontmatter.subtitle && (
+          <Styled.PublicationCardDescription>
+            {frontmatter.subtitle}
+          </Styled.PublicationCardDescription>
+        )}
       </Styled.PublicationCardContent>
     </Styled.PublicationCard>
   );

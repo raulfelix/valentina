@@ -1,18 +1,20 @@
 import { Link } from "gatsby";
 import styled from "styled-components";
-import { black } from "../../styles/colour.styles";
+import { black, grey10 } from "../../styles/colour.styles";
 
 import { rem } from "../../styles/styles";
 import {
   fontSize16,
+  fontSize20,
   fontSizeLineHeight16,
+  fontSizeLineHeight20,
   readingFont,
   secondaryFont,
   secondaryFontMedium,
 } from "../../styles/typography.styles";
 
 export const PublicationCardImageWrapper = styled.div`
-  border-radius: ${rem(6)};
+  border-radius: ${rem(16)};
   height: ${({ $width = 86 }) => rem($width)};
   width: ${({ $width = 86 }) => rem($width)};
   flex-shrink: 0;
@@ -42,17 +44,25 @@ export const PublicationCardImage = styled.div.attrs<PublicationCardImageProps>(
 
 export const PublicationCard = styled.div`
   display: flex;
-`;
-export const PublicationCardContent = styled.div`
-  padding-left: ${rem(8)};
+  margin-bottom: ${rem(20)};
 `;
 
-export const PublicationCardTitle = styled.h2`
+export const PublicationCardContent = styled.div`
+  padding-left: ${rem(16)};
+`;
+
+export const PublicationCardTitle = styled(Link)`
+  color: ${grey10};
+  display: block;
   font-family: ${readingFont};
   font-weight: 700;
-  font-size: ${rem(28)};
-  line-height: ${rem(34)};
+  font-size: ${fontSize20};
+  line-height: ${fontSizeLineHeight20};
   margin: 0 0 ${rem(4)} 0;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 export const PublicationCardDescription = styled.p`
