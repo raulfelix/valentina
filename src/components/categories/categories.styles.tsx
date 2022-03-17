@@ -18,7 +18,7 @@ export const CategoryList = styled.div`
   margin-bottom: ${rem(80)};
 
   & > a {
-    margin: 0 4px;
+    margin: 0 ${rem(8)};
   }
 `;
 
@@ -84,6 +84,6 @@ export const CategoryPill = styled(Link)<CategoryPillProps>`
   font-size: ${fontSize14};
   font-family: ${secondaryFontMedium};
   display: inline-block;
-  padding: ${rem(4)} ${rem(8)};
+  padding: ${rem(6)} ${rem(8)};
   text-decoration: none !important;
 `

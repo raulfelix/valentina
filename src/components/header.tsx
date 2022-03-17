@@ -2,9 +2,9 @@ import * as React from "react";
 
 import * as Styled from './header.styles';
 
-const Header = () => {
+export const Header = () => {
   return (
-    <Styled.Header>
+    <Styled.Header id="header">
       <Styled.HeaderLogo to="/">Valentina</Styled.HeaderLogo>
       <Styled.HeaderNav>
         <ul>
@@ -22,5 +22,3 @@ const Header = () => {
     </Styled.Header>
   );
 };
-
-export default Header;

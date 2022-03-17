@@ -14,6 +14,7 @@ type DataProps = {
     nodes: {
       id: string;
       slug: string;
+      excerpt: string;
       frontmatter: {
         title: string;
         date: string;

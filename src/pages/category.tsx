@@ -8,13 +8,11 @@ import { Col, Grid, Row } from "../styles/grid.styles";
 import * as Styled from "./category.styles";
 
 const CategoryPage = (props: PageProps) => {
-  console.log(props);
   const {
     pageContext: { category },
     data,
   } = props;
 
-  console.log(data);
   return (
     <Layout>
       <Styled.CategoryHeader category={category}>

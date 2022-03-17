@@ -12,13 +12,9 @@ import {
   azure1,
   azure2,
   azure8,
-  gold1,
-  gold2,
-  gold8,
-  lime1,
-  lime2,
-  lime4,
-  lime8,
+  cyan1,
+  cyan2,
+  cyan8,
   magenta1,
   magenta2,
   magenta8,
@@ -46,22 +42,22 @@ export function getColour(cat: string) {
   switch (cat.toLowerCase()) {
     case "sneakers":
       return {
+        bg: purple1,
+        bg2: purple2,
+        text: purple8,
+      };
+    case "fashion":
+      return {
         bg: magenta1,
         bg2: magenta2,
         text: magenta8,
       };
-    case "fashion":
-      return {
-        bg: lime1,
-        bg2: lime2,
-        text: lime8,
-      };
     case "music":
-      return { bg: purple1,  bg2: purple2, text: purple8 };
+      return { bg: purple1, bg2: purple2, text: purple8 };
     case "sport":
       return { bg: azure1, bg2: azure2, text: azure8 };
     case "travel":
-      return { bg: gold1, bg2: gold2, text: gold8 };
+      return { bg: cyan1, bg2: cyan2, text: cyan8 };
   }
 }
 
@@ -90,7 +86,7 @@ export const CategoryImage = ({ category }: { category: string }) => (
 export const Categories = () => {
   const data = useStaticQuery(graphql`
     query Categories {
-      allMdx(filter: {fileAbsolutePath: {regex: "/(blog)/"}}) {
+      allMdx(filter: { fileAbsolutePath: { regex: "/(blog)/" } }) {
         group(field: frontmatter___categories) {
           category: fieldValue
           totalCount
