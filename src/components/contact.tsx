@@ -13,7 +13,7 @@ export const Contact = () => (
           <StaticImage src="./social/twitter.png" alt="Twitter" />
         </Styled.ContactIcon>
         <Styled.ContactIcon
-          href="https://www.linkedin.com/in/valentinacarrizo/"
+          href="https://twitter.com/Valentina4Pres"
           target="_blank"
         >
           <StaticImage src="./social/li.png" alt="LinkedIn" />
