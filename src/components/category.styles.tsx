@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 import { mediaUp, rem } from "../styles/styles";
 import { fontSize40 } from "../styles/typography.styles";
-import { getColour } from "../components/categories/categories";
+import { getColour } from "./categories/categories";
 import {
   CategoryImage,
   CategoryImageLabel,
-} from "../components/categories/categories.styles";
-import { BlogList } from "../components/blog/blog.styles";
+} from "./categories/categories.styles";
+import { BlogList } from "./blog/blog.styles";
 
 type CategoryHeaderProps = {
   category: string;

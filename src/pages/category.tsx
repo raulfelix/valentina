@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 import { CategoryImage } from "../components/categories/categories";
 import { ListCard } from "../components/list-card";
 import { Col, Grid, Row } from "../styles/grid.styles";
-import * as Styled from "./category.styles";
+import * as Styled from "../components/category.styles";
 
 const CategoryPage = (props: PageProps) => {
   const {
