@@ -27,7 +27,7 @@ import {
 } from "../../styles/colour.styles";
 
 function getImage(cat: string) {
-  switch (cat.toLowerCase()) {
+  switch (cat?.toLowerCase()) {
     case "sneakers":
       return sneakers;
     case "fashion":
@@ -39,6 +39,7 @@ function getImage(cat: string) {
     case "travel":
       return travel;
   }
+  return "travel";
 }
 
 export function getColour(cat: string) {
