@@ -10,14 +10,20 @@ import sneakers from "./sneakers.png";
 import travel from "./travel.png";
 import {
   azure1,
+  azure2,
   azure8,
   gold1,
+  gold2,
   gold8,
   lime1,
+  lime2,
+  lime4,
   lime8,
   magenta1,
+  magenta2,
   magenta8,
   purple1,
+  purple2,
   purple8,
 } from "../../styles/colour.styles";
 
@@ -36,24 +42,26 @@ function getImage(cat: string) {
   }
 }
 
-function getColour(cat: string) {
+export function getColour(cat: string) {
   switch (cat.toLowerCase()) {
     case "sneakers":
       return {
         bg: magenta1,
+        bg2: magenta2,
         text: magenta8,
       };
     case "fashion":
       return {
         bg: lime1,
+        bg2: lime2,
         text: lime8,
       };
     case "music":
-      return { bg: purple1, text: purple8 };
+      return { bg: purple1,  bg2: purple2, text: purple8 };
     case "sport":
-      return { bg: azure1, text: azure8 };
+      return { bg: azure1, bg2: azure2, text: azure8 };
     case "travel":
-      return { bg: gold1, text: gold8 };
+      return { bg: gold1, bg2: gold2, text: gold8 };
   }
 }
 
@@ -72,10 +80,10 @@ export const CategoryTextLink = ({ category }: { category: string }) => (
   </Styled.CategoryLink>
 );
 
-export const Category = ({ category }: { category: string }) => (
+export const CategoryImage = ({ category }: { category: string }) => (
   <Styled.Category to={`/category/${category}`}>
     <Styled.CategoryImage imageSrc={getImage(category)}></Styled.CategoryImage>
-    <Styled.CategoryLabel>{category}</Styled.CategoryLabel>
+    <Styled.CategoryImageLabel>{category}</Styled.CategoryImageLabel>
   </Styled.Category>
 );
 

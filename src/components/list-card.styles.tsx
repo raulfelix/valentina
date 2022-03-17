@@ -13,9 +13,9 @@ import {
 } from "../styles/typography.styles";
 
 export const ListCardImageWrapper = styled.div`
-  border-radius: ${rem(6)};
-  height: ${({ $width = 86 }) => rem($width)};
-  width: ${({ $width = 86 }) => rem($width)};
+  border-radius: ${rem(16)};
+  height: ${({ $width = 100 }) => rem($width)};
+  width: ${({ $width = 100 }) => rem($width)};
   flex-shrink: 0;
   overflow: hidden;
   transform: translateZ(0);
