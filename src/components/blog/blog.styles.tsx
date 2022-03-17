@@ -57,6 +57,7 @@ export const BlogContent = styled.div`
   flex-direction: column;
   max-width: ${rem(1080)};
   margin: auto;
+  padding-bottom: ${rem(60)};
 
   ${mediaUp.md`
     flex-direction: row;

@@ -78,12 +78,17 @@ type CategoryPillProps = {
   }
 }
 export const CategoryPill = styled(Link)<CategoryPillProps>`
-  background-color: ${({ $colour }) => $colour?.bg};
+  background-color: ${({ $colour }) => $colour?.bg2};
   border-radius: ${rem(30)};
+  border: 1px solid ${({ $colour }) => $colour?.bg2};
   color: ${({ $colour }) => $colour?.text};
   font-size: ${fontSize14};
   font-family: ${secondaryFontMedium};
   display: inline-block;
   padding: ${rem(6)} ${rem(8)};
   text-decoration: none !important;
+
+  &:hover {
+    background-color: ${({ $colour }) => $colour?.bg};
+  }
 `

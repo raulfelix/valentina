@@ -74,10 +74,13 @@ export const HeaderNavLink = styled(Link)`
   font-family: ${secondaryFont};
   font-size: ${fontSize16};
   line-height: ${fontSizeLineHeight16};
-  text-decoration: none;
+  padding: ${rem(2)};
+  text-decoration: underline;
 
   &:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    background-color: ${black};
+    color: #fff;
   }
 `;
 

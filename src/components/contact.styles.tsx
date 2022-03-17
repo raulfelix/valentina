@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { grey2, grey3 } from "../styles/colour.styles";
 import { rem } from "../styles/styles";
 
 export const Contact = styled.footer`
-  background-color: #f3f3f3;
+  background-color: ${grey2};
   display: flex;
   justify-content: center;
   align-items: center;

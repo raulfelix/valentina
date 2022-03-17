@@ -4,10 +4,10 @@ import { Col, Grid, Row } from "../styles/grid.styles";
 import * as Styled from "./back-to-top.styles";
 
 export const BackToTop = () => (
+  <Styled.BackToTop>
   <Grid>
     <Row>
       <Col>
-        <Styled.BackToTop>
           <Styled.BackToTopButton
             type="button"
             onClick={() => {
@@ -18,8 +18,8 @@ export const BackToTop = () => (
           >
             bAck to top
           </Styled.BackToTopButton>
-        </Styled.BackToTop>
       </Col>
     </Row>
   </Grid>
+  </Styled.BackToTop>
 );

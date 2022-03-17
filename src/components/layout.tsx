@@ -23,14 +23,14 @@ const Layout = ({ children }: Props) => {
   `);
 
   return (
-    <div>
+    <>
       <GlobalStyle />
       <title>{data.site.siteMetadata.title}</title>
       <Header />
       <Styled.Layout>{children}</Styled.Layout>
-      <BackToTop />
       <Contact />
-    </div>
+      <BackToTop />
+    </>
   );
 };
 

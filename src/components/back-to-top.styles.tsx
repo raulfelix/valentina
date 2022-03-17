@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 import { rem } from "../styles/styles";
-import { grey1, grey10, grey5, grey6 } from "../styles/colour.styles";
+import { grey1, grey10, grey2, grey3, grey4, grey5, grey6 } from "../styles/colour.styles";
 import { fontSize20, headlineFont } from "../styles/typography.styles";
 
 export const BackToTop = styled.div`
-  background-color: ${grey1};
+  background-color: ${grey2};
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: ${rem(60)} 0;
+  padding: ${rem(40)} 0;
 `;
 
 export const BackToTopButton = styled.button`

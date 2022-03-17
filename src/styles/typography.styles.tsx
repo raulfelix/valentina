@@ -73,10 +73,10 @@ export const Text = styled.p`
 
 export const StrongLink = styled(Link)`
   ${font20} 
-  background-color: ${yellow};
+  // background-color: ${yellow};
   color: ${black};
   padding: ${rem(2)};
-  text-decoration: none;
+  text-decoration: underline;
   &:hover {
     background-color: ${black};
     color: #fff;
