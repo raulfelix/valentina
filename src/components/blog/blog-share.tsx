@@ -12,9 +12,12 @@ export const BlogShare = ({ title }: Props) => {
   const isBrowser = typeof window !== "undefined";
 
   let url = '';
+  if (isBrowser) {
+    url = window.location.href;
+  }
+
   function openWindow() {
     if (isBrowser) {
-      url = window.location.href;
       window.open(url, "width=550,height=435");
       return false;
     }
