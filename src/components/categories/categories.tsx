@@ -82,7 +82,7 @@ export const Category = ({ category }: { category: string }) => (
 export const Categories = () => {
   const data = useStaticQuery(graphql`
     query Categories {
-      allMdx {
+      allMdx(filter: {fileAbsolutePath: {regex: "/(blog)/"}}) {
         group(field: frontmatter___categories) {
           category: fieldValue
           totalCount
