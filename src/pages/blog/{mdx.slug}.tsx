@@ -39,7 +39,6 @@ const BlogPost = ({ data }: Props) => {
               <Styled.BlogSideText>
                 <BlogShare
                   title={data.mdx.frontmatter.title}
-                  url={window.location.href}
                 />
               </Styled.BlogSideText>
               <Styled.BlogContentText>

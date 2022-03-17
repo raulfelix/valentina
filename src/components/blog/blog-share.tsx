@@ -6,15 +6,16 @@ import * as Styled from "./blog-shared.styles";
 
 type Props = {
   title: string;
-  url: string;
 };
 
-export const BlogShare = ({ title, url }: Props) => {
+export const BlogShare = ({ title }: Props) => {
   const isBrowser = typeof window !== "undefined";
 
+  let url = '';
   function openWindow() {
     if (isBrowser) {
-      window.open(window.location.href, "width=550,height=435");
+      url = window.location.href;
+      window.open(url, "width=550,height=435");
       return false;
     }
   }
