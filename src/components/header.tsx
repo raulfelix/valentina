@@ -5,7 +5,7 @@ import * as Styled from './header.styles';
 export const Header = () => {
   return (
     <Styled.Header id="header">
-      <Styled.HeaderLogo to="/">Valentina</Styled.HeaderLogo>
+      <Styled.HeaderLogo to="/">VALENTINA</Styled.HeaderLogo>
       <Styled.HeaderNav>
         <ul>
           <li>

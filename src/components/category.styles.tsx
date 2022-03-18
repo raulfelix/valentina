@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import { mediaUp, rem } from "../styles/styles";
-import { fontSize40 } from "../styles/typography.styles";
+import { fontSize40, headlineFont } from "../styles/typography.styles";
 import { getColour } from "./categories/categories";
 import {
   CategoryImage,
@@ -20,6 +20,7 @@ export const CategoryHeader = styled.div<CategoryHeaderProps>`
   display: flex;
   justify-content: center;
   font-size: ${fontSize40};
+  font-family: ${headlineFont};
   padding: ${rem(24)};
   margin-top: -40px;
 

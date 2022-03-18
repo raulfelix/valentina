@@ -30,7 +30,7 @@ export const HeaderLogo = styled(Link)`
   color: ${white};
   font-size: ${rem(30)};
   font-family: ${headlineFont};
-  padding: 0 2px 5px 2px;
+  padding: 0 2px 0 2px;
   text-align: center;
   text-decoration: none;
 

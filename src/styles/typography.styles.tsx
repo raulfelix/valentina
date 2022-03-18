@@ -7,7 +7,7 @@ import { rem } from "./styles";
 export const secondaryFont = 'calibre';
 export const secondaryFontMedium = 'calibre-medium';
 export const readingFont = 'merriweather';
-export const headlineFont = 'Major Mono Display';
+export const headlineFont = 'Righteous';
 
 export const fontSize14 = rem(14);
 export const fontSizeLineHeight14 = rem(20);

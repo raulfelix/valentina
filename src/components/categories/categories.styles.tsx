@@ -8,6 +8,7 @@ import {
   fontSize16,
   fontSize40,
   fontSizeLineHeight16,
+  headlineFont,
   secondaryFont,
   secondaryFontMedium,
 } from "../../styles/typography.styles";
@@ -50,7 +51,7 @@ export const CategoryImage = styled.div<CategoryImageProps>`
 
 export const CategoryImageLabel = styled.div`
   color: ${black};
-  font-family: ${secondaryFontMedium};
+  font-family: ${headlineFont};
   font-size: ${fontSize40};
   text-decoration: none;
 `;

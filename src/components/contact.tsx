@@ -7,7 +7,7 @@ import * as Styled from "./contact.styles";
 export const Contact = () => (
   <Styled.Contact>
     <div>
-      <Heading46>contAct me</Heading46>
+      <Heading46>CONTACT ME</Heading46>
       <Styled.ContactIcons>
         <Styled.ContactIcon href="" target="_blank">
           <StaticImage src="./social/twitter.png" alt="Twitter" />
@@ -16,7 +16,7 @@ export const Contact = () => (
           href="https://twitter.com/Valentina4Pres"
           target="_blank"
         >
-          <StaticImage src="./social/li.png" alt="LinkedIn" />
+          <StaticImage src="./social/linkedin.png" alt="LinkedIn" />
         </Styled.ContactIcon>
         <Styled.ContactIcon
           href="https://www.instagram.com/valentina_carrizo/"

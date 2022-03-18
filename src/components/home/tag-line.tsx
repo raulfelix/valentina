@@ -1,9 +1,12 @@
-import React from 'react';
+import React from "react";
+
 import * as Styled from "./tag-line.styles";
 
 export const TagLine = () => (
   <Styled.TagLine>
-    I write. I am interested in blah. You will find my publications, blog posts
-    and personal projects below. Here some areas of interest I write about.
+    In between places, sounds, words and visions, life is coming from us. So
+    what is it saying? I am a writer and creative trying to get to the bottom of
+    the great interconnectedness that underpins everything. Discover my work
+    below.
   </Styled.TagLine>
 );

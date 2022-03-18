@@ -45,7 +45,7 @@ const IndexPage = ({ data }: PageProps<DataProps>) => {
           <Row>
             <Col lg={7}>
               <HomePostContent>
-                <Heading40 as="h2">lAtest blog</Heading40>
+                <Heading40 as="h2">LATEST BLOG</Heading40>
                 <Styled.PrimaryPost>
                   <PostCardLarge {...firstPost} />
                 </Styled.PrimaryPost>
@@ -58,7 +58,7 @@ const IndexPage = ({ data }: PageProps<DataProps>) => {
               </HomePostContent>
             </Col>
             <Col lg={5}>
-              <Heading40 as="h2">publicAtions</Heading40>
+              <Heading40 as="h2">PUBLICATIONS</Heading40>
               <PublicationsList />
               <StrongLink to="/publications">See all publications</StrongLink>
             </Col>

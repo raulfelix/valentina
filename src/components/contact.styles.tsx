@@ -1,9 +1,10 @@
 import styled from "styled-components";
-import { grey2, grey3 } from "../styles/colour.styles";
+
+import { black, grey1, grey3 } from "../styles/colour.styles";
 import { rem } from "../styles/styles";
 
 export const Contact = styled.footer`
-  background-color: ${grey2};
+  background-color: ${grey1};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,10 +12,26 @@ export const Contact = styled.footer`
 `;
 
 export const ContactIcon = styled.a`
-  display: block;
-  width: ${rem(68)};
+  background-color: ${grey1};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: ${rem(48)};
+  height: ${rem(48)};
+  padding: ${rem(8)};
+  border-radius: ${rem(48)};
+
+  &:hover {
+    background-color: ${grey3};
+  }
+
+  &:focus {
+    outline: 2px solid ${black};
+  }
+
   img {
-    width: 100%;
+    height: 100%;
+    width: auto !important;
   }
 `;
 
@@ -22,5 +39,5 @@ export const ContactIcons = styled.div`
   display: flex;
   justify-content: space-between;
   margin: auto;
-  width: ${rem(300)};
+  width: ${rem(200)};
 `;

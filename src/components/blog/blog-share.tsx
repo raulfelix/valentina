@@ -25,7 +25,7 @@ export const BlogShare = ({ title }: Props) => {
 
   return (
     <Styled.BlogShare>
-      <Text>shAre</Text>
+      <Text>SHARE</Text>
       <div>
         <Styled.BlogShareIcon
           target="_blank"
@@ -39,14 +39,14 @@ export const BlogShare = ({ title }: Props) => {
           href={`https://www.linkedin.com/shareArticle?mini=true&url=${url}`}
           onclick={openWindow}
         >
-          <StaticImage src="../social/li.png" alt="LinkedIn" />
+          <StaticImage src="../social/linkedin.png" alt="LinkedIn" />
         </Styled.BlogShareIcon>
         <Styled.BlogShareIcon
           target="_blank"
           href={`https://facebook.com/sharer.php?u=${url}`}
           onclick={openWindow}
         >
-          <StaticImage src="../social/facebook.png" alt="Facebook" />
+          <StaticImage src="../social/facebook.png" alt="Facebook"  width={15} height={33}/>
         </Styled.BlogShareIcon>
       </div>
     </Styled.BlogShare>
