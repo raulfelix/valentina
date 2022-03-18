@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-import { black, grey1, grey2, grey3 } from "../styles/colour.styles";
-import { rem } from "../styles/styles";
+import { grey2, grey3 } from "../styles/colour.styles";
+import { baseFocusState, rem } from "../styles/styles";
 
 export const Contact = styled.footer`
   background-color: ${grey2};
@@ -25,7 +25,7 @@ export const ContactIcon = styled.a`
   }
 
   &:focus {
-    outline: 2px solid ${black};
+    ${baseFocusState}
   }
 
   img {

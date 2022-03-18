@@ -1,6 +1,6 @@
 import { Link } from "gatsby";
 import styled from "styled-components";
-import { black, grey10 } from "../../styles/colour.styles";
+import { grey10 } from "../../styles/colour.styles";
 
 import { rem } from "../../styles/styles";
 import {
@@ -72,7 +72,7 @@ export const PublicationCardDescription = styled.p`
 `;
 
 export const PublicationCardCategory = styled.a`
-  color: ${black};
+  color: ${grey10};
   font-family: ${secondaryFontMedium};
   font-size: ${fontSize16};
   line-height: ${fontSizeLineHeight16};

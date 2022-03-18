@@ -1,8 +1,8 @@
 import { Link } from "gatsby";
 import styled from "styled-components";
-import { black, grey1 } from "../../styles/colour.styles";
-import { baseFocusState, rem } from "../../styles/styles";
 
+import { grey10 } from "../../styles/colour.styles";
+import { baseFocusState, rem } from "../../styles/styles";
 import {
   fontSize14,
   fontSize16,
@@ -33,31 +33,15 @@ export const Category = styled(Link)`
   text-decoration: none !important;
 `;
 
-type CategoryImageProps = {
-  imageSrc: string;
-}
-export const CategoryImage = styled.div<CategoryImageProps>`
-  border-radius: ${rem(66)};
-  border: 4px solid ${grey1};
-  box-shadow: 0px 3px 6px rgb(0 0 0 / 20%);
-  background-color: #f5f5f5;
-  background-image: url(${({ imageSrc }) => imageSrc });
-  background-size: 100%;
-  background-position: center;
-  margin-bottom: ${rem(8)};
-  width: ${rem(120)};
-  height: ${rem(120)};
-`;
-
 export const CategoryImageLabel = styled.div`
-  color: ${black};
+  color: ${grey10};
   font-family: ${headlineFont};
   font-size: ${fontSize40};
   text-decoration: none;
 `;
 
 export const CategoryLabel = styled.div`
-  color: ${black};
+  color: ${grey10};
   font-family: ${secondaryFont};
   font-size: ${fontSize16};
   line-height: ${fontSizeLineHeight16};

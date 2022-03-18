@@ -81,13 +81,6 @@ export const CategoryTextLink = ({ category }: { category: string }) => (
   </Styled.CategoryLink>
 );
 
-export const CategoryImage = ({ category }: { category: string }) => (
-  <Styled.Category to={`/category/${category}`}>
-    <Styled.CategoryImage imageSrc={getImage(category)}></Styled.CategoryImage>
-    <Styled.CategoryImageLabel>{category}</Styled.CategoryImageLabel>
-  </Styled.Category>
-);
-
 export const Categories = () => {
   const data = useStaticQuery(graphql`
     query Categories {

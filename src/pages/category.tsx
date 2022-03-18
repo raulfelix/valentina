@@ -2,7 +2,6 @@ import * as React from "react";
 import { graphql, PageProps } from "gatsby";
 
 import Layout from "../components/layout";
-import { CategoryImage } from "../components/categories/categories";
 import { ListCard } from "../components/list-card";
 import { Col, Grid, Row } from "../styles/grid.styles";
 import * as Styled from "../components/category.styles";
@@ -17,7 +16,7 @@ const CategoryPage = (props: PageProps) => {
   return (
     <Layout>
       <Styled.CategoryHeader category={category}>
-        <CategoryImageLabel>{category.toUpperCase()}</CategoryImageLabel>
+        <CategoryImageLabel>{category?.toUpperCase()}</CategoryImageLabel>
       </Styled.CategoryHeader>
       <Styled.CategoryBlogList>
         <Grid>
