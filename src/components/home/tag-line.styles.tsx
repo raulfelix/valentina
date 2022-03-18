@@ -7,7 +7,7 @@ export const TagLine = styled.div`
   font-size: ${fontSize20};
   font-family: ${readingFont};
   line-height: ${fontSizeLineHeight20};
-  max-width: ${rem(800)};
+  max-width: ${rem(700)};
   margin: auto auto ${rem(60)} auto;
   text-align: center;
   
