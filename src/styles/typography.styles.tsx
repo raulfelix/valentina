@@ -72,7 +72,6 @@ export const Text = styled.p`
 
 export const StrongLink = styled(Link)`
   ${font20}
-  border-radius: 4px;
   color: ${grey10};
   padding: ${rem(2)};
   text-decoration: underline;
