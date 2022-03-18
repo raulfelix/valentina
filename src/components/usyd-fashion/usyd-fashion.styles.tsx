@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { black, lime2, lime6 } from "../../styles/colour.styles";
 
-import { rem } from "../../styles/styles";
+import { mediaUp, rem } from "../../styles/styles";
 import { fontSize20, fontSizeLineHeight20, headlineFont, secondaryFont } from "../../styles/typography.styles";
 
 export const UsydBlade = styled.div`
@@ -47,14 +47,24 @@ export const UsydBladeTitle = styled.h2`
 
 export const UsydBladeImages = styled.div`
   display: flex;
+  flex-wrap: wrap;
   max-width: ${rem(1000)};
   margin: auto;
-  div {
-    flex: 1;
+
+  & > div {
+    margin-bottom: ${rem(8)};
+    width: 50%;
   }
+
   img {
     display: block;
-    padding: 0 4px;
+    padding: 0 ${rem(4)};
     width: 100%;
   }
+
+  ${mediaUp.md`
+    & > div {
+      width: 25%;
+    }
+  `}
 `

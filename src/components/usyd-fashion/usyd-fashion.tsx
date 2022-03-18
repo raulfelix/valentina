@@ -18,9 +18,9 @@ export const UsydFashion = () => (
               #usydfashion
             </Styled.UsydBladeHashTag>
             <Styled.UsydBladeText>
-              Describe the project briefly here. How is started and what tools
-              you used to get it all going. Where it is at today and what comes
-              next....
+              I lead a team of creatives in photographing the best outfits on
+              campus and bringing these to a wider audience. Currently producing
+              and editing our inaugural print publication.
             </Styled.UsydBladeText>
             <Styled.UsydBladeImages>
               <div>

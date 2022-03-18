@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-import { black, grey1, grey3 } from "../styles/colour.styles";
+import { black, grey1, grey2, grey3 } from "../styles/colour.styles";
 import { rem } from "../styles/styles";
 
 export const Contact = styled.footer`
-  background-color: ${grey1};
+  background-color: ${grey2};
   display: flex;
   justify-content: center;
   align-items: center;
