@@ -14,7 +14,7 @@ export const BackToTop = styled.div`
 
 export const BackToTopButton = styled.button`
   background-color: transparent;
-  border: 1px solid ${grey3};
+  border: none;
   color: ${grey10};
   font-size: ${rem(14)};
   font-family: ${secondaryFontMedium};

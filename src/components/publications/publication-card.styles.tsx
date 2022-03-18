@@ -1,4 +1,3 @@
-import { Link } from "gatsby";
 import styled from "styled-components";
 import { grey10 } from "../../styles/colour.styles";
 
@@ -51,7 +50,7 @@ export const PublicationCardContent = styled.div`
   padding-left: ${rem(16)};
 `;
 
-export const PublicationCardTitle = styled(Link)`
+export const PublicationCardTitle = styled.a`
   color: ${grey10};
   display: block;
   font-family: ${readingFont};

@@ -41,7 +41,7 @@ export const BlogSideText = styled.div`
   padding-right: ${rem(24)};
   width: ${rem(280)};
   display: none;
-  ${mediaUp.md`
+  ${mediaUp.lg`
     display: block;
   `};
 
@@ -55,12 +55,13 @@ export const BlogContentText = styled.div``;
 export const BlogContent = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: ${rem(1080)};
+  max-width: ${rem(700)};
   margin: auto;
   padding-bottom: ${rem(60)};
 
-  ${mediaUp.md`
+  ${mediaUp.lg`
     flex-direction: row;
+    max-width: ${rem(1000)};
   `};
 
   p, li {
