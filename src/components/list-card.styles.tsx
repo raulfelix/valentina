@@ -1,15 +1,14 @@
 import { Link } from "gatsby";
 import styled from "styled-components";
-import { black, grey } from "../styles/colour.styles";
 
-import { rem } from "../styles/styles";
+import { grey10, grey4, grey6 } from "../styles/colour.styles";
+import { baseFocusState, rem } from "../styles/styles";
 import {
   font20,
   fontSize16,
   fontSizeLineHeight16,
   readingFont,
   secondaryFont,
-  secondaryFontMedium,
 } from "../styles/typography.styles";
 
 export const ListCardImageWrapper = styled.div`
@@ -42,14 +41,19 @@ export const ListCardImage = styled.div.attrs<ListCardImageProps>(
 `;
 
 export const ListCard = styled(Link)`
-  border: 1px solid #eee;
+  border: 1px solid ${grey4};
   border-radius: ${rem(16)};
-  color: ${black};
+  color: ${grey10};
   display: flex;
   margin-bottom: ${rem(16)};
   padding: ${rem(16)};
   text-decoration: none;
+
+  &:focus {
+    ${baseFocusState}
+  }
 `;
+
 export const ListCardContent = styled.div`
   padding-left: ${rem(16)};
 `;
@@ -67,18 +71,17 @@ export const ListCardDescription = styled.p`
   margin-bottom: ${rem(8)};
 `;
 
-
 export const ListCardDetails = styled.div`
-  color: ${grey};
+  color: ${grey6};
   font-family: ${secondaryFont};
   font-size: ${rem(14)};
 `;
 
 export const ListCardCategory = styled.span`
-  color: ${black};
+  color: ${grey10};
   background-color: #eee;
   border-radius: 2px;
-  padding: ${rem(2)};
   font-family: ${secondaryFont};
   font-size: ${rem(14)};
+  padding: ${rem(2)};
 `;

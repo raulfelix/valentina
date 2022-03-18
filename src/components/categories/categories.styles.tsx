@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import styled from "styled-components";
 import { black, grey1 } from "../../styles/colour.styles";
-import { rem } from "../../styles/styles";
+import { baseFocusState, rem } from "../../styles/styles";
 
 import {
   fontSize14,
@@ -94,5 +94,9 @@ export const CategoryPill = styled(Link)<CategoryPillProps>`
 
   &:hover {
     background-color: ${({ $colour }) => $colour?.bg};
+  }
+
+  &:focus {
+    ${baseFocusState}
   }
 `

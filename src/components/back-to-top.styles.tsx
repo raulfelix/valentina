@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 import { rem } from "../styles/styles";
-import { grey1, grey10, grey2, grey3, grey4, grey5, grey6 } from "../styles/colour.styles";
-import { fontSize20, headlineFont } from "../styles/typography.styles";
+import { grey1, grey10, grey2, grey3 } from "../styles/colour.styles";
+import { secondaryFontMedium } from "../styles/typography.styles";
 
 export const BackToTop = styled.div`
-  background-color: ${grey10};
+  background-color: ${grey2};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,16 +14,15 @@ export const BackToTop = styled.div`
 
 export const BackToTopButton = styled.button`
   background-color: transparent;
-  border: 1px solid ${grey1};
-  border-radius: ${rem(40)};
-  color: ${grey1};
-  font-size: ${fontSize20};
-  font-family: ${headlineFont};
-  padding: ${rem(12)} ${rem(32)};
-
+  border: 1px solid ${grey3};
+  color: ${grey10};
+  font-size: ${rem(14)};
+  font-family: ${secondaryFontMedium};
+  padding: ${rem(3)};
+  text-decoration: underline;
   &:hover {
-    background-color: ${grey1};
-    color: ${grey10};
+    background-color: ${grey10};
+    color: ${grey1};
     cursor: pointer;
   }
 `;

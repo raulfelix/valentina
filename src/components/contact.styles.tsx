@@ -12,8 +12,7 @@ export const Contact = styled.footer`
 `;
 
 export const ContactIcon = styled.a`
-  background-color: ${grey1};
-  display: flex;
+  background-color: transparent;
   align-items: center;
   justify-content: center;
   width: ${rem(48)};

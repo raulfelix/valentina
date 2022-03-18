@@ -1,4 +1,5 @@
 import { css, BaseThemedCssFunction, CSSObject } from "styled-components";
+import { grey10 } from "./colour.styles";
 
 export const rem = (val: number | string): string =>
   `${parseFloat(val.toString()) / 16}rem`;
@@ -82,3 +83,7 @@ export const MEDIA_LG = `(min-width: ${BREAKPOINT_LG}px)`;
 export const MEDIA_XL = `(min-width: ${BREAKPOINT_XL}px)`;
 
 export type MinMediaQuery = typeof MEDIA_MD;
+
+export const baseFocusState = css`
+  outline: 2px solid ${grey10};
+`

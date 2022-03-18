@@ -1,14 +1,14 @@
 import styled from "styled-components";
 import { Link } from "gatsby";
 
-import { black, white, yellow } from "../styles/colour.styles";
+import { baseFocusState, mediaUp, rem } from "../styles/styles";
+import { grey10, grey1, yellow, lime8 } from "../styles/colour.styles";
 import {
   fontSize16,
   fontSizeLineHeight16,
   headlineFont,
   secondaryFont,
 } from "../styles/typography.styles";
-import { mediaUp, rem } from "../styles/styles";
 
 export const Header = styled.header`
   display: flex;
@@ -26,8 +26,8 @@ export const Header = styled.header`
 `;
 
 export const HeaderLogo = styled(Link)`
-  background-color: ${black};
-  color: ${white};
+  background-color: ${grey10};
+  color: ${grey1};
   font-size: ${rem(30)};
   font-family: ${headlineFont};
   padding: 0 2px 0 2px;
@@ -36,7 +36,11 @@ export const HeaderLogo = styled(Link)`
 
   &:hover {
     background-color: ${yellow};
-    color: ${black};
+    color: ${grey10};
+  }
+
+  &:focus {
+    ${baseFocusState}
   }
 
   ${mediaUp.md`
@@ -70,7 +74,7 @@ export const HeaderNav = styled.nav`
 `;
 
 export const HeaderNavLink = styled(Link)`
-  color: ${black};
+  color: ${grey10};
   font-family: ${secondaryFont};
   font-size: ${fontSize16};
   line-height: ${fontSizeLineHeight16};
@@ -78,9 +82,13 @@ export const HeaderNavLink = styled(Link)`
   text-decoration: underline;
 
   &:hover {
+    background-color: ${grey10};
+    color: ${grey1};
     text-decoration: none;
-    background-color: ${black};
-    color: #fff;
+  }
+
+  &:focus {
+    ${baseFocusState}
   }
 `;
 

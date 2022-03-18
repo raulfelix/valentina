@@ -6,6 +6,7 @@ import { CategoryImage } from "../components/categories/categories";
 import { ListCard } from "../components/list-card";
 import { Col, Grid, Row } from "../styles/grid.styles";
 import * as Styled from "../components/category.styles";
+import { CategoryImageLabel } from "../components/categories/categories.styles";
 
 const CategoryPage = (props: PageProps) => {
   const {
@@ -16,7 +17,7 @@ const CategoryPage = (props: PageProps) => {
   return (
     <Layout>
       <Styled.CategoryHeader category={category}>
-        <CategoryImage category={category} />
+        <CategoryImageLabel>{category.toUpperCase()}</CategoryImageLabel>
       </Styled.CategoryHeader>
       <Styled.CategoryBlogList>
         <Grid>

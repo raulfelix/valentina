@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
-import { mediaUp, rem } from "../styles/styles";
+import { rem } from "../styles/styles";
 import { fontSize40, headlineFont } from "../styles/typography.styles";
 import { getColour } from "./categories/categories";
 import {
-  CategoryImage,
   CategoryImageLabel,
 } from "./categories/categories.styles";
 import { BlogList } from "./blog/blog.styles";
@@ -23,12 +22,6 @@ export const CategoryHeader = styled.div<CategoryHeaderProps>`
   font-family: ${headlineFont};
   padding: ${rem(24)};
   margin-top: -40px;
-
-  ${CategoryImage} {
-    ${mediaUp.md`
-      margin-top: -50px;
-    `}
-  }
 
   ${CategoryImageLabel} {
     color: ${({ category }) => getColour(category)?.text};

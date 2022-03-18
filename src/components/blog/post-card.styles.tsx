@@ -2,7 +2,7 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 import { grey1, grey10 } from "../../styles/colour.styles";
 
-import { mediaUp, rem } from "../../styles/styles";
+import { baseFocusState, mediaUp, rem } from "../../styles/styles";
 import {
   fontSize14,
   fontSize16,
@@ -120,12 +120,17 @@ export const PostCardHeader = styled.div`
 `;
 
 export const PostCardLink = styled(Link)`
+  border-radius: ${rem(16)};
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 3;
+
+  &:focus {
+    ${baseFocusState}
+  }
 `;
 
 

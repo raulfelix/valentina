@@ -16,7 +16,7 @@ export const BackToTop = () => (
               });
             }}
           >
-            BACK TO TOP
+            Back to top
           </Styled.BackToTopButton>
       </Col>
     </Row>
