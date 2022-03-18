@@ -13,6 +13,7 @@ export const Contact = styled.footer`
 
 export const ContactIcon = styled.a`
   background-color: transparent;
+  display: flex;
   align-items: center;
   justify-content: center;
   width: ${rem(48)};
@@ -38,5 +39,5 @@ export const ContactIcons = styled.div`
   display: flex;
   justify-content: space-between;
   margin: auto;
-  width: ${rem(200)};
+  width: ${rem(180)};
 `;

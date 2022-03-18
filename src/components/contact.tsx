@@ -10,19 +10,19 @@ export const Contact = () => (
       <Heading46>CONTACT ME</Heading46>
       <Styled.ContactIcons>
         <Styled.ContactIcon href="" target="_blank">
-          <StaticImage src="./social/twitter.png" alt="Twitter" />
+          <StaticImage src="./social/twitter.png" alt="Twitter" width={28} />
         </Styled.ContactIcon>
         <Styled.ContactIcon
           href="https://twitter.com/Valentina4Pres"
           target="_blank"
         >
-          <StaticImage src="./social/linkedin.png" alt="LinkedIn" />
+          <StaticImage src="./social/linkedin.png" alt="LinkedIn" width={28} />
         </Styled.ContactIcon>
         <Styled.ContactIcon
           href="https://www.instagram.com/valentina_carrizo/"
           target="_blank"
         >
-          <StaticImage src="./social/instagram.png" alt="Instagram" />
+          <StaticImage src="./social/instagram.png" alt="Instagram" width={28}/>
         </Styled.ContactIcon>
       </Styled.ContactIcons>
     </div>

@@ -25,5 +25,5 @@ export const BlogShare = styled.div`
 `;
 
 export const BlogShareIcon = styled(ContactIcon)`
-  margin: 0 0 ${rem(24)} 0;
+  margin: 0 0 ${rem(8)} 0;
 `

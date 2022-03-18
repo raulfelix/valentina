@@ -1,8 +1,13 @@
 import styled from "styled-components";
-import { black, lime2, lime6 } from "../../styles/colour.styles";
 
 import { mediaUp, rem } from "../../styles/styles";
-import { fontSize20, fontSizeLineHeight20, headlineFont, secondaryFont } from "../../styles/typography.styles";
+import { grey10, lime2, lime6 } from "../../styles/colour.styles";
+import {
+  fontSize20,
+  fontSizeLineHeight20,
+  headlineFont,
+  secondaryFont,
+} from "../../styles/typography.styles";
 
 export const UsydBlade = styled.div`
   background-color: ${lime2};
@@ -19,11 +24,11 @@ export const UsydBladeText = styled.p`
   line-height: ${fontSizeLineHeight20};
   margin: 0 auto ${rem(40)} auto;
   max-width: ${rem(700)};
-`
+`;
 
 export const UsydBladeHashTag = styled.a`
   background-color: ${lime6};
-  color: ${black};
+  color: ${grey10};
   display: inline-block;
   font-size: ${rem(30)};
   font-family: ${secondaryFont};
@@ -36,14 +41,14 @@ export const UsydBladeHashTag = styled.a`
     background-color: #000;
     color: #fff;
   }
-`
+`;
 
 export const UsydBladeTitle = styled.h2`
   font-size: ${rem(60)};
   font-family: ${headlineFont};
   line-height: ${rem(68)};
   margin: 0 0 ${rem(20)} 0;
-`
+`;
 
 export const UsydBladeImages = styled.div`
   display: flex;
@@ -67,4 +72,4 @@ export const UsydBladeImages = styled.div`
       width: 25%;
     }
   `}
-`
+`;
