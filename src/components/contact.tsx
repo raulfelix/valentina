@@ -9,11 +9,11 @@ export const Contact = () => (
     <div>
       <Heading46>CONTACT ME</Heading46>
       <Styled.ContactIcons>
-        <Styled.ContactIcon href="" target="_blank">
+        <Styled.ContactIcon href="https://twitter.com/Valentina4Pres" target="_blank">
           <StaticImage src="./social/twitter.png" alt="Twitter" width={28} />
         </Styled.ContactIcon>
         <Styled.ContactIcon
-          href="https://twitter.com/Valentina4Pres"
+          href="https://www.linkedin.com/in/valentinacarrizo/"
           target="_blank"
         >
           <StaticImage src="./social/linkedin.png" alt="LinkedIn" width={28} />
