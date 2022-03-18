@@ -10,7 +10,6 @@ export const UsydFashion = () => (
       <Row>
         <Col>
           <Styled.UsydBladeContent>
-            <Styled.UsydBladeText>Personal project</Styled.UsydBladeText>
             <Styled.UsydBladeTitle>usyd fAshion</Styled.UsydBladeTitle>
             <Styled.UsydBladeHashTag
               href="https://www.instagram.com/usydfashion/"

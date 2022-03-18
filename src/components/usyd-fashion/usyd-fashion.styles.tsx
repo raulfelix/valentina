@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import { black } from "../../styles/colour.styles";
+import { black, lime2, lime6 } from "../../styles/colour.styles";
 
 import { rem } from "../../styles/styles";
 import { fontSize20, fontSizeLineHeight20, headlineFont, secondaryFont } from "../../styles/typography.styles";
 
 export const UsydBlade = styled.div`
-  background-color: #FFE3E3;
+  background-color: ${lime2};
   padding: ${rem(80)} 0;
 `;
 
@@ -22,7 +22,7 @@ export const UsydBladeText = styled.p`
 `
 
 export const UsydBladeHashTag = styled.a`
-  background-color: #FF89C9;
+  background-color: ${lime6};
   color: ${black};
   display: inline-block;
   font-size: ${rem(30)};
