@@ -18,7 +18,7 @@ export const BlogShare = ({ title }: Props) => {
 
   function openWindow() {
     if (isBrowser) {
-      window.open(url, "width=550,height=435");
+      window.open(window.location.href, "width=550,height=435");
       return false;
     }
   }
@@ -29,7 +29,7 @@ export const BlogShare = ({ title }: Props) => {
       <div>
         <Styled.BlogShareIcon
           target="_blank"
-          href={`https://twitter.com/intent/tweet?text="${title}"&url="${url}"`}
+          href={`https://twitter.com/intent/tweet?text=${title}&url=${url}`}
           onclick={openWindow}
         >
           <StaticImage src="../social/twitter.png" alt="Twitter" width={28} />
