@@ -9,7 +9,7 @@ import { Col, Grid, Row } from "../../styles/grid.styles";
 import { Text } from "../../styles/typography.styles";
 import { BlogShare } from "../../components/blog/blog-share";
 import { CategoryPill } from "../../components/categories/categories";
-import { Embed } from './embed';
+import { Embed } from '../../components/blog/embed';
 import * as Styled from "../../components/blog/blog.styles";
 
 type Props = {

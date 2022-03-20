@@ -1,6 +1,6 @@
 import React from "react";
 
-import { EmbedWrapper } from "../../components/blog/blog.styles";
+import { EmbedWrapper } from "./blog.styles";
 
 type Props = {
   url: string;
