@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { grey1, grey10, grey3 } from "../../styles/colour.styles";
 
 import { baseFocusState, rem } from "../../styles/styles";
-import { fontSize14, Heading40 } from "../../styles/typography.styles";
+import { fontSize14, Heading40, secondaryFontMedium } from "../../styles/typography.styles";
 
 export const List = styled.div`
   margin: auto;
@@ -43,9 +43,10 @@ export const PublicationFilters = styled.div`
     background-color: ${grey3};
     color: ${grey10};
     font-size: ${fontSize14};
+    font-family: ${secondaryFontMedium};
     display: inline-block;
     border-radius: 30px;
-    padding: ${rem(4)} ${rem(8)};
+    padding: ${rem(6)} ${rem(8)};
     margin: 0 ${rem(8)};
     text-decoration: none;
 

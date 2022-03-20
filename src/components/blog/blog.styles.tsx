@@ -130,3 +130,19 @@ export const BlogList = styled.div`
   margin: auto;
   max-width: ${rem(800)};
 `
+
+export const EmbedWrapper = styled.div`
+  margin-bottom: ${rem(32)};
+  padding-top: 56%;
+  position: relative;
+
+  iframe {
+    border: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+`
