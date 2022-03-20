@@ -30,21 +30,21 @@ export const BlogShare = ({ title }: Props) => {
         <Styled.BlogShareIcon
           target="_blank"
           href={`https://twitter.com/intent/tweet?text=${title}&url=${url}`}
-          onclick={openWindow}
+          onClick={openWindow}
         >
           <StaticImage src="../social/twitter.png" alt="Twitter" width={28} />
         </Styled.BlogShareIcon>
         <Styled.BlogShareIcon
           target="_blank"
           href={`https://www.linkedin.com/shareArticle?mini=true&url=${url}`}
-          onclick={openWindow}
+          onClick={openWindow}
         >
           <StaticImage src="../social/linkedin.png" alt="LinkedIn" width={28} />
         </Styled.BlogShareIcon>
         <Styled.BlogShareIcon
           target="_blank"
           href={`https://facebook.com/sharer.php?u=${url}`}
-          onclick={openWindow}
+          onClick={openWindow}
         >
           <StaticImage src="../social/facebook.png" alt="Facebook"  width={14} height={28}/>
         </Styled.BlogShareIcon>
