@@ -11,6 +11,7 @@ module.exports = {
     "gatsby-plugin-mdx",
     "gatsby-plugin-styled-components",
     "gatsby-remark-images",
+    "gatsby-plugin-react-helmet",
     {
       resolve: `gatsby-plugin-mdx`,
       options: {

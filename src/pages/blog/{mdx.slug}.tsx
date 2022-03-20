@@ -9,7 +9,7 @@ import { Col, Grid, Row } from "../../styles/grid.styles";
 import { Text } from "../../styles/typography.styles";
 import { BlogShare } from "../../components/blog/blog-share";
 import { CategoryPill } from "../../components/categories/categories";
-import { Embed } from '../../components/blog/embed';
+import { Embed } from "../../components/blog/embed";
 import * as Styled from "../../components/blog/blog.styles";
 
 type Props = {
@@ -20,7 +20,17 @@ const BlogPost = ({ data }: Props) => {
   const image = getImage(data.mdx.frontmatter.hero_image);
 
   return (
-    <Layout>
+    <Layout
+      meta={[
+        <meta name="twitter:card" content="summary" />,
+        <meta name="twitter:site" content="@Valentina4Pres" />,
+        <meta name="twitter:creator" content="@Valentina4Pres" />,
+        <meta property="og:url" content={`/blog/${data.mdx.slug}`} />,
+        <meta property="og:title" content={data.mdx.frontmatter.title} />,
+        <meta property="og:description" content={data.mdx.excerpt} />,
+        <meta property="og:image" content={image?.images.fallback?.src} />,
+      ]}
+    >
       <MDXProvider components={{ Embed }}>
         <Grid>
           <Row>
@@ -73,6 +83,7 @@ export const query = graphql`
       }
       slug
       body
+      excerpt
     }
   }
 `;
