@@ -14,7 +14,7 @@ export const Embed = ({ url }: Props) => {
         height="315"
         src={url}
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
+        allowFullScreen
       ></iframe>
     </EmbedWrapper>
   );
