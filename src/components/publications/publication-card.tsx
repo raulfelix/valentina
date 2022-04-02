@@ -25,7 +25,7 @@ export const PublicationCard = ({ frontmatter }: Props) => {
     <Styled.PublicationCard>
       <Styled.PublicationCardImageWrapper>
         <Styled.PublicationCardImage
-          imageUrl={frontmatter.hero_image.childImageSharp.fixed.srcWebp}
+          imageUrl={frontmatter.hero_image?.childImageSharp?.fixed?.srcWebp}
         />
       </Styled.PublicationCardImageWrapper>
       <Styled.PublicationCardContent>
