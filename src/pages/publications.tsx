@@ -9,6 +9,7 @@ import * as Styled from "../components/publications/publications.styles";
 import honisoit from "../components/publications/honisoit.png";
 import deadgoodmusic from "../components/publications/deadgoodmusic.png";
 import gluestore from "../components/publications/gluestore.png";
+import icon from "../components/publications/icon.png";
 
 type DataProps = {
   allMdx: {
@@ -27,11 +28,13 @@ type DataProps = {
 };
 
 function getIcon(name: string) {
-  switch (name) {
-    case "Honi Soit":
+  switch (name.toLowerCase()) {
+    case "honi soit":
       return honisoit;
-    case "Dead Good Music":
+    case "dead good music":
       return deadgoodmusic;
+    case "icon":
+      return icon;
   }
   return "";
 }
