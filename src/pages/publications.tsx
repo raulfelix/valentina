@@ -8,8 +8,9 @@ import * as Styled from "../components/publications/publications.styles";
 
 import honisoit from "../components/publications/honisoit.png";
 import deadgoodmusic from "../components/publications/deadgoodmusic.png";
-import gluestore from "../components/publications/gluestore.png";
 import icon from "../components/publications/icon.png";
+import grazia from "../components/publications/grazia.png";
+import gluestore from "../components/publications/gluestore.png";
 
 type DataProps = {
   allMdx: {
@@ -35,6 +36,8 @@ function getIcon(name: string) {
       return deadgoodmusic;
     case "icon":
       return icon;
+    case "grazia":
+      return grazia;
   }
   return "";
 }
