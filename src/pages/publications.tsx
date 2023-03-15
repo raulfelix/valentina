@@ -38,6 +38,8 @@ function getIcon(name: string) {
       return icon;
     case "grazia":
       return grazia;
+    case "gluestore":
+      return gluestore;
   }
   return "";
 }
