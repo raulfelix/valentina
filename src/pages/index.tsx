@@ -38,7 +38,6 @@ const IndexPage = ({ data }: PageProps<DataProps>) => {
         <Grid>
           <Row>
             <Col>
-              <TagLine />
               <Categories />
             </Col>
           </Row>
