@@ -1,8 +1,8 @@
 /** @type {import('gatsby').GatsbyConfig} */
 module.exports = {
   siteMetadata: {
-      title: `Valentina`,
-      siteUrl: `https://www.valentina.com`,
+    title: `Valentina`,
+    siteUrl: `https://www.valentina.com`,
   },
   plugins: [
     "gatsby-plugin-image",
@@ -12,6 +12,7 @@ module.exports = {
     "gatsby-plugin-styled-components",
     "gatsby-remark-images",
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-netlify",
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
@@ -31,14 +32,14 @@ module.exports = {
         name: "blog",
         path: `${__dirname}/blog`,
         ignore: [`publications/**/\.*`],
-      }
+      },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "publications",
         path: `${__dirname}/publication`,
-      }
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -54,5 +55,5 @@ module.exports = {
         icon: `${__dirname}/src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
-  ]
-}
+  ],
+};
