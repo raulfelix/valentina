@@ -40,12 +40,9 @@ const CategoryPage = (props: PageProps) => {
 
 export const query = graphql`
   query categoryList($category: [String!]) {
-    allMdx( 
+    allMdx(
       sort: { order: DESC, fields: frontmatter___date }
-      filter: {
-        fileAbsolutePath: { regex: "/(blog)/" }
-        frontmatter: { categories: { in: $category } }
-      }
+      filter: { frontmatter: { categories: { in: $category } } }
     ) {
       nodes {
         id
@@ -58,6 +55,8 @@ export const query = graphql`
           title
           subtitle
           categories
+          publisher_name
+          external_link
           hero_image {
             childImageSharp {
               fixed(width: 800) {

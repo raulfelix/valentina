@@ -54,6 +54,20 @@ export const ListCard = styled(Link)`
   }
 `;
 
+export const ListCardAnchor = styled.a`
+  border: 1px solid ${grey4};
+  border-radius: ${rem(16)};
+  color: ${grey10};
+  display: flex;
+  margin-bottom: ${rem(16)};
+  padding: ${rem(16)};
+  text-decoration: none;
+
+  &:focus {
+    ${baseFocusState}
+  }
+`;
+
 export const ListCardContent = styled.div`
   padding-left: ${rem(16)};
 `;
@@ -80,8 +94,10 @@ export const ListCardDetails = styled.div`
 export const ListCardCategory = styled.span`
   color: ${grey10};
   background-color: #eee;
-  border-radius: 2px;
+  border-radius: 4px;
+  display: inline-block;
   font-family: ${secondaryFont};
   font-size: ${rem(14)};
-  padding: ${rem(2)};
+  margin-top: ${rem(8)};
+  padding: ${rem(2)} ${rem(4)};
 `;

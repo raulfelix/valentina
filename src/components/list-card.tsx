@@ -9,6 +9,7 @@ type Props = {
     title: string;
     subtitle: string;
     categories: string[];
+    publisher_name: string;
     external_link: string;
     hero_image: {
       childImageSharp: {
@@ -20,21 +21,38 @@ type Props = {
   };
 };
 
-export const ListCard = ({ slug, frontmatter }: Props) => (
-  <Styled.ListCard to={slug}>
-    <Styled.ListCardImageWrapper>
-      <Styled.ListCardImage
-        imageUrl={frontmatter.hero_image.childImageSharp.fixed.srcWebp}
-      />
-    </Styled.ListCardImageWrapper>
-    <Styled.ListCardContent>
-      <Styled.ListCardTitle>{frontmatter.title}</Styled.ListCardTitle>
-      <Styled.ListCardDescription>
-        {frontmatter.subtitle}
-      </Styled.ListCardDescription>
-      <Styled.ListCardDetails>
-      {frontmatter.categories[0]}{" · "} {frontmatter.date} 
-      </Styled.ListCardDetails>
-    </Styled.ListCardContent>
-  </Styled.ListCard>
-);
+export const ListCard = ({ slug, frontmatter }: Props) =>
+  frontmatter.external_link ? (
+    <Styled.ListCardAnchor href={frontmatter.external_link} target="_blank">
+      <Styled.ListCardImageWrapper>
+        <Styled.ListCardImage
+          imageUrl={frontmatter.hero_image.childImageSharp.fixed.srcWebp}
+        />
+      </Styled.ListCardImageWrapper>
+      <Styled.ListCardContent>
+        <Styled.ListCardTitle>{frontmatter.title}</Styled.ListCardTitle>
+        <Styled.ListCardDescription>
+          {frontmatter.subtitle}
+        </Styled.ListCardDescription>
+        <Styled.ListCardDetails>{frontmatter.date}</Styled.ListCardDetails>
+        <Styled.ListCardCategory>
+          {frontmatter.publisher_name}
+        </Styled.ListCardCategory>
+      </Styled.ListCardContent>
+    </Styled.ListCardAnchor>
+  ) : (
+    <Styled.ListCard to={slug}>
+      <Styled.ListCardImageWrapper>
+        <Styled.ListCardImage
+          imageUrl={frontmatter.hero_image.childImageSharp.fixed.srcWebp}
+        />
+      </Styled.ListCardImageWrapper>
+      <Styled.ListCardContent>
+        <Styled.ListCardTitle>{frontmatter.title}</Styled.ListCardTitle>
+        <Styled.ListCardDescription>
+          {frontmatter.subtitle}
+        </Styled.ListCardDescription>
+        <Styled.ListCardDetails>{frontmatter.date}</Styled.ListCardDetails>
+      </Styled.ListCardContent>
+    </Styled.ListCard>
+  );
