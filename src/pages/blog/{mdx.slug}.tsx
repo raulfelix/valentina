@@ -11,6 +11,7 @@ import { BlogShare } from "../../components/blog/blog-share";
 import { CategoryPill } from "../../components/categories/categories";
 import { Embed } from "../../components/blog/embed";
 import * as Styled from "../../components/blog/blog.styles";
+import { SEO } from "../../components/seo";
 
 type Props = {
   data: any;
@@ -89,3 +90,5 @@ export const query = graphql`
 `;
 
 export default BlogPost;
+
+export const Head = () => <SEO />;

@@ -1,8 +1,11 @@
 /** @type {import('gatsby').GatsbyConfig} */
 module.exports = {
   siteMetadata: {
-    title: `Valentina`,
-    siteUrl: `https://www.valentina.com`,
+    title: `Valentina Carrizo, Journalist, Writer`,
+    siteUrl: `https://www.valentinacarrizo.com`,
+    twitterUsername: `@Valentina4Pres`,
+    image: "/v.jpeg",
+    description: `Example project forValentina Carrizo is a writer and journalist from Australia specialising in long and short form journalism and criticism, and is experienced in the fashion, culture and lifestyle space. She is also a copywriter, and SEO expert with experience in AI prompt generation.`,
   },
   plugins: [
     "gatsby-plugin-image",

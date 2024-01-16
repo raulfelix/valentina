@@ -11,6 +11,7 @@ import deadgoodmusic from "../components/publications/deadgoodmusic.png";
 import icon from "../components/publications/icon.png";
 import grazia from "../components/publications/grazia.png";
 import gluestore from "../components/publications/gluestore.png";
+import { SEO } from "../components/seo";
 
 type DataProps = {
   allMdx: {
@@ -122,3 +123,5 @@ export const query = graphql`
 `;
 
 export default PublicationsPage;
+
+export const Head = () => <SEO />;

@@ -8,6 +8,7 @@ import { ListCard } from "../../components/list-card";
 import { BlogList } from "../../components/blog/blog.styles";
 import { Categories } from "../../components/categories/categories";
 import { LayoutContent } from "../../components/layout.styles";
+import { SEO } from "../../components/seo";
 
 type DataProps = {
   allMdx: {
@@ -82,3 +83,5 @@ export const query = graphql`
 `;
 
 export default BlogPage;
+
+export const Head = () => <SEO />;

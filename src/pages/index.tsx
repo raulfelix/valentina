@@ -12,6 +12,7 @@ import { TagLine } from "../components/home/tag-line";
 import { UsydFashion } from "../components/usyd-fashion/usyd-fashion";
 import * as Styled from "../components/home/home.styles";
 import { HomePostContent } from "../components/layout.styles";
+import { SEO } from "../components/seo";
 
 type DataProps = {
   allMdx: {
@@ -102,3 +103,5 @@ export const query = graphql`
 `;
 
 export default IndexPage;
+
+export const Head = () => <SEO />;
