@@ -2,7 +2,11 @@ import styled from "styled-components";
 import { grey1, grey10, grey3 } from "../../styles/colour.styles";
 
 import { baseFocusState, rem } from "../../styles/styles";
-import { fontSize14, Heading40, secondaryFontMedium } from "../../styles/typography.styles";
+import {
+  fontSize14,
+  Heading40,
+  secondaryFontMedium,
+} from "../../styles/typography.styles";
 
 export const List = styled.div`
   margin: auto;
@@ -36,6 +40,8 @@ export const PublicationHeader = styled.div`
 
 export const PublicationFilters = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  gap: ${rem(8)};
   justify-content: center;
   margin-bottom: ${rem(80)};
 
@@ -47,7 +53,6 @@ export const PublicationFilters = styled.div`
     display: inline-block;
     border-radius: 30px;
     padding: ${rem(6)} ${rem(8)};
-    margin: 0 ${rem(8)};
     text-decoration: none;
 
     &:hover {

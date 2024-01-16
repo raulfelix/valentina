@@ -129,7 +129,7 @@ export const BlogContent = styled.div`
 export const BlogList = styled.div`
   margin: auto;
   max-width: ${rem(800)};
-`
+`;
 
 export const EmbedWrapper = styled.div`
   margin-bottom: ${rem(32)};
@@ -145,4 +145,4 @@ export const EmbedWrapper = styled.div`
     width: 100%;
     height: 100%;
   }
-`
+`;

@@ -15,12 +15,10 @@ import {
 
 export const CategoryList = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  gap: ${rem(8)};
   justify-content: center;
   margin-bottom: ${rem(80)};
-
-  & > a {
-    margin: 0 ${rem(8)};
-  }
 `;
 
 export const Category = styled(Link)`
@@ -48,13 +46,12 @@ export const CategoryLabel = styled.div`
   text-decoration: none;
 `;
 
-
 type CategoryPillProps = {
   $colour: {
     bg: string;
     text: string;
-  }
-}
+  };
+};
 
 export const CategoryLink = styled(Link)<CategoryPillProps>`
   color: ${({ $colour }) => $colour?.text};
@@ -63,7 +60,7 @@ export const CategoryLink = styled(Link)<CategoryPillProps>`
   font-size: ${fontSize16};
   line-height: ${fontSizeLineHeight16};
   text-decoration: underline;
-`
+`;
 
 export const CategoryPill = styled(Link)<CategoryPillProps>`
   background-color: ${({ $colour }) => $colour?.bg2};
@@ -83,4 +80,4 @@ export const CategoryPill = styled(Link)<CategoryPillProps>`
   &:focus {
     ${baseFocusState}
   }
-`
+`;
