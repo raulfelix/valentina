@@ -1,65 +1,40 @@
 import styled from "styled-components";
 import { Link } from "gatsby";
 
-import { baseFocusState, mediaUp, rem } from "../styles/styles";
-import { grey10, grey1, yellow, lime8 } from "../styles/colour.styles";
+import { baseFocusState, rem } from "../styles/styles";
+import { grey10, grey1, highlight } from "../styles/colour.styles";
 import {
-  fontSize16,
+  fontFamilyElderkin,
   fontSizeLineHeight16,
-  headlineFont,
-  secondaryFont,
 } from "../styles/typography.styles";
 
 export const Header = styled.header`
   display: flex;
   align-items: center;
-  flex-direction: column;
-  padding: ${rem(24)};
+  justify-content: center;
+  padding: 0 ${rem(16)};
   position: relative;
-  justify-content: space-between;
-
-  ${mediaUp.md`
-    flex-direction: row;
-    height: ${rem(100)};
-    padding-left: ${rem(40)};
-  `}
+  flex-direction: row;
 `;
 
 export const HeaderLogo = styled(Link)`
-  background-color: ${grey10};
   color: ${grey1};
-  font-size: ${rem(30)};
-  font-family: ${headlineFont};
-  padding: 0 2px 0 2px;
+  position: relative;
   text-align: center;
   text-decoration: none;
-
-  &:hover {
-    background-color: ${yellow};
-    color: ${grey10};
-  }
+  width: 100%;
+  max-width: ${rem(1000)};
 
   &:focus {
     ${baseFocusState}
   }
-
-  ${mediaUp.md`
-    font-size: ${rem(46)};
-  `}
 `;
 
 export const HeaderNav = styled.nav`
   display: flex;
   align-items: center;
-  height: 100%;
-  margin-top: ${rem(16)};
-
-  ${mediaUp.md`
-    position: absolute;
-    right: ${rem(40)};
-    top: 0;
-    margin-top: 0;
-  `}
+  justify-content: center;
+  margin: ${rem(24)} 0;
 
   ul {
     display: flex;
@@ -75,8 +50,8 @@ export const HeaderNav = styled.nav`
 
 export const HeaderNavLink = styled(Link)`
   color: ${grey10};
-  font-family: ${secondaryFont};
-  font-size: ${fontSize16};
+  ${fontFamilyElderkin}
+  font-size: ${rem(20)};
   line-height: ${fontSizeLineHeight16};
   padding: ${rem(2)};
   text-decoration: underline;
@@ -92,11 +67,35 @@ export const HeaderNavLink = styled(Link)`
   }
 `;
 
-export const HeaderSearch = styled.div`
-  display: flex;
-  align-items: center;
-  height: 100%;
+export const HeaderBanner = styled.div`
+  ${fontFamilyElderkin}
+  background-color: ${highlight};
+  box-shadow: 4px 4px 0 ${grey10};
+  color: ${grey10};
+  font-size: ${rem(12)};
+  line-height: ${rem(22)};
+  padding: ${rem(4)};
+  padding-bottom: ${rem(0)};
   position: absolute;
-  left: ${rem(40)};
-  top: 0;
+  bottom: ${rem(-2)};
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (min-width: 410px) {
+    font-size: ${rem(16)};
+    line-height: ${rem(22)};
+    padding: ${rem(12)};
+    padding-bottom: ${rem(8)};
+  }
+
+  @media (min-width: 600px) {
+    font-size: ${rem(24)};
+    line-height: ${rem(26)};
+    bottom: ${rem(4)};
+  }
+
+  @media (min-width: 840px) {
+    font-size: ${rem(30)};
+    line-height: ${rem(32)};
+  }
 `;

@@ -9,6 +9,7 @@ export const secondaryFontMedium = "calibre-medium";
 export const readingFont = "merriweather";
 export const headlineFont = "Righteous";
 
+export const fontFamilyElderkin = "font-family: Elderkin, Arial, sans-serif;";
 export const fontSize14 = rem(14);
 export const fontSizeLineHeight14 = rem(20);
 export const fontSize16 = rem(16);

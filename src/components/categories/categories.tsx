@@ -3,11 +3,6 @@ import { graphql, useStaticQuery } from "gatsby";
 
 import * as Styled from "./categories.styles";
 
-import sport from "./sport.png";
-import fashion from "./fashion.png";
-import music from "./music.png";
-import sneakers from "./sneakers.png";
-import travel from "./travel.png";
 import {
   azure1,
   azure2,
@@ -25,22 +20,6 @@ import {
   purple2,
   purple8,
 } from "../../styles/colour.styles";
-
-function getImage(cat: string) {
-  switch (cat?.toLowerCase()) {
-    case "sneakers":
-      return sneakers;
-    case "fashion":
-      return fashion;
-    case "music":
-      return music;
-    case "sport":
-      return sport;
-    case "travel":
-      return travel;
-  }
-  return "travel";
-}
 
 export function getColour(cat: string) {
   switch (cat?.toLowerCase()) {
@@ -76,7 +55,10 @@ export const CategoryPill = ({ category }: { category: string }) => (
 );
 
 export const CategoryTextLink = ({ category }: { category: string }) => (
-  <Styled.CategoryLink to={`/category/${category}`} $colour={getColour(category)}>
+  <Styled.CategoryLink
+    to={`/category/${category}`}
+    $colour={getColour(category)}
+  >
     {category}
   </Styled.CategoryLink>
 );

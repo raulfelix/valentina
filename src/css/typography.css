@@ -1,10 +1,8 @@
 @font-face {
   font-style: normal;
-  font-family: "calibre";
+  font-family: "Elderkin";
   font-display: swap;
-  src: url("../fonts/calibre-r-school-web-regular.eot"),
-    url("../fonts/calibre-r-school-web-regular.woff"),
-    url("../fonts/calibre-r-school-web-regular.woff2");
+  src: url("../fonts/elderkin.woff2");
 }
 
 @font-face {
