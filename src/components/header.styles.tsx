@@ -81,7 +81,7 @@ export const HeaderBanner = styled.div`
   left: 50%;
   transform: translateX(-50%);
 
-  @media (min-width: 410px) {
+  @media (min-width: 421px) {
     font-size: ${rem(16)};
     line-height: ${rem(22)};
     padding: ${rem(12)};
