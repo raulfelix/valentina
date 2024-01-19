@@ -27,7 +27,6 @@
     "gatsby-plugin-manifest": "^4.10.1",
     "gatsby-plugin-mdx": "^3.9.1",
     "gatsby-plugin-netlify": "^5.1.1",
-    "gatsby-plugin-react-helmet": "^5.10.0",
     "gatsby-plugin-sharp": "^4.9.1",
     "gatsby-plugin-styled-components": "^5.9.0",
     "gatsby-remark-images": "^6.9.1",
@@ -35,7 +34,6 @@
     "gatsby-transformer-sharp": "^4.9.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0",
     "styled-components": "^5.3.3"
   },
   "devDependencies": {

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import { mediaUp, rem } from "../../styles/styles";
-import { grey10, lime2, lime6 } from "../../styles/colour.styles";
+import { grey10, grey2, grey6 } from "../../styles/colour.styles";
 import {
   fontSize20,
   fontSizeLineHeight20,
@@ -10,7 +10,7 @@ import {
 } from "../../styles/typography.styles";
 
 export const UsydBlade = styled.div`
-  background-color: ${lime2};
+  background-color: ${grey2};
   padding: ${rem(80)} 0;
 `;
 
@@ -27,7 +27,7 @@ export const UsydBladeText = styled.p`
 `;
 
 export const UsydBladeHashTag = styled.a`
-  background-color: ${lime6};
+  background-color: ${grey6};
   color: ${grey10};
   display: inline-block;
   font-size: ${rem(30)};
