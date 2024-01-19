@@ -21,17 +21,7 @@ const BlogPost = ({ data }: Props) => {
   const image = getImage(data.mdx.frontmatter.hero_image);
 
   return (
-    <Layout
-      meta={[
-        <meta name="twitter:card" content="summary" />,
-        <meta name="twitter:site" content="@Valentina4Pres" />,
-        <meta name="twitter:creator" content="@Valentina4Pres" />,
-        <meta property="og:url" content={`/blog/${data.mdx.slug}`} />,
-        <meta property="og:title" content={data.mdx.frontmatter.title} />,
-        <meta property="og:description" content={data.mdx.excerpt} />,
-        <meta property="og:image" content={image?.images.fallback?.src} />,
-      ]}
-    >
+    <Layout withSmallHeader>
       <MDXProvider components={{ Embed }}>
         <Grid>
           <Row>
@@ -96,6 +86,7 @@ export const Head = (props: HeadProps) => {
     <SEO
       title={`${props.data.mdx.frontmatter.title} - Valentina Carrizo, Journalist, Writer`}
       url={props.data.mdx.slug}
+      description={props.data.mdx.frontmatter.excerpt}
       customImage={image.images.fallback.src}
     >
       <meta property="og:type" content="article" />

@@ -17,13 +17,16 @@ export const Header = styled.header`
   flex-direction: row;
 `;
 
-export const HeaderLogo = styled(Link)`
+type HeaderLogoProps = {
+  $isSmall?: boolean;
+};
+export const HeaderLogo = styled(Link)<HeaderLogoProps>`
   color: ${grey1};
   position: relative;
   text-align: center;
   text-decoration: none;
   width: 100%;
-  max-width: ${rem(1000)};
+  max-width: ${({ $isSmall }) => ($isSmall ? rem(400) : rem(1000))};
 
   &:focus {
     ${baseFocusState}

@@ -8,13 +8,14 @@ import * as Styled from "./layout.styles";
 
 type Props = {
   children: React.ReactNode;
+  withSmallHeader?: boolean;
 };
 
-const Layout = ({ children }: Props) => {
+const Layout = ({ children, withSmallHeader }: Props) => {
   return (
     <>
       <GlobalStyle />
-      <Header />
+      <Header isSmall={withSmallHeader} />
       <Styled.Layout>{children}</Styled.Layout>
       <Contact />
       <BackToTop />
