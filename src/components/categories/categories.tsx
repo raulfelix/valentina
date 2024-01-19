@@ -46,11 +46,8 @@ export function getColour(cat: string) {
 }
 
 export const CategoryPill = ({ category }: { category: string }) => (
-  <Styled.CategoryPill
-    to={`/category/${category}`}
-    $colour={getColour(category)}
-  >
-    <span>{category}</span>
+  <Styled.CategoryPill to={`/category/${category}`}>
+    {category}
   </Styled.CategoryPill>
 );
 
@@ -77,9 +74,11 @@ export const Categories = () => {
 
   return (
     <Styled.CategoryList>
-      {data.allMdx.group.map((g: any, i: number) => {
-        return <CategoryPill key={i} category={g.category} />;
-      })}
+      <Styled.CategoryListInner>
+        {data.allMdx.group.map((g: any, i: number) => {
+          return <CategoryPill key={i} category={g.category} />;
+        })}
+      </Styled.CategoryListInner>
     </Styled.CategoryList>
   );
 };

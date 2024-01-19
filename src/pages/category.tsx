@@ -1,11 +1,13 @@
 import * as React from "react";
 import { graphql, PageProps } from "gatsby";
+import type { HeadProps } from "gatsby";
 
 import Layout from "../components/layout";
 import { ListCard } from "../components/list-card";
 import { Col, Grid, Row } from "../styles/grid.styles";
 import * as Styled from "../components/category.styles";
 import { CategoryImageLabel } from "../components/categories/categories.styles";
+import { SEO } from "../components/seo";
 
 const CategoryPage = (props: PageProps) => {
   const {
@@ -35,6 +37,14 @@ const CategoryPage = (props: PageProps) => {
         </Grid>
       </Styled.CategoryBlogList>
     </Layout>
+  );
+};
+
+export const Head = (props: HeadProps) => {
+  return (
+    <SEO
+      title={`${props.pageContext?.category} - Valentina Carrizo, Journalist, Writer`}
+    />
   );
 };
 

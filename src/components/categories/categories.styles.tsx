@@ -1,11 +1,12 @@
 import { Link } from "gatsby";
 import styled from "styled-components";
 
-import { grey10 } from "../../styles/colour.styles";
+import { grey1, grey10, highlight } from "../../styles/colour.styles";
 import { baseFocusState, rem } from "../../styles/styles";
 import {
-  fontSize14,
+  fontFamilyElderkin,
   fontSize16,
+  fontSize30,
   fontSize40,
   fontSizeLineHeight16,
   headlineFont,
@@ -15,10 +16,17 @@ import {
 
 export const CategoryList = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  gap: ${rem(8)};
   justify-content: center;
-  margin-bottom: ${rem(80)};
+  margin-bottom: ${rem(48)};
+`;
+
+export const CategoryListInner = styled.div`
+  border-top: 2px solid ${grey10};
+  border-bottom: 1px dashed ${grey10};
+  display: flex;
+  flex-wrap: wrap;
+  gap: ${rem(48)};
+  padding: ${rem(16)} 0;
 `;
 
 export const Category = styled(Link)`
@@ -62,19 +70,20 @@ export const CategoryLink = styled(Link)<CategoryPillProps>`
   text-decoration: underline;
 `;
 
-export const CategoryPill = styled(Link)<CategoryPillProps>`
-  background-color: ${({ $colour }) => $colour?.bg2};
-  border-radius: ${rem(30)};
-  border: 1px solid ${({ $colour }) => $colour?.bg2};
-  color: ${({ $colour }) => $colour?.text};
-  font-size: ${fontSize14};
-  font-family: ${secondaryFontMedium};
+export const CategoryPill = styled(Link)`
+  ${fontFamilyElderkin};
+  color: ${grey10};
+  font-size: ${fontSize30};
+  line-height: ${rem(32)};
+  font-weight: normal;
   display: inline-block;
-  padding: ${rem(6)} ${rem(8)};
+  padding: 2px 2px 0 2px;
   text-decoration: none !important;
+  text-transform: uppercase;
 
   &:hover {
-    background-color: ${({ $colour }) => $colour?.bg};
+    background-color: ${grey10};
+    color: ${grey1};
   }
 
   &:focus {

@@ -8,7 +8,6 @@ import { PostCard } from "../components/blog/post-card";
 import { PostCardLarge } from "../components/blog/post-card-large";
 import { Categories } from "../components/categories/categories";
 import { PublicationsList } from "../components/home/publications-list";
-import { TagLine } from "../components/home/tag-line";
 import { UsydFashion } from "../components/usyd-fashion/usyd-fashion";
 import * as Styled from "../components/home/home.styles";
 import { HomePostContent } from "../components/layout.styles";

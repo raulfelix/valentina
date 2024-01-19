@@ -124,4 +124,6 @@ export const query = graphql`
 
 export default PublicationsPage;
 
-export const Head = () => <SEO />;
+export const Head = () => (
+  <SEO title="Publications - Valentina Carrizo, Journalist, Writer" />
+);

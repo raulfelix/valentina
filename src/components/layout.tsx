@@ -27,10 +27,7 @@ const Layout = ({ children, meta }: Props) => {
   return (
     <>
       <GlobalStyle />
-      <Helmet>
-        <title>{data.site.siteMetadata.title}</title>
-        {meta && meta}
-      </Helmet>
+      {/* <Helmet>{meta && meta}</Helmet> */}
       <Header />
       <Styled.Layout>{children}</Styled.Layout>
       <Contact />
