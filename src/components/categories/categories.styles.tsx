@@ -17,7 +17,7 @@ import {
 export const CategoryList = styled.div`
   display: flex;
   justify-content: center;
-  margin-bottom: ${rem(48)};
+  margin-bottom: ${rem(32)};
 `;
 
 export const CategoryListInner = styled.div`

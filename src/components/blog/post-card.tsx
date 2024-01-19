@@ -1,8 +1,6 @@
 import { IGatsbyImageData } from "gatsby-plugin-image";
 import React from "react";
 
-import { CategoryPill } from "../categories/categories";
-
 import * as Styled from "./post-card.styles";
 
 type Props = {
@@ -14,9 +12,10 @@ type Props = {
     date: string;
     hero_image: IGatsbyImageData;
   };
+  isSquare?: boolean;
 };
 
-export const PostCard = ({ excerpt, slug, frontmatter }: Props) => {
+export const PostCard = ({ excerpt, slug, frontmatter, isSquare }: Props) => {
   return (
     <Styled.PostCard>
       <Styled.PostCardLink to={`/blog/${slug}`} />
@@ -26,7 +25,9 @@ export const PostCard = ({ excerpt, slug, frontmatter }: Props) => {
             imageUrl={frontmatter.hero_image.childImageSharp.fixed?.srcWebp}
           />
         </Styled.PostCardImageWrapper>
-        <CategoryPill category={frontmatter.categories[0]} />
+        <Styled.PostCardCategory>
+          {frontmatter.categories[0]}
+        </Styled.PostCardCategory>
       </Styled.PostCardHeader>
 
       <Styled.PostCardContent>

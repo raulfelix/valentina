@@ -1,5 +1,5 @@
 import * as React from "react";
-import { graphql } from "gatsby";
+import { HeadProps, graphql } from "gatsby";
 import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
@@ -67,7 +67,6 @@ const BlogPost = ({ data }: Props) => {
   );
 };
 
-// TODO filter out publicaitons
 export const query = graphql`
   query ($id: String) {
     mdx(id: { eq: $id }) {
@@ -91,4 +90,15 @@ export const query = graphql`
 
 export default BlogPost;
 
-export const Head = () => <SEO />;
+export const Head = (props: HeadProps) => {
+  const image = getImage(props.data.mdx.frontmatter.hero_image);
+  return (
+    <SEO
+      title={`${props.data.mdx.frontmatter.title} - Valentina Carrizo, Journalist, Writer`}
+      url={props.data.mdx.slug}
+      customImage={image.images.fallback.src}
+    >
+      <meta property="og:type" content="article" />
+    </SEO>
+  );
+};

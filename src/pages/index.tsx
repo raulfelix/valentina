@@ -9,9 +9,8 @@ import { PostCardLarge } from "../components/blog/post-card-large";
 import { Categories } from "../components/categories/categories";
 import { PublicationsList } from "../components/home/publications-list";
 import { UsydFashion } from "../components/usyd-fashion/usyd-fashion";
-import * as Styled from "../components/home/home.styles";
-import { HomePostContent } from "../components/layout.styles";
 import { SEO } from "../components/seo";
+import * as Styled from "../components/home/home.styles";
 
 type DataProps = {
   allMdx: {
@@ -32,6 +31,9 @@ type DataProps = {
 
 const IndexPage = ({ data }: PageProps<DataProps>) => {
   const firstPost = data.allMdx.nodes[0];
+  const secondPost = data.allMdx.nodes[1];
+  const thirdPost = data.allMdx.nodes[2];
+
   return (
     <Layout>
       <Styled.HomeSection>
@@ -41,21 +43,24 @@ const IndexPage = ({ data }: PageProps<DataProps>) => {
               <Categories />
             </Col>
           </Row>
+
           <Row>
-            <Col lg={7}>
-              <HomePostContent>
-                <Heading40 as="h2">LATEST BLOG</Heading40>
-                <Styled.PrimaryPost>
+            <Col lg={12}>
+              <Styled.HomePosts>
+                <Styled.HomeSecondaryPost>
+                  <PostCard {...secondPost} isSquare />
+                </Styled.HomeSecondaryPost>
+                <Styled.HomeMainPost>
                   <PostCardLarge {...firstPost} />
-                </Styled.PrimaryPost>
-                <Styled.SecondaryPosts>
-                  {data.allMdx.nodes.map(
-                    (m) => m !== firstPost && <PostCard key={m.id} {...m} />
-                  )}
-                </Styled.SecondaryPosts>
-                <StrongLink to="/blog">See all blog posts</StrongLink>
-              </HomePostContent>
+                </Styled.HomeMainPost>
+                <Styled.HomeSecondaryPost>
+                  <PostCard {...thirdPost} isSquare />
+                </Styled.HomeSecondaryPost>
+              </Styled.HomePosts>
             </Col>
+          </Row>
+
+          <Row>
             <Col lg={5}>
               <Heading40 as="h2">PUBLICATIONS</Heading40>
               <PublicationsList />

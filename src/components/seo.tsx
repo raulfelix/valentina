@@ -4,11 +4,20 @@ import React, { ReactNode } from "react";
 type Props = {
   title?: string;
   description?: string;
+  url?: string;
+  customImage?: any;
   pathname?: string;
   children?: ReactNode;
 };
 
-export const SEO = ({ title, description, pathname, children }: Props) => {
+export const SEO = ({
+  title,
+  description,
+  customImage,
+  pathname,
+  url,
+  children,
+}: Props) => {
   const {
     title: defaultTitle,
     description: defaultDescription,
@@ -20,8 +29,8 @@ export const SEO = ({ title, description, pathname, children }: Props) => {
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
-    image: `${siteUrl}${image}`,
-    url: `${siteUrl}${pathname || ``}`,
+    image: `${siteUrl}${customImage || image}`,
+    url: `${siteUrl}${url ? `/${url}` : pathname || ``}`,
     twitterUsername,
   };
 
@@ -36,6 +45,10 @@ export const SEO = ({ title, description, pathname, children }: Props) => {
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.image} />
       <meta name="twitter:creator" content={seo.twitterUsername} />
+      <meta property="og:url" content={seo.url} />
+      <meta name="og:title" content={seo.title} />
+      <meta name="og:image" content={seo.image} />
+
       {children}
     </>
   );

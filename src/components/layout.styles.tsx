@@ -9,10 +9,3 @@ export const Layout = styled.main`
 export const LayoutContent = styled.div`
   padding-bottom: ${rem(40)};
 `;
-
-export const HomePostContent = styled.div`
-  margin-bottom: ${rem(80)};
-  ${mediaUp.lg`
-    margin-bottom: 0;
-  `}
-`;

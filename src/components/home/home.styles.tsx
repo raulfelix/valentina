@@ -1,26 +1,33 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { mediaUp, rem } from '../../styles/styles';
+import { rem } from "../../styles/styles";
 
 export const HomeSection = styled.div`
   margin-bottom: ${rem(80)};
 `;
 
-export const PrimaryPost = styled.div`
-  display: flex;
-  margin-bottom: ${rem(24)};
-`
+export const HomeMainPost = styled.div`
+  width: 100%;
+`;
 
-export const SecondaryPosts = styled.div`
+export const HomeSecondaryPost = styled.div`
+  width: 100%;
+`;
+
+export const HomePosts = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin-left: -${rem(12)};
-  margin-right: -${rem(12)};
-  margin-bottom: ${rem(24)};
+  gap: ${rem(40)};
 
-  ${mediaUp.sm`
-    & > div {
+  @media (min-width: 768px) {
+    ${HomeMainPost}, ${HomeSecondaryPost} {
       flex: 1;
     }
-  `}
-`
+  }
+
+  @media (min-width: 1000px) {
+    ${HomeMainPost} {
+      flex: 1.5;
+    }
+  }
+`;

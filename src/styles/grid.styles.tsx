@@ -1,6 +1,6 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
 
-import { rem, mediaUp } from './styles';
+import { rem, mediaUp } from "./styles";
 const spacing12 = 12;
 
 const col1 = css`
@@ -144,10 +144,9 @@ export const Row = styled.div`
   margin-right: -${rem(spacing12)};
 `;
 
-
 export const Grid = styled.div`
   margin: auto;
   max-width: 1400px;
   padding-left: ${rem(24)};
   padding-right: ${rem(24)};
-`
+`;
