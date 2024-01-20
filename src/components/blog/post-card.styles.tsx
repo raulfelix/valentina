@@ -17,21 +17,19 @@ export const PostCardTitle = styled.h2`
   font-size: ${rem(22)};
   line-height: ${rem(28)};
   margin: 0 0 ${rem(8)} 0;
+  font-weight: normal;
 `;
 
-export const PostCardTitleLarge = styled(Link)`
+export const PostCardTitleLarge = styled.h2`
   ${fontFamilyElderkin}
 
   display: block;
   color: ${grey10};
   font-size: ${rem(24)};
+  font-weight: normal;
   line-height: ${rem(30)};
   margin: 0 0 ${rem(8)} 0;
   text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
 `;
 
 export const PostCardImageWrapper = styled.div`
