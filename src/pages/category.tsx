@@ -41,6 +41,7 @@ export const Head = (props: HeadProps) => {
   return (
     <SEO
       title={`${props.pageContext?.category} - Valentina Carrizo, Journalist, Writer`}
+      url={`category/${props.pageContext?.category}`}
     />
   );
 };

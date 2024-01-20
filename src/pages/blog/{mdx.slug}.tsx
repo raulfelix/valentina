@@ -96,7 +96,7 @@ export const Head = (props: HeadProps) => {
   return (
     <SEO
       title={`${props.data.mdx.frontmatter.title} - Valentina Carrizo, Journalist, Writer`}
-      url={props.data.mdx.slug}
+      url={`blog/${props.data.mdx.slug}`}
       description={props.data.mdx.frontmatter.excerpt}
       customImage={image.images.fallback.src}
     >
