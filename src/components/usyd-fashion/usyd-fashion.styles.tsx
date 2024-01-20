@@ -1,16 +1,23 @@
 import styled from "styled-components";
 
 import { mediaUp, rem } from "../../styles/styles";
-import { grey10, grey2, grey6 } from "../../styles/colour.styles";
 import {
+  grey1,
+  grey10,
+  grey2,
+  grey6,
+  highlight,
+} from "../../styles/colour.styles";
+import {
+  fontFamilyElderkin,
+  fontFamilyMerriweather,
   fontSize20,
   fontSizeLineHeight20,
   headlineFont,
-  secondaryFont,
 } from "../../styles/typography.styles";
 
 export const UsydBlade = styled.div`
-  background-color: ${grey2};
+  background-color: #fff2c5;
   padding: ${rem(80)} 0;
 `;
 
@@ -20,25 +27,27 @@ export const UsydBladeContent = styled.div`
 
 export const UsydBladeText = styled.p`
   font-size: ${fontSize20};
-  font-family: ${secondaryFont};
+  ${fontFamilyMerriweather}
   line-height: ${fontSizeLineHeight20};
   margin: 0 auto ${rem(40)} auto;
   max-width: ${rem(700)};
 `;
 
 export const UsydBladeHashTag = styled.a`
-  background-color: ${grey6};
+  ${fontFamilyElderkin}
+  background-color: ${grey1};
+  border: 2px solid ${grey10};
+  box-shadow: 4px 4px 0 ${highlight};
   color: ${grey10};
   display: inline-block;
-  font-size: ${rem(30)};
-  font-family: ${secondaryFont};
-  line-height: ${rem(38)};
+  font-size: ${rem(50)};
   margin-bottom: ${rem(60)};
   padding: 0 ${rem(2)};
   text-decoration: none;
 
   &:hover {
     background-color: #000;
+    box-shadow: 4px 4px 0 ${highlight};
     color: #fff;
   }
 `;

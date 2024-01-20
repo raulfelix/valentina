@@ -86,4 +86,18 @@ export type MinMediaQuery = typeof MEDIA_MD;
 
 export const baseFocusState = css`
   outline: 2px solid ${grey10};
-`
+`;
+
+export const standardFocusState = css`
+  &:focus {
+    outline: 0;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: 0;
+  }
+
+  &:focus-visible {
+    outline: 2px solid ${grey10};
+  }
+`;

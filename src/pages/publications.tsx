@@ -75,11 +75,11 @@ const PublicationsPage = ({ data }: PageProps<DataProps>) => {
                   <Styled.PublicationIcon>
                     <img src={getIcon(key)} alt={key} height={40} />
                   </Styled.PublicationIcon>
-                  <div>
+                  <Styled.PublicationCards>
                     {pubGroups[key].map((p) => (
                       <PublicationCard key={p.id} frontmatter={p.frontmatter} />
                     ))}
-                  </div>
+                  </Styled.PublicationCards>
                 </Styled.PublicationGroup>
               ))}
             </Styled.List>

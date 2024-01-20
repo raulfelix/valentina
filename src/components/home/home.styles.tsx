@@ -18,6 +18,7 @@ export const HomePosts = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: ${rem(40)};
+  margin-bottom: ${rem(80)};
 
   @media (min-width: 768px) {
     ${HomeMainPost}, ${HomeSecondaryPost} {

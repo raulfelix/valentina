@@ -3,7 +3,12 @@ import { graphql, PageProps } from "gatsby";
 
 import Layout from "../components/layout";
 import { Grid, Col, Row } from "../styles/grid.styles";
-import { Heading40, StrongLink } from "../styles/typography.styles";
+import {
+  Heading20,
+  Heading40,
+  Heading46,
+  StrongLink,
+} from "../styles/typography.styles";
 import { PostCard } from "../components/blog/post-card";
 import { PostCardLarge } from "../components/blog/post-card-large";
 import { Categories } from "../components/categories/categories";
@@ -61,10 +66,9 @@ const IndexPage = ({ data }: PageProps<DataProps>) => {
           </Row>
 
           <Row>
-            <Col lg={5}>
-              <Heading40 as="h2">PUBLICATIONS</Heading40>
+            <Col lg={12}>
+              <Heading46 as="h2">PUBLICATIONS</Heading46>
               <PublicationsList />
-              <StrongLink to="/publications">See all publications</StrongLink>
             </Col>
           </Row>
         </Grid>

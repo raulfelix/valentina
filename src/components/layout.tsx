@@ -17,8 +17,8 @@ const Layout = ({ children, withSmallHeader }: Props) => {
       <GlobalStyle />
       <Header isSmall={withSmallHeader} />
       <Styled.Layout>{children}</Styled.Layout>
+      {/* <BackToTop /> */}
       <Contact />
-      <BackToTop />
     </>
   );
 };

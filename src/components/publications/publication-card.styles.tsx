@@ -13,7 +13,6 @@ import {
 } from "../../styles/typography.styles";
 
 export const PublicationCardImageWrapper = styled.div`
-  border-radius: ${rem(16)};
   height: ${({ $width = 86 }) => rem($width)};
   width: ${({ $width = 86 }) => rem($width)};
   flex-shrink: 0;
@@ -35,10 +34,8 @@ export const PublicationCardImage = styled.div.attrs<PublicationCardImageProps>(
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: ${rem(6)};
   display: block;
   height: 100%;
-  flex-shrink: 0;
 `;
 
 export const PublicationCard = styled.div`

@@ -7,8 +7,10 @@ import { grey1, grey10 } from "./colour.styles";
 export const secondaryFont = "calibre";
 export const secondaryFontMedium = "calibre-medium";
 export const readingFont = "merriweather";
-export const headlineFont = "Righteous";
+export const headlineFont = "Luckiest Guy";
 
+export const fontFamilyLuckiestGuy =
+  "font-family: Luckiest Guy, Arial, sans-serif;";
 export const fontFamilyElderkin = "font-family: Elderkin, Arial, sans-serif;";
 export const fontFamilyMerriweather =
   "font-family: merriweather, Arial, sans-serif;";
@@ -40,8 +42,8 @@ export const Heading46 = styled.h1`
   margin: 0 0 ${rem(32)} 0;
 `;
 
-export const Heading40 = styled.h1`
-  font-size: ${rem(40)};
+export const Heading20 = styled.h1`
+  font-size: ${rem(20)};
   font-family: ${headlineFont};
   font-weight: normal;
   margin: 0 0 ${rem(32)} 0;
