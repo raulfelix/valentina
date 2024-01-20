@@ -11,7 +11,10 @@ export const headlineFont = "Luckiest Guy";
 
 export const fontFamilyLuckiestGuy =
   "font-family: Luckiest Guy, Arial, sans-serif;";
-export const fontFamilyElderkin = "font-family: Elderkin, Arial, sans-serif;";
+export const fontFamilyElderkin = css`
+  font-family: Elderkin, Arial, sans-serif;
+  letter-spacing: 0.3px;
+`;
 export const fontFamilyMerriweather =
   "font-family: merriweather, Arial, sans-serif;";
 
