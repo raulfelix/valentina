@@ -12,6 +12,7 @@ import { CategoryPill } from "../../components/categories/categories";
 import { Embed } from "../../components/blog/embed";
 import * as Styled from "../../components/blog/blog.styles";
 import { SEO } from "../../components/seo";
+import { ContactHr } from "../../components/contact.styles";
 
 type Props = {
   data: any;
@@ -26,29 +27,39 @@ const BlogPost = ({ data }: Props) => {
         <Grid>
           <Row>
             <Col>
-              <Styled.BlogHeader>
-                <CategoryPill
-                  category={data.mdx.frontmatter?.categories?.[0] || ""}
-                />
-                <Styled.BlogTitle>
-                  {data.mdx.frontmatter.title}
-                </Styled.BlogTitle>
-                <Text>{data.mdx.frontmatter.subtitle}</Text>
-              </Styled.BlogHeader>
               <Styled.BlogHeroImage>
                 <GatsbyImage
                   image={image}
                   alt={data.mdx.frontmatter.hero_image_alt}
                 />
               </Styled.BlogHeroImage>
-              <Styled.BlogContent>
+              <Styled.BlogContainer>
                 <Styled.BlogSideText>
+                  <Styled.BlogCategory
+                    to={`/category/${
+                      data.mdx.frontmatter?.categories?.[0] || ""
+                    }`}
+                  >
+                    {data.mdx.frontmatter?.categories?.[0]}
+                  </Styled.BlogCategory>
                   <BlogShare title={data.mdx.frontmatter.title} />
                 </Styled.BlogSideText>
-                <Styled.BlogContentText>
-                  <MDXRenderer>{data.mdx.body}</MDXRenderer>
-                </Styled.BlogContentText>
-              </Styled.BlogContent>
+                <div>
+                  <Styled.BlogHeader>
+                    <Styled.BlogTitle>
+                      {data.mdx.frontmatter.title}
+                    </Styled.BlogTitle>
+                    <Text>{data.mdx.frontmatter.subtitle}</Text>
+                    <ContactHr />
+                    <ContactHr />
+                  </Styled.BlogHeader>
+                  <Styled.BlogContent>
+                    <Styled.BlogContentText>
+                      <MDXRenderer>{data.mdx.body}</MDXRenderer>
+                    </Styled.BlogContentText>
+                  </Styled.BlogContent>
+                </div>
+              </Styled.BlogContainer>
             </Col>
           </Row>
         </Grid>

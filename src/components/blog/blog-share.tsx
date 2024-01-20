@@ -1,8 +1,10 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
 
-import { Text } from "../../styles/typography.styles";
 import * as Styled from "./blog-shared.styles";
+
+import twitter from "../social/twitter.svg";
+import facebook from "../social/facebook.svg";
+import linked from "../social/linkedin.svg";
 
 type Props = {
   title: string;
@@ -11,7 +13,7 @@ type Props = {
 export const BlogShare = ({ title }: Props) => {
   const isBrowser = typeof window !== "undefined";
 
-  let url = '';
+  let url = "";
   if (isBrowser) {
     url = window.location.href;
   }
@@ -25,29 +27,39 @@ export const BlogShare = ({ title }: Props) => {
 
   return (
     <Styled.BlogShare>
-      <Text>SHARE</Text>
       <div>
-        <Styled.BlogShareIcon
+        <Styled.BlogShareGroup
           target="_blank"
           href={`https://twitter.com/intent/tweet?text=${title}&url=${url}`}
-          onClick={() => openWindow('https://twitter.com/intent/tweet?url=')}
+          onClick={() => openWindow("https://twitter.com/intent/tweet?url=")}
         >
-          <StaticImage src="../social/twitter.png" alt="Twitter" width={28} />
-        </Styled.BlogShareIcon>
-        <Styled.BlogShareIcon
+          <Styled.BlogShareIcon>
+            <img className="tweet" src={twitter} alt="Twitter" />
+          </Styled.BlogShareIcon>
+          <p>Tweet</p>
+        </Styled.BlogShareGroup>
+        <Styled.BlogShareGroup
           target="_blank"
           href={`https://www.linkedin.com/shareArticle?mini=true&url=${url}`}
-          onClick={() => openWindow('https://www.linkedin.com/shareArticle?mini=true&url=')}
+          onClick={() =>
+            openWindow("https://www.linkedin.com/shareArticle?mini=true&url=")
+          }
         >
-          <StaticImage src="../social/linkedin.png" alt="LinkedIn" width={28} />
-        </Styled.BlogShareIcon>
-        <Styled.BlogShareIcon
+          <Styled.BlogShareIcon>
+            <img src={linked} alt="LinkedIn" />
+          </Styled.BlogShareIcon>
+          <p>Post</p>
+        </Styled.BlogShareGroup>
+        <Styled.BlogShareGroup
           target="_blank"
           href={`https://facebook.com/sharer.php`}
-          onClick={() => openWindow('https://facebook.com/sharer.php?u=')}
+          onClick={() => openWindow("https://facebook.com/sharer.php?u=")}
         >
-          <StaticImage src="../social/facebook.png" alt="Facebook"  width={14} height={28}/>
-        </Styled.BlogShareIcon>
+          <Styled.BlogShareIcon>
+            <img className="facebook" src={facebook} alt="Facebook" />
+          </Styled.BlogShareIcon>
+          <p>Share</p>
+        </Styled.BlogShareGroup>
       </div>
     </Styled.BlogShare>
   );

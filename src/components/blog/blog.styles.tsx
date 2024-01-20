@@ -4,64 +4,107 @@ import { mediaUp, rem } from "../../styles/styles";
 import {
   font20,
   font40,
+  fontFamilyElderkin,
+  fontSize20,
+  fontSize30,
   readingFont,
   secondaryFontMedium,
 } from "../../styles/typography.styles";
-import { Category, CategoryPill } from "../categories/categories.styles";
+import { grey1, grey10, highlight } from "../../styles/colour.styles";
+import { Link } from "gatsby";
+
+export const blogBreakpoint = "@media (min-width: 900px)";
 
 export const BlogHeader = styled.div`
-  margin: auto;
-  max-width: ${rem(800)};
-  text-align: center;
-
-  ${CategoryPill} {
-    margin-bottom: ${rem(16)};
-  }
+  margin-bottom: ${rem(48)};
 `;
 
 export const BlogTitle = styled.h1`
+  ${fontFamilyElderkin}
   font-size: ${rem(42)};
-  font-family: ${readingFont};
   line-height: ${rem(50)};
-  margin: 0 0 ${rem(12)} 0;
+  margin: 0;
 `;
 
 export const BlogHeroImage = styled.div`
-  margin-bottom: ${rem(80)};
-  padding-top: ${rem(24)};
+  position: relative;
+  margin: auto;
+  margin-bottom: ${rem(32)};
+  max-width: ${rem(1200)};
+
   & > div {
     overflow: hidden;
-    height: ${rem(390)};
+    height: ${rem(320)};
     width: 100%;
+  }
+
+  ${blogBreakpoint} {
+    & > div {
+      height: ${rem(480)};
+    }
+  }
+`;
+
+export const BlogCategory = styled(Link)`
+  ${fontFamilyElderkin}
+  background-color: ${grey1};
+  border: 1px solid ${grey10};
+  color: ${grey10};
+  display: inline-block;
+  font-size: ${fontSize20};
+  line-height: 34px;
+  padding: 0 ${rem(8)} 0 ${rem(8)};
+  margin: 0;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  ${blogBreakpoint} {
+    font-size: ${fontSize30};
+    margin-bottom: ${rem(32)};
+  }
+
+  &:hover {
+    background-color: ${highlight};
+    color: ${grey10};
   }
 `;
 
 export const BlogSideText = styled.div`
-  flex-shrink: 0;
-  padding-right: ${rem(24)};
-  width: ${rem(280)};
-  display: none;
-  ${mediaUp.lg`
-    display: block;
-  `};
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  width: 100%;
+  margin-bottom: ${rem(32)};
 
-  ${Category} {
-    margin-bottom: ${rem(32)};
+  ${blogBreakpoint} {
+    display: block;
+    flex-shrink: 0;
+    width: ${rem(320)};
+    padding-right: ${rem(24)};
   }
 `;
 
+export const BlogContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  max-width: ${rem(1200)};
+  margin: auto;
+
+  ${blogBreakpoint} {
+    flex-direction: row;
+  }
+`;
 export const BlogContentText = styled.div``;
 
 export const BlogContent = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: ${rem(700)};
+  max-width: ${rem(1200)};
   margin: auto;
   padding-bottom: ${rem(60)};
 
   ${mediaUp.lg`
     flex-direction: row;
-    max-width: ${rem(1000)};
   `};
 
   p, li {

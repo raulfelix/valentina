@@ -26,7 +26,7 @@ export const HeaderLogo = styled(Link)<HeaderLogoProps>`
   text-align: center;
   text-decoration: none;
   width: 100%;
-  max-width: ${({ $isSmall }) => ($isSmall ? rem(400) : rem(1000))};
+  max-width: ${({ $isSmall }) => ($isSmall ? rem(280) : rem(1000))};
 
   &:focus {
     ${baseFocusState}

@@ -34,8 +34,12 @@ export const ContactIcon = styled.a`
     width: ${rem(24)};
   }
 
-  &:first-child img {
-    width: ${rem(18)};
+  img.facebook {
+    width: 38px;
+  }
+
+  img.tweet {
+    width: 18px;
   }
 `;
 

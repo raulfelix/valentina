@@ -32,7 +32,7 @@ export const Contact = () => (
           href="https://twitter.com/Valentina4Pres"
           target="_blank"
         >
-          <img src={twitter} alt="Twitter" width={100} />
+          <img className="tweet" src={twitter} alt="Twitter" width={100} />
         </Styled.ContactIcon>
         <Styled.ContactIcon
           href="https://www.linkedin.com/in/valentinacarrizo/"
