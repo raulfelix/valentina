@@ -14,6 +14,7 @@ export const fontFamilyLuckiestGuy =
 export const fontFamilyElderkin = css`
   font-family: Elderkin, Arial, sans-serif;
   letter-spacing: 0.3px;
+  font-weight: normal;
 `;
 export const fontFamilyMerriweather =
   "font-family: merriweather, Arial, sans-serif;";
