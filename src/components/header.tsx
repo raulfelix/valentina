@@ -4,8 +4,13 @@ import * as Styled from "./header.styles";
 
 import logo from "../images/v.svg";
 
-export const Header = ({ isSmall }: { isSmall?: boolean }) => {
-  console.log(isSmall);
+export const Header = ({
+  isSmall,
+  bannerText,
+}: {
+  isSmall?: boolean;
+  bannerText?: string;
+}) => {
   return (
     <>
       <Styled.HeaderNav>
@@ -28,7 +33,7 @@ export const Header = ({ isSmall }: { isSmall?: boolean }) => {
           <img src={logo} alt="valentina" />
           {!isSmall && (
             <Styled.HeaderBanner>
-              {"JOURNALIST . WRITER . RANTER"}
+              {bannerText || "JOURNALIST . WRITER . RANTER"}
             </Styled.HeaderBanner>
           )}
         </Styled.HeaderLogo>

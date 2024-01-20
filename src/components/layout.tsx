@@ -9,13 +9,14 @@ import * as Styled from "./layout.styles";
 type Props = {
   children: React.ReactNode;
   withSmallHeader?: boolean;
+  bannerText?: string;
 };
 
-const Layout = ({ children, withSmallHeader }: Props) => {
+const Layout = ({ children, withSmallHeader, bannerText }: Props) => {
   return (
     <>
       <GlobalStyle />
-      <Header isSmall={withSmallHeader} />
+      <Header isSmall={withSmallHeader} bannerText={bannerText} />
       <Styled.Layout>{children}</Styled.Layout>
       {/* <BackToTop /> */}
       <Contact />

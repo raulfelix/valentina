@@ -16,10 +16,7 @@ const CategoryPage = (props: PageProps) => {
   } = props;
 
   return (
-    <Layout>
-      <Styled.CategoryHeader category={category}>
-        <CategoryImageLabel>{category?.toUpperCase()}</CategoryImageLabel>
-      </Styled.CategoryHeader>
+    <Layout bannerText={category}>
       <Styled.CategoryBlogList>
         <Grid>
           <Row>
