@@ -71,6 +71,7 @@ export const BlogCategory = styled(Link)`
 
 export const BlogSideText = styled.div`
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   gap: 32px;
   width: 100%;
