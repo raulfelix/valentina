@@ -1,9 +1,17 @@
 import styled from "styled-components";
 
 import { rem } from "../../styles/styles";
+import { CategoryList } from "../categories/categories.styles";
 
 export const HomeSection = styled.div`
   margin-bottom: ${rem(80)};
+
+  ${CategoryList} {
+    display: none;
+    @media (min-width: 768px) {
+      display: flex;
+    }
+  }
 `;
 
 export const HomeMainPost = styled.div`

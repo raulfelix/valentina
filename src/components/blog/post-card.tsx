@@ -15,7 +15,7 @@ type Props = {
   isSquare?: boolean;
 };
 
-export const PostCard = ({ excerpt, slug, frontmatter, isSquare }: Props) => {
+export const PostCard = ({ excerpt, slug, frontmatter }: Props) => {
   return (
     <Styled.PostCard>
       <Styled.PostCardLink to={`/blog/${slug}`} />

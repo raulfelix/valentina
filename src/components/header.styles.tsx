@@ -84,14 +84,14 @@ export const HeaderBanner = styled.div`
   left: 50%;
   transform: translateX(-50%);
 
-  @media (min-width: 421px) {
+  @media (min-width: 438px) {
     font-size: ${rem(16)};
     line-height: ${rem(22)};
     padding: ${rem(12)};
     padding-bottom: ${rem(8)};
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: 610px) {
     font-size: ${rem(24)};
     line-height: ${rem(26)};
     bottom: ${rem(4)};
@@ -101,4 +101,10 @@ export const HeaderBanner = styled.div`
     font-size: ${rem(30)};
     line-height: ${rem(32)};
   }
+`;
+
+export const HeaderMobileNav = styled.div`
+  position: absolute;
+  left: ${rem(16)};
+  top: ${rem(16)};
 `;
