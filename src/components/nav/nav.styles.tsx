@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import { rem, standardFocusState } from "../../styles/styles";
-import { grey1, grey4 } from "../../styles/colour.styles";
+import { grey1, grey10, grey4, highlight } from "../../styles/colour.styles";
 
 export const Nav = styled.button`
   background-color: transparent;
@@ -24,7 +24,7 @@ export const Nav = styled.button`
 `;
 
 export const NavContent = styled.div`
-  border: 1px solid ${grey4};
+  border: 2px solid ${grey10};
   background-color: ${grey1};
   width: ${rem(300)};
   position: absolute;
@@ -42,7 +42,7 @@ export const NavContent = styled.div`
   }
 
   ul:not(:first-child) {
-    border-top: 1px solid ${grey4};
+    border-top: 1px dashed ${grey10};
     margin-top: ${rem(20)};
     padding-top: ${rem(20)};
   }
