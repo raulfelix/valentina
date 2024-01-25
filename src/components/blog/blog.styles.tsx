@@ -144,11 +144,12 @@ export const BlogContent = styled.div`
   }
 
   blockquote {
-    color: #FF89C9;
+    background-color: ${highlight};
     margin: 0 0 ${rem(32)} 0;
-    padding: 0 ${rem(24)};
-    p {
-      color: #FF89C9;
+    padding: ${rem(24)};
+    p:last-child {
+      color: ${grey10};
+      margin-bottom: 0;
     }
   }
 
@@ -172,7 +173,8 @@ export const BlogContent = styled.div`
 
 export const BlogList = styled.div`
   margin: auto;
-  max-width: ${rem(800)};
+  margin-bottom: ${rem(80)};
+  max-width: ${rem(1000)};
 `;
 
 export const EmbedWrapper = styled.div`
