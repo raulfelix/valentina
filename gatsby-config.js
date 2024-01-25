@@ -62,6 +62,7 @@ module.exports = {
       resolve: "gatsby-plugin-sitemap",
       options: {
         excludes: ["/blog/*"],
+        createLinkInHead: true,
       },
     },
   ],
