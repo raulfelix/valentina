@@ -110,11 +110,7 @@ export const query = graphql`
           publisher_link
           hero_image {
             childImageSharp {
-              fixed(width: 800) {
-                srcWebp
-                srcSetWebp
-                originalName
-              }
+              gatsbyImageData(width: 400, placeholder: BLURRED, layout: FIXED)
             }
           }
           hero_image_credit_link

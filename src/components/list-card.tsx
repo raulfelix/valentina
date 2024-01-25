@@ -1,7 +1,6 @@
 import React from "react";
 
 import * as Styled from "./list-card.styles";
-import { PostCardCategory } from "./blog/post-card.styles";
 
 type Props = {
   frontmatter: {
@@ -12,13 +11,7 @@ type Props = {
     publisher_name: string;
     external_link: string;
     slug: string;
-    hero_image: {
-      childImageSharp: {
-        fixed: {
-          srcWebp: string;
-        };
-      };
-    };
+    hero_image: any;
   };
 };
 
@@ -27,7 +20,10 @@ export const ListCard = ({ frontmatter }: Props) =>
     <Styled.ListCardAnchor href={frontmatter.external_link} target="_blank">
       <Styled.ListCardImageWrapper>
         <Styled.ListCardImage
-          imageUrl={frontmatter.hero_image.childImageSharp.fixed.srcWebp}
+          imageUrl={
+            frontmatter.hero_image.childImageSharp.gatsbyImageData.images
+              .fallback.src
+          }
         />
         <Styled.ListCardCategory>
           {frontmatter.publisher_name}
@@ -44,7 +40,10 @@ export const ListCard = ({ frontmatter }: Props) =>
     <Styled.ListCard to={`/blog/${frontmatter.slug}`}>
       <Styled.ListCardImageWrapper>
         <Styled.ListCardImage
-          imageUrl={frontmatter.hero_image.childImageSharp.fixed.srcWebp}
+          imageUrl={
+            frontmatter.hero_image.childImageSharp.gatsbyImageData.images
+              .fallback.src
+          }
         />
         <Styled.ListCardCategory>
           {frontmatter.categories[0]}

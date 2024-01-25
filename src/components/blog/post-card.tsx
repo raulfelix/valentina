@@ -15,14 +15,16 @@ type Props = {
 };
 
 export const PostCard = ({ excerpt, frontmatter }: Props) => {
-  console.log(frontmatter.hero_image.childImageSharp.fixed?.srcWebp);
   return (
     <Styled.PostCard>
       <Styled.PostCardLink to={`/blog/${frontmatter.slug}`} />
       <Styled.PostCardHeader>
         <Styled.PostCardImageWrapper>
           <Styled.PostCardImage
-            $imageUrl={frontmatter.hero_image.childImageSharp.fixed?.srcWebp}
+            $imageUrl={
+              frontmatter.hero_image.childImageSharp.gatsbyImageData.images
+                .fallback.src
+            }
           />
         </Styled.PostCardImageWrapper>
         <Styled.PostCardCategory>

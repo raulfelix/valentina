@@ -25,7 +25,10 @@ export const PublicationCardLarge = ({ frontmatter }: Props) => {
     <Styled.PublicationCardLarge>
       <Styled.PublicationCardImageWrapper>
         <Styled.PublicationCardImage
-          imageUrl={frontmatter.hero_image?.childImageSharp?.fixed?.srcWebp}
+          imageUrl={
+            frontmatter.hero_image.childImageSharp.gatsbyImageData.images
+              .fallback.src
+          }
         />
         <Styled.PublicationCardCategory
           href={frontmatter.publisher_link}

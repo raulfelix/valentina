@@ -27,13 +27,7 @@ export const PublicationsList = () => {
             publisher_link
             hero_image {
               childImageSharp {
-                fixed(width: 400) {
-                  tracedSVG
-                  aspectRatio
-                  srcWebp
-                  srcSetWebp
-                  originalName
-                }
+                gatsbyImageData(width: 400, placeholder: BLURRED, layout: FIXED)
               }
             }
           }

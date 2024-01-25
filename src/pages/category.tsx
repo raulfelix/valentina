@@ -43,38 +43,32 @@ export const Head = (props: HeadProps) => {
   );
 };
 
-export const query = graphql`
-  query categoryList($category: [String!]) {
-    allMdx(
-      sort: { frontmatter: { date: DESC } }
-      filter: { frontmatter: { categories: { in: $category } } }
-    ) {
-      nodes {
-        id
-        excerpt
-        frontmatter {
-          hero_image_credit_link
-          hero_image_credit_text
-          date(formatString: "DD MMMM yyyy")
-          title
-          subtitle
-          slug
-          categories
-          publisher_name
-          external_link
-          hero_image {
-            childImageSharp {
-              fixed(width: 800) {
-                srcWebp
-                srcSetWebp
-                originalName
-              }
-            }
+export const query = graphql`query categoryList($category: [String!]) {
+  allMdx(
+    sort: {frontmatter: {date: DESC}}
+    filter: {frontmatter: {categories: {in: $category}}}
+  ) {
+    nodes {
+      id
+      excerpt
+      frontmatter {
+        hero_image_credit_link
+        hero_image_credit_text
+        date(formatString: "DD MMMM yyyy")
+        title
+        subtitle
+        slug
+        categories
+        publisher_name
+        external_link
+        hero_image {
+          childImageSharp {
+            gatsbyImageData(width: 800, placeholder: BLURRED, layout: FIXED)
           }
         }
       }
     }
   }
-`;
+}`;
 
 export default CategoryPage;

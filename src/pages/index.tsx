@@ -86,37 +86,31 @@ const IndexPage = ({ data }: PageProps<DataProps>) => {
   );
 };
 
-export const query = graphql`
-  {
-    allMdx(
-      limit: 3
-      sort: { frontmatter: { date: DESC } }
-      filter: { internal: { contentFilePath: { regex: "/blog/" } } }
-    ) {
-      nodes {
-        id
-        excerpt
-        frontmatter {
-          slug
-          hero_image_credit_link
-          hero_image_credit_text
-          date
-          title
-          categories
-          hero_image {
-            childImageSharp {
-              fixed(width: 800) {
-                srcWebp
-                srcSetWebp
-                originalName
-              }
-            }
+export const query = graphql`{
+  allMdx(
+    limit: 3
+    sort: {frontmatter: {date: DESC}}
+    filter: {internal: {contentFilePath: {regex: "/blog/"}}}
+  ) {
+    nodes {
+      id
+      excerpt
+      frontmatter {
+        slug
+        hero_image_credit_link
+        hero_image_credit_text
+        date
+        title
+        categories
+        hero_image {
+          childImageSharp {
+            gatsbyImageData(width: 800, placeholder: BLURRED, layout: FIXED)
           }
         }
       }
     }
   }
-`;
+}`;
 
 export default IndexPage;
 

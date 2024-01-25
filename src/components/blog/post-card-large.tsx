@@ -22,7 +22,10 @@ export const PostCardLarge = ({ excerpt, frontmatter }: Props) => {
       <Styled.PostCardHeader>
         <Styled.PostCardImageWrapper>
           <Styled.PostCardImage
-            $imageUrl={frontmatter.hero_image.childImageSharp.fixed.srcWebp}
+            $imageUrl={
+              frontmatter.hero_image.childImageSharp.gatsbyImageData.images
+                .fallback.src
+            }
           />
         </Styled.PostCardImageWrapper>
         <Styled.PostCardCategory>
