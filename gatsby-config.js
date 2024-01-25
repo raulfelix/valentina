@@ -9,6 +9,7 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-image",
+
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-mdx",
@@ -55,6 +56,12 @@ module.exports = {
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: "standalone",
         icon: `${__dirname}/src/images/icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        excludes: ["/blog/*"],
       },
     },
   ],
