@@ -35,7 +35,7 @@ export const HeaderNav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: ${rem(24)} 0;
+  padding: ${rem(24)} 0;
 
   ul {
     display: flex;

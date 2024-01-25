@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import { rem, standardFocusState } from "../../styles/styles";
-import { grey1, grey10, grey4, highlight } from "../../styles/colour.styles";
+import { grey1, grey10 } from "../../styles/colour.styles";
 
 export const Nav = styled.button`
   background-color: transparent;
