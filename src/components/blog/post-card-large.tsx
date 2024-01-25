@@ -1,4 +1,4 @@
-import { IGatsbyImageData } from "gatsby-plugin-image";
+import { IGatsbyImageData, getImage } from "gatsby-plugin-image";
 import React from "react";
 import { ROUTE_CATEGORY } from "../../constants";
 
@@ -11,19 +11,18 @@ type Props = {
     date: string;
     hero_image: IGatsbyImageData;
   };
-  slug: string;
   excerpt: string;
 };
 
-export const PostCardLarge = ({ excerpt, slug, frontmatter }: Props) => {
+export const PostCardLarge = ({ excerpt, frontmatter }: Props) => {
   return (
     <Styled.PostCardLarge>
-      <Styled.PostCardLink to={`/blog/${slug}`} />
+      <Styled.PostCardLink to={`/blog/${frontmatter.slug}`} />
 
       <Styled.PostCardHeader>
         <Styled.PostCardImageWrapper>
           <Styled.PostCardImage
-            imageUrl={frontmatter.hero_image.childImageSharp.fixed.srcWebp}
+            $imageUrl={frontmatter.hero_image.childImageSharp.fixed.srcWebp}
           />
         </Styled.PostCardImageWrapper>
         <Styled.PostCardCategory>

@@ -12,14 +12,14 @@ export const PublicationsList = () => {
   const data = useStaticQuery(graphql`
     query {
       allMdx(
-        filter: { fileAbsolutePath: { regex: "/(publication)/" } }
-        sort: { order: DESC, fields: frontmatter___date }
+        filter: { internal: { contentFilePath: { regex: "/publication/" } } }
+        sort: { frontmatter: { date: DESC } }
       ) {
         nodes {
           id
-          slug
           frontmatter {
             date
+            slug
             title
             subtitle
             external_link

@@ -3,7 +3,6 @@ import * as React from "react";
 
 import Layout from "../components/layout";
 import { Col, Grid, Row } from "../styles/grid.styles";
-import { PublicationCard } from "../components/publications/publication-card";
 import * as Styled from "../components/publications/publications.styles";
 
 import honisoit from "../components/publications/honisoit.png";
@@ -97,8 +96,8 @@ const PublicationsPage = ({ data }: PageProps<DataProps>) => {
 export const query = graphql`
   query {
     allMdx(
-      filter: { fileAbsolutePath: { regex: "/(publication)/" } }
-      sort: { order: DESC, fields: frontmatter___date }
+      filter: { internal: { contentFilePath: { regex: "/publication/" } } }
+      sort: { frontmatter: { date: DESC } }
     ) {
       nodes {
         id

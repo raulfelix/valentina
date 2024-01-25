@@ -4,7 +4,6 @@ import * as Styled from "./list-card.styles";
 import { PostCardCategory } from "./blog/post-card.styles";
 
 type Props = {
-  slug: string;
   frontmatter: {
     date: string;
     title: string;
@@ -12,6 +11,7 @@ type Props = {
     categories: string[];
     publisher_name: string;
     external_link: string;
+    slug: string;
     hero_image: {
       childImageSharp: {
         fixed: {
@@ -22,7 +22,7 @@ type Props = {
   };
 };
 
-export const ListCard = ({ slug, frontmatter }: Props) =>
+export const ListCard = ({ frontmatter }: Props) =>
   frontmatter.external_link ? (
     <Styled.ListCardAnchor href={frontmatter.external_link} target="_blank">
       <Styled.ListCardImageWrapper>
@@ -41,7 +41,7 @@ export const ListCard = ({ slug, frontmatter }: Props) =>
       </Styled.ListCardContent>
     </Styled.ListCardAnchor>
   ) : (
-    <Styled.ListCard to={slug}>
+    <Styled.ListCard to={`/blog/${frontmatter.slug}`}>
       <Styled.ListCardImageWrapper>
         <Styled.ListCardImage
           imageUrl={frontmatter.hero_image.childImageSharp.fixed.srcWebp}

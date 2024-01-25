@@ -22,7 +22,7 @@ const CategoryPage = (props: PageProps) => {
             {data.allMdx.nodes.map((node) => (
               <Col sm={6} key={node.id}>
                 <ListCard
-                  slug={`/blog/${node.slug}`}
+                  slug={`/blog/${node.frontmatter.slug}`}
                   frontmatter={node.frontmatter}
                 />
               </Col>
@@ -46,12 +46,11 @@ export const Head = (props: HeadProps) => {
 export const query = graphql`
   query categoryList($category: [String!]) {
     allMdx(
-      sort: { order: DESC, fields: frontmatter___date }
+      sort: { frontmatter: { date: DESC } }
       filter: { frontmatter: { categories: { in: $category } } }
     ) {
       nodes {
         id
-        slug
         excerpt
         frontmatter {
           hero_image_credit_link
@@ -59,6 +58,7 @@ export const query = graphql`
           date(formatString: "DD MMMM yyyy")
           title
           subtitle
+          slug
           categories
           publisher_name
           external_link

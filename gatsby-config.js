@@ -9,12 +9,10 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-image",
-
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
-    "gatsby-plugin-mdx",
+    "gatsby-plugin-slug",
     "gatsby-plugin-styled-components",
-    "gatsby-remark-images",
     "gatsby-plugin-netlify",
     {
       resolve: `gatsby-plugin-mdx`,
@@ -23,7 +21,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 1200,
+              maxWidth: 1500,
             },
           },
         ],

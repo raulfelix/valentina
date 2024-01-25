@@ -59,7 +59,6 @@ const BlogPage = ({ data }: PageProps<DataProps>) => {
                 <Col md={6} key={node.id}>
                   <ListCard
                     excerpt={node.excerpt}
-                    slug={node.slug}
                     frontmatter={node.frontmatter}
                   />
                 </Col>
@@ -73,16 +72,16 @@ const BlogPage = ({ data }: PageProps<DataProps>) => {
 };
 
 export const query = graphql`
-  query {
+  {
     allMdx(
-      sort: { order: DESC, fields: frontmatter___date }
-      filter: { fileAbsolutePath: { regex: "/(blog)/" } }
+      sort: { frontmatter: { date: DESC } }
+      filter: { internal: { contentFilePath: { regex: "/blog/" } } }
     ) {
       nodes {
         id
-        slug
         excerpt
         frontmatter {
+          slug
           hero_image_credit_link
           hero_image_credit_text
           date(formatString: "DD MMMM yyyy")

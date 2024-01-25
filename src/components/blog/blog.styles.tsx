@@ -160,6 +160,9 @@ export const BlogContent = styled.div`
   }
 
   // caption an image
+  .gatsby-resp-image-wrapper {
+    margin-bottom: ${rem(32)};
+  }
   .gatsby-resp-image-wrapper + em {
     display: block;
     font-size: ${rem(14)};

@@ -6,8 +6,8 @@ import { CategoryPill } from "../categories/categories";
 export const NavCategories = () => {
   const data = useStaticQuery(graphql`
     query Categories {
-      allMdx(filter: { fileAbsolutePath: { regex: "/(blog)/" } }) {
-        group(field: frontmatter___categories) {
+      allMdx(filter: { internal: { contentFilePath: { regex: "/blog/" } } }) {
+        group(field: { frontmatter: { categories: SELECT } }) {
           category: fieldValue
           totalCount
         }

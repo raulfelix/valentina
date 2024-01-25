@@ -42,12 +42,12 @@ export const PostCardImageWrapper = styled.div`
 `;
 
 type PostCardImageProps = {
-  imageUrl: string;
+  $imageUrl: string;
 };
 export const PostCardImage = styled.div.attrs<PostCardImageProps>(
-  ({ imageUrl }) => ({
+  ({ $imageUrl }) => ({
     style: {
-      backgroundImage: imageUrl ? `url(${imageUrl})` : "",
+      backgroundImage: $imageUrl ? `url(${$imageUrl})` : "",
     },
   })
 )<PostCardImageProps>`

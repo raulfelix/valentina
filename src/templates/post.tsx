@@ -1,24 +1,20 @@
-import * as React from "react";
+import React from "react";
 import { HeadProps, graphql } from "gatsby";
 import { MDXProvider } from "@mdx-js/react";
-import { MDXRenderer } from "gatsby-plugin-mdx";
+
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-import Layout from "../../components/layout";
-import { Col, Grid, Row } from "../../styles/grid.styles";
-import { Text } from "../../styles/typography.styles";
-import { BlogShare } from "../../components/blog/blog-share";
-import { Embed } from "../../components/blog/embed";
-import * as Styled from "../../components/blog/blog.styles";
-import { SEO } from "../../components/seo";
-import { ContactHr } from "../../components/contact.styles";
-import { SubStack } from "../../components/substack/substack";
+import Layout from "../components/layout";
+import { Col, Grid, Row } from "../styles/grid.styles";
+import { Text } from "../styles/typography.styles";
+import { BlogShare } from "../components/blog/blog-share";
+import { Embed } from "../components/blog/embed";
+import * as Styled from "../components/blog/blog.styles";
+import { SEO } from "../components/seo";
+import { ContactHr } from "../components/contact.styles";
+import { SubStack } from "../components/substack/substack";
 
-type Props = {
-  data: any;
-};
-
-const BlogPost = ({ data }: Props) => {
+export default function BlogPost({ data, children }) {
   const image = getImage(data.mdx.frontmatter.hero_image);
 
   return (
@@ -59,9 +55,7 @@ const BlogPost = ({ data }: Props) => {
                     <ContactHr />
                   </Styled.BlogHeader>
                   <Styled.BlogContent>
-                    <Styled.BlogContentText>
-                      <MDXRenderer>{data.mdx.body}</MDXRenderer>
-                    </Styled.BlogContentText>
+                    <Styled.BlogContentText>{children}</Styled.BlogContentText>
                   </Styled.BlogContent>
                 </div>
               </Styled.BlogContainer>
@@ -71,14 +65,15 @@ const BlogPost = ({ data }: Props) => {
       </MDXProvider>
     </Layout>
   );
-};
+}
 
-export const query = graphql`
-  query ($id: String) {
+export const pageQuery = graphql`
+  query ($id: String!) {
     mdx(id: { eq: $id }) {
       frontmatter {
         title
         subtitle
+        slug
         categories
         date(formatString: "MMMM D, YYYY")
         hero_image {
@@ -87,21 +82,20 @@ export const query = graphql`
           }
         }
       }
-      slug
       body
       excerpt
     }
   }
 `;
 
-export default BlogPost;
-
 export const Head = (props: HeadProps) => {
+  console.log(props);
+
   const image = getImage(props.data.mdx.frontmatter.hero_image);
   return (
     <SEO
       title={`${props.data.mdx.frontmatter.title} - Valentina Carrizo, Journalist, Writer`}
-      url={`blog/${props.data.mdx.slug}`}
+      url={`blog/${props.data.mdx.frontmatter.slug}`}
       description={props.data.mdx.frontmatter.excerpt}
       customImage={image.images.fallback.src}
     >

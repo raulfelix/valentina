@@ -51,13 +51,13 @@ const IndexPage = ({ data }: PageProps<DataProps>) => {
             <Col lg={12}>
               <Styled.HomePosts>
                 <Styled.HomeSecondaryPost>
-                  <PostCard {...secondPost} isSquare />
+                  <PostCard {...secondPost} />
                 </Styled.HomeSecondaryPost>
                 <Styled.HomeMainPost>
                   <PostCardLarge {...firstPost} />
                 </Styled.HomeMainPost>
                 <Styled.HomeSecondaryPost>
-                  <PostCard {...thirdPost} isSquare />
+                  <PostCard {...thirdPost} />
                 </Styled.HomeSecondaryPost>
               </Styled.HomePosts>
             </Col>
@@ -87,17 +87,17 @@ const IndexPage = ({ data }: PageProps<DataProps>) => {
 };
 
 export const query = graphql`
-  query {
+  {
     allMdx(
       limit: 3
-      sort: { order: DESC, fields: frontmatter___date }
-      filter: { fileAbsolutePath: { regex: "/(blog)/" } }
+      sort: { frontmatter: { date: DESC } }
+      filter: { internal: { contentFilePath: { regex: "/blog/" } } }
     ) {
       nodes {
         id
-        slug
         excerpt
         frontmatter {
+          slug
           hero_image_credit_link
           hero_image_credit_text
           date
