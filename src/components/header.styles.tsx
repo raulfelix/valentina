@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "gatsby";
 
-import { baseFocusState, rem } from "../styles/styles";
+import { rem, standardFocusState } from "../styles/styles";
 import { grey10, grey1, highlight } from "../styles/colour.styles";
 import {
   fontFamilyElderkin,
@@ -28,9 +28,7 @@ export const HeaderLogo = styled(Link)<HeaderLogoProps>`
   width: 100%;
   max-width: ${({ $isSmall }) => ($isSmall ? rem(280) : rem(1000))};
 
-  &:focus {
-    ${baseFocusState}
-  }
+  ${standardFocusState}
 `;
 
 export const HeaderNav = styled.nav`
@@ -65,9 +63,7 @@ export const HeaderNavLink = styled(Link)`
     text-decoration: none;
   }
 
-  &:focus {
-    ${baseFocusState}
-  }
+  ${standardFocusState}
 `;
 
 export const HeaderBanner = styled.div`
@@ -107,4 +103,23 @@ export const HeaderMobileNav = styled.div`
   position: absolute;
   left: ${rem(16)};
   top: ${rem(16)};
+`;
+
+export const HeaderSubscribe = styled.div`
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: -1px;
+
+  a {
+    ${fontFamilyElderkin}
+    background-color: ${grey10};
+    border: 1px dashed ${grey10};
+    border-top: none;
+    color: ${grey1};
+    border-radius: 0 0 0 16px;
+    display: block;
+    padding: ${rem(8)} ${rem(16)};
+    text-decoration: none;
+  }
 `;

@@ -2,7 +2,7 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 
 import { grey1, grey10 } from "../../styles/colour.styles";
-import { baseFocusState, rem } from "../../styles/styles";
+import { rem, standardFocusState } from "../../styles/styles";
 import {
   fontFamilyElderkin,
   fontFamilyMerriweather,
@@ -115,11 +115,7 @@ export const PostCardLink = styled(Link)`
   right: 0;
   z-index: 3;
 
-  &:hover {
-  }
-  &:focus {
-    ${baseFocusState}
-  }
+  ${standardFocusState}
 `;
 
 export const PostCardLarge = styled.div`

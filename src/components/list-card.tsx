@@ -1,6 +1,7 @@
 import React from "react";
 
 import * as Styled from "./list-card.styles";
+import { PostCardCategory } from "./blog/post-card.styles";
 
 type Props = {
   slug: string;
@@ -28,16 +29,15 @@ export const ListCard = ({ slug, frontmatter }: Props) =>
         <Styled.ListCardImage
           imageUrl={frontmatter.hero_image.childImageSharp.fixed.srcWebp}
         />
+        <Styled.ListCardCategory>
+          {frontmatter.publisher_name}
+        </Styled.ListCardCategory>
       </Styled.ListCardImageWrapper>
       <Styled.ListCardContent>
         <Styled.ListCardTitle>{frontmatter.title}</Styled.ListCardTitle>
         <Styled.ListCardDescription>
           {frontmatter.subtitle}
         </Styled.ListCardDescription>
-        <Styled.ListCardDetails>{frontmatter.date}</Styled.ListCardDetails>
-        <Styled.ListCardCategory>
-          {frontmatter.publisher_name}
-        </Styled.ListCardCategory>
       </Styled.ListCardContent>
     </Styled.ListCardAnchor>
   ) : (
@@ -46,13 +46,15 @@ export const ListCard = ({ slug, frontmatter }: Props) =>
         <Styled.ListCardImage
           imageUrl={frontmatter.hero_image.childImageSharp.fixed.srcWebp}
         />
+        <Styled.ListCardCategory>
+          {frontmatter.categories[0]}
+        </Styled.ListCardCategory>
       </Styled.ListCardImageWrapper>
       <Styled.ListCardContent>
         <Styled.ListCardTitle>{frontmatter.title}</Styled.ListCardTitle>
         <Styled.ListCardDescription>
           {frontmatter.subtitle}
         </Styled.ListCardDescription>
-        <Styled.ListCardDetails>{frontmatter.date}</Styled.ListCardDetails>
       </Styled.ListCardContent>
     </Styled.ListCard>
   );

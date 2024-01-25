@@ -1,13 +1,8 @@
 import styled from "styled-components";
 
 import { grey1, grey10, grey3, highlight } from "../../styles/colour.styles";
-import { baseFocusState, rem, standardFocusState } from "../../styles/styles";
-import {
-  fontFamilyElderkin,
-  fontSize14,
-  fontSize20,
-  secondaryFontMedium,
-} from "../../styles/typography.styles";
+import { rem, standardFocusState } from "../../styles/styles";
+import { fontFamilyElderkin, fontSize20 } from "../../styles/typography.styles";
 
 export const List = styled.div`
   margin: auto;
@@ -67,9 +62,7 @@ export const PublicationFilters = styled.div`
       cursor: pointer;
     }
 
-    &:focus {
-      ${baseFocusState}
-    }
+    ${standardFocusState}
   }
 `;
 

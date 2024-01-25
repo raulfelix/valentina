@@ -12,6 +12,8 @@ import icon from "../components/publications/icon.png";
 import grazia from "../components/publications/grazia.png";
 import gluestore from "../components/publications/gluestore.png";
 import { SEO } from "../components/seo";
+import { BlogList } from "../components/blog/blog.styles";
+import { ListCard } from "../components/list-card";
 
 type DataProps = {
   allMdx: {
@@ -59,33 +61,35 @@ const PublicationsPage = ({ data }: PageProps<DataProps>) => {
   const keys = Object.keys(pubGroups);
   return (
     <Layout>
-      <Grid>
-        <Row>
-          <Col>
-            <Styled.List>
-              <Styled.PublicationFilters>
+      <BlogList $marginBottom={false}>
+        <Grid>
+          <Row>
+            <Col>
+              <Styled.List>
+                <Styled.PublicationFilters>
+                  {keys.map((key) => (
+                    <a key={key} href={`#${key}`}>
+                      {key}
+                    </a>
+                  ))}
+                </Styled.PublicationFilters>
                 {keys.map((key) => (
-                  <a key={key} href={`#${key}`}>
-                    {key}
-                  </a>
+                  <Styled.PublicationGroup key={key} id={key}>
+                    <Styled.PublicationIcon>
+                      <img src={getIcon(key)} alt={key} height={40} />
+                    </Styled.PublicationIcon>
+                    <Styled.PublicationCards>
+                      {pubGroups[key].map((p) => (
+                        <ListCard key={p.id} frontmatter={p.frontmatter} />
+                      ))}
+                    </Styled.PublicationCards>
+                  </Styled.PublicationGroup>
                 ))}
-              </Styled.PublicationFilters>
-              {keys.map((key) => (
-                <Styled.PublicationGroup key={key} id={key}>
-                  <Styled.PublicationIcon>
-                    <img src={getIcon(key)} alt={key} height={40} />
-                  </Styled.PublicationIcon>
-                  <Styled.PublicationCards>
-                    {pubGroups[key].map((p) => (
-                      <PublicationCard key={p.id} frontmatter={p.frontmatter} />
-                    ))}
-                  </Styled.PublicationCards>
-                </Styled.PublicationGroup>
-              ))}
-            </Styled.List>
-          </Col>
-        </Row>
-      </Grid>
+              </Styled.List>
+            </Col>
+          </Row>
+        </Grid>
+      </BlogList>
     </Layout>
   );
 };

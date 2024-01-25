@@ -5,10 +5,11 @@ import type { PageProps } from "gatsby";
 import Layout from "../../components/layout";
 import { Col, Grid, Row } from "../../styles/grid.styles";
 import { ListCard } from "../../components/list-card";
-import { BlogList } from "../../components/blog/blog.styles";
+import { BlogCategories, BlogList } from "../../components/blog/blog.styles";
 import { Categories } from "../../components/categories/categories";
 import { LayoutContent } from "../../components/layout.styles";
 import { SEO } from "../../components/seo";
+import { PostCard } from "../../components/blog/post-card";
 
 type DataProps = {
   allMdx: {
@@ -25,23 +26,44 @@ type DataProps = {
 };
 
 const BlogPage = ({ data }: PageProps<DataProps>) => {
+  const post1 = data.allMdx.nodes[0];
+  const post2 = data.allMdx.nodes[1];
+  const filtered =
+    data.allMdx.nodes.length > 1
+      ? data.allMdx.nodes.filter((n, index) => index > 1)
+      : [];
+
   return (
-    <Layout>
+    <Layout bannerText="Personal Blog">
       <LayoutContent>
-        <Categories />
+        <BlogCategories>
+          <Categories />
+        </BlogCategories>
         <BlogList>
           <Grid>
             <Row>
-              <Col>
-                {data.allMdx.nodes.map((node) => (
+              <Col sm={6}>
+                <PostCard {...post1} />
+              </Col>
+              <Col sm={6}>
+                <PostCard {...post2} />
+              </Col>
+            </Row>
+          </Grid>
+        </BlogList>
+
+        <BlogList $marginBottom={false}>
+          <Grid>
+            <Row>
+              {filtered.map((node) => (
+                <Col md={6} key={node.id}>
                   <ListCard
-                    key={node.id}
                     excerpt={node.excerpt}
                     slug={node.slug}
                     frontmatter={node.frontmatter}
                   />
-                ))}
-              </Col>
+                </Col>
+              ))}
             </Row>
           </Grid>
         </BlogList>

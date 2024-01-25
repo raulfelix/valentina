@@ -8,11 +8,11 @@ import Layout from "../../components/layout";
 import { Col, Grid, Row } from "../../styles/grid.styles";
 import { Text } from "../../styles/typography.styles";
 import { BlogShare } from "../../components/blog/blog-share";
-import { CategoryPill } from "../../components/categories/categories";
 import { Embed } from "../../components/blog/embed";
 import * as Styled from "../../components/blog/blog.styles";
 import { SEO } from "../../components/seo";
 import { ContactHr } from "../../components/contact.styles";
+import { SubStack } from "../../components/substack/substack";
 
 type Props = {
   data: any;
@@ -35,14 +35,19 @@ const BlogPost = ({ data }: Props) => {
               </Styled.BlogHeroImage>
               <Styled.BlogContainer>
                 <Styled.BlogSideText>
-                  <Styled.BlogCategory
-                    to={`/category/${
-                      data.mdx.frontmatter?.categories?.[0] || ""
-                    }`}
-                  >
-                    {data.mdx.frontmatter?.categories?.[0]}
-                  </Styled.BlogCategory>
-                  <BlogShare title={data.mdx.frontmatter.title} />
+                  <Styled.BlogPageStickyContent>
+                    <Styled.BlogCategory
+                      to={`/category/${
+                        data.mdx.frontmatter?.categories?.[0] || ""
+                      }`}
+                    >
+                      {data.mdx.frontmatter?.categories?.[0]}
+                    </Styled.BlogCategory>
+                    <BlogShare title={data.mdx.frontmatter.title} />
+                    <Styled.BlogPageSubStack>
+                      <SubStack />
+                    </Styled.BlogPageSubStack>
+                  </Styled.BlogPageStickyContent>
                 </Styled.BlogSideText>
                 <div>
                   <Styled.BlogHeader>

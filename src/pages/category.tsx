@@ -5,9 +5,8 @@ import type { HeadProps } from "gatsby";
 import Layout from "../components/layout";
 import { ListCard } from "../components/list-card";
 import { Col, Grid, Row } from "../styles/grid.styles";
-import * as Styled from "../components/category.styles";
-import { CategoryImageLabel } from "../components/categories/categories.styles";
 import { SEO } from "../components/seo";
+import { BlogList } from "../components/blog/blog.styles";
 
 const CategoryPage = (props: PageProps) => {
   const {
@@ -17,22 +16,20 @@ const CategoryPage = (props: PageProps) => {
 
   return (
     <Layout bannerText={category}>
-      <Styled.CategoryBlogList>
+      <BlogList>
         <Grid>
           <Row>
-            <Col>
-              {data.allMdx.nodes.map((node) => (
+            {data.allMdx.nodes.map((node) => (
+              <Col sm={6} key={node.id}>
                 <ListCard
-                  key={node.id}
-                  excerpt={node.excerpt}
                   slug={`/blog/${node.slug}`}
                   frontmatter={node.frontmatter}
                 />
-              ))}
-            </Col>
+              </Col>
+            ))}
           </Row>
         </Grid>
-      </Styled.CategoryBlogList>
+      </BlogList>
     </Layout>
   );
 };

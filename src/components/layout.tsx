@@ -20,6 +20,7 @@ const Layout = ({ children, withSmallHeader, bannerText }: Props) => {
       <Styled.Layout>{children}</Styled.Layout>
       {/* <BackToTop /> */}
       <Contact />
+      <script src="https://substackapi.com/widget.js" async></script>
     </>
   );
 };

@@ -5,7 +5,6 @@ import {
   fontFamilyElderkin,
   fontSizeLineHeight14,
 } from "../../styles/typography.styles";
-import { ContactIcon } from "../contact.styles";
 import { blogBreakpoint } from "./blog.styles";
 import { grey10, highlight } from "../../styles/colour.styles";
 
@@ -17,6 +16,7 @@ export const BlogShare = styled.div`
 
     ${blogBreakpoint} {
       flex-direction: column;
+      margin-bottom: ${rem(40)};
     }
   }
 `;

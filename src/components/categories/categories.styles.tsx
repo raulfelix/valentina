@@ -1,15 +1,13 @@
 import { Link } from "gatsby";
 import styled from "styled-components";
 
-import { grey1, grey10, highlight } from "../../styles/colour.styles";
-import { baseFocusState, rem } from "../../styles/styles";
+import { grey1, grey10 } from "../../styles/colour.styles";
+import { rem, standardFocusState } from "../../styles/styles";
 import {
   fontFamilyElderkin,
   fontSize16,
   fontSize30,
-  fontSize40,
   fontSizeLineHeight16,
-  headlineFont,
   secondaryFont,
   secondaryFontMedium,
 } from "../../styles/typography.styles";
@@ -37,13 +35,6 @@ export const Category = styled(Link)`
   padding: 0 ${rem(16)};
   position: relative;
   text-decoration: none !important;
-`;
-
-export const CategoryImageLabel = styled.div`
-  color: ${grey10};
-  font-family: ${headlineFont};
-  font-size: ${fontSize40};
-  text-decoration: none;
 `;
 
 export const CategoryLabel = styled.div`
@@ -86,7 +77,5 @@ export const CategoryPill = styled(Link)`
     color: ${grey1};
   }
 
-  &:focus {
-    ${baseFocusState}
-  }
+  ${standardFocusState}
 `;

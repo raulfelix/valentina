@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { grey1, grey10, highlight } from "../../styles/colour.styles";
 
-import { baseFocusState, rem } from "../../styles/styles";
+import { rem, standardFocusState } from "../../styles/styles";
 import {
   fontFamilyElderkin,
   fontFamilyMerriweather,
@@ -43,9 +43,8 @@ export const PublicationCardTitle = styled.a`
   &:hover {
     text-decoration: underline;
   }
-  &:focus {
-    ${baseFocusState}
-  }
+
+  ${standardFocusState}
 `;
 
 export const PublicationCardDescription = styled.p`
@@ -71,9 +70,7 @@ export const PublicationCardCategory = styled.a`
   right: 0;
   top: -${rem(12)};
 
-  &:focus {
-    ${baseFocusState}
-  }
+  ${standardFocusState}
 
   &:hover {
     background-color: ${highlight};

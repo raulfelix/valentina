@@ -84,10 +84,6 @@ export const MEDIA_XL = `(min-width: ${BREAKPOINT_XL}px)`;
 
 export type MinMediaQuery = typeof MEDIA_MD;
 
-export const baseFocusState = css`
-  outline: 2px solid ${grey10};
-`;
-
 export const standardFocusState = css`
   &:focus {
     outline: 0;

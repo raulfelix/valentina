@@ -1,8 +1,6 @@
-import { Link } from "gatsby";
 import styled, { css } from "styled-components";
 
-import { baseFocusState, rem } from "./styles";
-import { grey1, grey10 } from "./colour.styles";
+import { rem } from "./styles";
 
 export const secondaryFont = "calibre";
 export const secondaryFontMedium = "calibre-medium";
@@ -78,20 +76,4 @@ export const font40 = css`
 
 export const Text = styled.p`
   ${font20}
-`;
-
-export const StrongLink = styled(Link)`
-  ${font20}
-  color: ${grey10};
-  padding: ${rem(2)};
-  text-decoration: underline;
-
-  &:hover {
-    background-color: ${grey10};
-    color: ${grey1};
-  }
-
-  &:focus {
-    ${baseFocusState}
-  }
 `;

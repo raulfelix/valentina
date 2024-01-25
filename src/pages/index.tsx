@@ -11,6 +11,9 @@ import { PublicationsList } from "../components/home/publications-list";
 import { UsydFashion } from "../components/usyd-fashion/usyd-fashion";
 import { SEO } from "../components/seo";
 import * as Styled from "../components/home/home.styles";
+import { SubStack } from "../components/substack/substack";
+
+import bigarrow from "../components/substack/bigarrow.svg";
 
 type DataProps = {
   allMdx: {
@@ -59,7 +62,17 @@ const IndexPage = ({ data }: PageProps<DataProps>) => {
               </Styled.HomePosts>
             </Col>
           </Row>
-
+          <Styled.HomeSubStack>
+            <Styled.HomeSubStackContainer>
+              <img src={bigarrow} alt="" />
+              <SubStack />
+            </Styled.HomeSubStackContainer>
+            <Styled.HomeSubStackMessage>
+              <span>
+                No spam, no nonsense. Just a good dose of critical thinking
+              </span>
+            </Styled.HomeSubStackMessage>
+          </Styled.HomeSubStack>
           <Row>
             <Col lg={12}>
               <Heading46 as="h2">PUBLICATIONS</Heading46>

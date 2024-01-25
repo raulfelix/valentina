@@ -75,6 +75,11 @@ export const Header = ({
           </li>
         </ul>
       </Styled.HeaderNav>
+      <Styled.HeaderSubscribe>
+        <a href="https://goodtimesawfulposture.substack.com/" target="_blank">
+          Subscribe
+        </a>
+      </Styled.HeaderSubscribe>
       <Styled.Header id="header">
         <Styled.HeaderLogo to="/" aria-label="home" $isSmall={isSmall}>
           <img src={logo} alt="valentina" />

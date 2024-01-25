@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import styled from "styled-components";
 
 import { mediaUp, rem } from "../../styles/styles";
@@ -11,7 +12,7 @@ import {
   secondaryFontMedium,
 } from "../../styles/typography.styles";
 import { grey1, grey10, highlight } from "../../styles/colour.styles";
-import { Link } from "gatsby";
+import { Row } from "../../styles/grid.styles";
 
 export const blogBreakpoint = "@media (min-width: 900px)";
 
@@ -70,18 +71,14 @@ export const BlogCategory = styled(Link)`
 `;
 
 export const BlogSideText = styled.div`
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 32px;
   width: 100%;
   margin-bottom: ${rem(32)};
 
   ${blogBreakpoint} {
     display: block;
     flex-shrink: 0;
-    width: ${rem(320)};
-    padding-right: ${rem(24)};
+    width: ${rem(360)};
+    padding-right: ${rem(40)};
   }
 `;
 
@@ -171,10 +168,38 @@ export const BlogContent = styled.div`
   }
 `;
 
-export const BlogList = styled.div`
+export const BlogCategories = styled.div`
+  display: none;
+  ${blogBreakpoint} {
+    display: block;
+  }
+`;
+
+type BlogListProps = {
+  $marginBottom?: boolean;
+};
+export const BlogList = styled.div<BlogListProps>`
   margin: auto;
-  margin-bottom: ${rem(80)};
-  max-width: ${rem(1000)};
+  max-width: ${rem(1100)};
+  ${({ $marginBottom = true }) =>
+    $marginBottom &&
+    `
+    margin-bottom: ${rem(80)};
+  `}
+
+  ${Row} {
+    gap: 24px;
+  }
+  ${mediaUp.sm`
+    ${Row} {
+      gap: 0;
+    }
+  `}
+`;
+
+export const StickyContent = styled.div`
+  position: sticky;
+  top: ${rem(40)};
 `;
 
 export const EmbedWrapper = styled.div`
@@ -190,5 +215,25 @@ export const EmbedWrapper = styled.div`
     right: 0;
     width: 100%;
     height: 100%;
+  }
+`;
+
+export const BlogPageStickyContent = styled.div`
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 32px;
+
+  ${blogBreakpoint} {
+    display: block;
+    position: sticky;
+    top: ${rem(40)};
+  }
+`;
+
+export const BlogPageSubStack = styled.div`
+  display: none;
+  ${blogBreakpoint} {
+    display: block;
   }
 `;
