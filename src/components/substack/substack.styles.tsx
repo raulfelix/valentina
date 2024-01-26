@@ -81,6 +81,7 @@ export const SubStackInput = styled.div`
 
 export const SubStackJoin = styled.div`
   background-color: ${highlight};
+  color: ${grey1};
   border: none;
   border-radius: 3px;
   ${fontFamilyElderkin}

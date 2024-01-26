@@ -18,9 +18,7 @@ const Layout = ({ children, withSmallHeader, bannerText }: Props) => {
       <GlobalStyle />
       <Header isSmall={withSmallHeader} bannerText={bannerText} />
       <Styled.Layout>{children}</Styled.Layout>
-      {/* <BackToTop /> */}
       <Contact />
-      <script src="https://substackapi.com/widget.js" async></script>
     </>
   );
 };
