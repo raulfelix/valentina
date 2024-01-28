@@ -1,5 +1,6 @@
 import * as React from "react";
 import { MDXProvider } from "@mdx-js/react";
+import { StaticImage } from "gatsby-plugin-image";
 
 import Layout from "../components/layout";
 import { Col, Grid, Row } from "../styles/grid.styles";
@@ -7,7 +8,6 @@ import { SEO } from "../components/seo";
 import { Image } from "../components/blog/image";
 import * as Styled from "../components/about.styles";
 
-import whiteRabbit from "../about/white-rabbit.jpeg";
 import AboutText from "../about/about.mdx";
 
 export default function About() {
@@ -19,7 +19,11 @@ export default function About() {
             <Col>
               <Styled.AboutPage>
                 <Styled.AboutImage>
-                  <img src={whiteRabbit} width="200" height="200" centre />
+                  <StaticImage
+                    src={"../about/white-rabbit.jpeg"}
+                    alt="white rabbit"
+                    width={200}
+                  />
                 </Styled.AboutImage>
                 <AboutText />
               </Styled.AboutPage>
