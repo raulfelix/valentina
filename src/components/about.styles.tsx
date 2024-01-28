@@ -6,7 +6,7 @@ import {
   fontSize24,
   fontSize40,
 } from "../styles/typography.styles";
-import { blogBaseCss } from "../components/blog/blog.styles";
+import { blogBaseCss } from "./blog/blog.styles";
 
 export const AboutPage = styled.div`
   padding: ${rem(80)} 0;

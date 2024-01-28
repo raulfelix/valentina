@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 import { Col, Grid, Row } from "../styles/grid.styles";
 import { SEO } from "../components/seo";
 import { Image } from "../components/blog/image";
-import * as Styled from "./about.styles";
+import * as Styled from "../components/about.styles";
 
 import whiteRabbit from "../about/white-rabbit.jpeg";
 import AboutText from "../about/about.mdx";
