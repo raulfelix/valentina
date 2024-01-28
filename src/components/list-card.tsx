@@ -21,8 +21,8 @@ export const ListCard = ({ frontmatter }: Props) =>
       <Styled.ListCardImageWrapper>
         <Styled.ListCardImage
           imageUrl={
-            frontmatter.hero_image.childImageSharp.gatsbyImageData.images
-              .fallback.src
+            frontmatter.hero_image?.childImageSharp?.gatsbyImageData?.images
+              ?.fallback?.src
           }
         />
         <Styled.ListCardCategory>
@@ -41,12 +41,12 @@ export const ListCard = ({ frontmatter }: Props) =>
       <Styled.ListCardImageWrapper>
         <Styled.ListCardImage
           imageUrl={
-            frontmatter.hero_image.childImageSharp.gatsbyImageData.images
-              .fallback.src
+            frontmatter.hero_image?.childImageSharp?.gatsbyImageData?.images
+              ?.fallback?.src
           }
         />
         <Styled.ListCardCategory>
-          {frontmatter.categories[0]}
+          {frontmatter?.categories?.[0]}
         </Styled.ListCardCategory>
       </Styled.ListCardImageWrapper>
       <Styled.ListCardContent>

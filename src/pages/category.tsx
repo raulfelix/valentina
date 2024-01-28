@@ -21,10 +21,7 @@ const CategoryPage = (props: PageProps) => {
           <Row>
             {data.allMdx.nodes.map((node) => (
               <Col sm={6} key={node.id}>
-                <ListCard
-                  slug={`/blog/${node.frontmatter.slug}`}
-                  frontmatter={node.frontmatter}
-                />
+                <ListCard frontmatter={node.frontmatter} />
               </Col>
             ))}
           </Row>
@@ -43,32 +40,34 @@ export const Head = (props: HeadProps) => {
   );
 };
 
-export const query = graphql`query categoryList($category: [String!]) {
-  allMdx(
-    sort: {frontmatter: {date: DESC}}
-    filter: {frontmatter: {categories: {in: $category}}}
-  ) {
-    nodes {
-      id
-      excerpt
-      frontmatter {
-        hero_image_credit_link
-        hero_image_credit_text
-        date(formatString: "DD MMMM yyyy")
-        title
-        subtitle
-        slug
-        categories
-        publisher_name
-        external_link
-        hero_image {
-          childImageSharp {
-            gatsbyImageData(width: 800, placeholder: BLURRED, layout: FIXED)
+export const query = graphql`
+  query categoryList($category: [String!]) {
+    allMdx(
+      sort: { frontmatter: { date: DESC } }
+      filter: { frontmatter: { categories: { in: $category } } }
+    ) {
+      nodes {
+        id
+        excerpt
+        frontmatter {
+          hero_image_credit_link
+          hero_image_credit_text
+          date(formatString: "DD MMMM yyyy")
+          title
+          subtitle
+          slug
+          categories
+          publisher_name
+          external_link
+          hero_image {
+            childImageSharp {
+              gatsbyImageData(width: 800, placeholder: BLURRED, layout: FIXED)
+            }
           }
         }
       }
     }
   }
-}`;
+`;
 
 export default CategoryPage;
