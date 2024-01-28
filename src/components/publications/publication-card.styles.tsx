@@ -62,14 +62,14 @@ export const PublicationCardTitle = styled.a`
 `;
 
 export const PublicationCardDescription = styled.p`
-  font-family: ${secondaryFont};
+  font-family: Arial;
   font-size: ${fontSize16};
   line-height: ${fontSizeLineHeight16};
 `;
 
 export const PublicationCardCategory = styled.a`
   color: ${grey10};
-  font-family: ${secondaryFontMedium};
+  font-family: Arial;
   font-size: ${fontSize16};
   line-height: ${fontSizeLineHeight16};
   margin-bottom: ${rem(8)};

@@ -1,5 +1,5 @@
 import { Link } from "gatsby";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { mediaUp, rem } from "../../styles/styles";
 import {
@@ -94,6 +94,72 @@ export const BlogContainer = styled.div`
 `;
 export const BlogContentText = styled.div``;
 
+export const blogBaseCss = css`
+p, li {
+  color: #2d2b29;
+  ${font20}
+  font-family: ${readingFont};
+  margin-bottom: ${rem(32)};
+}
+
+h1, h2, h3, h4, h5, h6 {
+  ${fontFamilyElderkin}
+  margin: 0 0 ${rem(32)}; 0;
+}
+
+h1 {
+  ${font40}
+}
+
+h2 {
+  font-size: ${rem(34)};
+  line-height: ${rem(43)};
+}
+
+h3 {
+  font-size: ${rem(30)};
+  line-height: ${rem(40)};
+}
+
+a {
+  color: #2c84f1;
+  text-decoration: underline;
+
+  &:hover {
+    color: #005ac9;
+  }
+}
+
+blockquote {
+  background-color: ${highlight};
+  margin: 0 0 ${rem(32)} 0;
+  padding: ${rem(24)};
+  p:last-child {
+    color: ${grey10};
+    margin-bottom: 0;
+  }
+}
+
+ol, ul {
+  margin: 0 0 ${rem(32)} 0;
+  padding-left: ${rem(32)};
+
+  li, p {
+    margin-bottom: ${rem(8)};
+  }
+}
+
+// caption an image
+.gatsby-resp-image-wrapper {
+  margin-bottom: ${rem(32)};
+}
+.gatsby-resp-image-wrapper + em {
+  display: block;
+  font-size: ${rem(14)};
+  font-style: italic;
+  text-align: right;
+}
+`;
 export const BlogContent = styled.div`
   display: flex;
   flex-direction: column;
@@ -105,70 +171,7 @@ export const BlogContent = styled.div`
     flex-direction: row;
   `};
 
-  p, li {
-    color: #2d2b29;
-    ${font20}
-    font-family: ${readingFont};
-    margin-bottom: ${rem(32)};
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: ${secondaryFontMedium};
-    margin: 0 0 ${rem(32)}; 0;
-  }
-
-  h1 {
-    ${font40}
-  }
-
-  h2 {
-    font-size: ${rem(34)};
-    line-height: ${rem(43)};
-  }
-
-  h3 {
-    font-size: ${rem(30)};
-    line-height: ${rem(40)};
-  }
-
-  a {
-    color: #2c84f1;
-    text-decoration: underline;
-
-    &:hover {
-      color: #005ac9;
-    }
-  }
-
-  blockquote {
-    background-color: ${highlight};
-    margin: 0 0 ${rem(32)} 0;
-    padding: ${rem(24)};
-    p:last-child {
-      color: ${grey10};
-      margin-bottom: 0;
-    }
-  }
-
-  ol, ul {
-    margin: 0 0 ${rem(32)} 0;
-    padding-left: ${rem(32)};
-
-    li, p {
-      margin-bottom: ${rem(8)};
-    }
-  }
-
-  // caption an image
-  .gatsby-resp-image-wrapper {
-    margin-bottom: ${rem(32)};
-  }
-  .gatsby-resp-image-wrapper + em {
-    display: block;
-    font-size: ${rem(14)};
-    font-style: italic;
-    text-align: right;
-  }
+  ${blogBaseCss}
 `;
 
 export const BlogCategories = styled.div`

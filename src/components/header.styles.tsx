@@ -33,18 +33,31 @@ export const HeaderLogo = styled(Link)<HeaderLogoProps>`
 
 export const HeaderNav = styled.nav`
   display: flex;
+  height: ${rem(78)};
+
   align-items: center;
   justify-content: center;
-  padding: ${rem(24)} 0;
+
+  @media (min-width: 480px) {
+    height: ${rem(100)};
+  }
 
   ul {
-    display: flex;
+    display: none;
+
+    @media (min-width: 480px) {
+      display: flex;
+    }
     list-style: none;
     margin: 0;
     padding: 0;
 
     li {
-      padding: 0 ${rem(16)};
+      padding: 0 ${rem(8)};
+
+      @media (min-width: 480px) {
+        padding: 0 ${rem(16)};
+      }
     }
   }
 `;

@@ -1,8 +1,7 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
 
-import * as Styled from "./contact.styles";
 import { HeaderNav, HeaderNavLink } from "./header.styles";
+import * as Styled from "./contact.styles";
 
 import twitter from "./social/twitter.svg";
 import insta from "./social/instagram.svg";
@@ -11,10 +10,15 @@ import linked from "./social/linkedin.svg";
 export const Contact = () => (
   <Styled.Contact>
     <div>
-      <HeaderNav>
+      <Styled.ContactHr />
+      <Styled.ContactHr />
+      <Styled.ContactNav>
         <ul>
           <li>
             <HeaderNavLink to="/">Home</HeaderNavLink>
+          </li>
+          <li>
+            <HeaderNavLink to="/about">About</HeaderNavLink>
           </li>
           <li>
             <HeaderNavLink to="/blog">Blog</HeaderNavLink>
@@ -23,9 +27,8 @@ export const Contact = () => (
             <HeaderNavLink to="/publications">Publications</HeaderNavLink>
           </li>
         </ul>
-      </HeaderNav>
-      <Styled.ContactHr />
-      <Styled.ContactHr />
+      </Styled.ContactNav>
+
       <Styled.ContactIcons>
         <Styled.ContactIcon
           id="twitter"

@@ -47,6 +47,9 @@ export const Header = ({
                 <Styled.HeaderNavLink to="/">Home</Styled.HeaderNavLink>
               </li>
               <li>
+                <Styled.HeaderNavLink to="/about">About</Styled.HeaderNavLink>
+              </li>
+              <li>
                 <Styled.HeaderNavLink to="/blog">Blog</Styled.HeaderNavLink>
               </li>
               <li>
@@ -64,6 +67,9 @@ export const Header = ({
         <ul>
           <li>
             <Styled.HeaderNavLink to="/">Home</Styled.HeaderNavLink>
+          </li>
+          <li>
+            <Styled.HeaderNavLink to="/about">About</Styled.HeaderNavLink>
           </li>
           <li>
             <Styled.HeaderNavLink to="/blog">Blog</Styled.HeaderNavLink>

@@ -15,6 +15,13 @@ module.exports = {
     "gatsby-plugin-styled-components",
     "gatsby-plugin-netlify",
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "about",
+        path: `${__dirname}/src/about`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-mdx`,
       options: {
         gatsbyRemarkPlugins: [

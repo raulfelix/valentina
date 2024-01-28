@@ -54,7 +54,7 @@ export const ContactIcons = styled.div`
 export const ContactHr = styled.div`
   background-color: ${grey10};
   height: 1px;
-  max-width: 1000px;
+  max-width: ${rem(1000)};
   margin: auto;
   margin-bottom: 2px;
 `;
@@ -62,4 +62,26 @@ export const ContactHr = styled.div`
 export const ContactTiny = styled.div`
   font-size: 12px;
   text-align: center;
+`;
+
+export const ContactNav = styled.nav`
+  display: flex;
+  padding: 40px 0 0 0;
+  align-items: center;
+  justify-content: center;
+
+  ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      padding: 0 ${rem(8)};
+
+      @media (min-width: 480px) {
+        padding: 0 ${rem(16)};
+      }
+    }
+  }
 `;
