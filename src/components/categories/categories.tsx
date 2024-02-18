@@ -46,7 +46,7 @@ export function getColour(cat: string) {
 }
 
 export const CategoryPill = ({ category }: { category: string }) => (
-  <Styled.CategoryPill to={`/category/${category}`}>
+  <Styled.CategoryPill to={`/category/${category.toLowerCase()}`}>
     {category}
   </Styled.CategoryPill>
 );

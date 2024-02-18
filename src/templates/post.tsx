@@ -34,7 +34,8 @@ export default function BlogPost({ data, children }) {
                   <Styled.BlogPageStickyContent>
                     <Styled.BlogCategory
                       to={`/category/${
-                        data.mdx.frontmatter?.categories?.[0] || ""
+                        data.mdx.frontmatter?.categories?.[0]?.toLowerCase() ||
+                        ""
                       }`}
                     >
                       {data.mdx.frontmatter?.categories?.[0]}

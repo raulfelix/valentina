@@ -49,7 +49,7 @@ exports.createPages = ({ graphql, actions }) => {
     // create a page for each category
     categoriesFound.forEach((cat) => {
       createPage({
-        path: `category/${cat}`,
+        path: `category/${cat.toLowerCase()}`,
         component: `${__dirname}/src/pages/category.tsx`,
         context: {
           category: cat,
