@@ -90,14 +90,13 @@ export const pageQuery = graphql`
 `;
 
 export const Head = (props: HeadProps) => {
-  console.log(props);
-
   const image = getImage(props.data.mdx.frontmatter.hero_image);
+  console.log(props.data.mdx);
   return (
     <SEO
-      title={`${props.data.mdx.frontmatter.title} - Valentina Carrizo, Journalist, Writer`}
+      title={`${props.data.mdx.frontmatter.title} - Blog, Valentina Carrizo`}
       url={`blog/${props.data.mdx.frontmatter.slug}`}
-      description={props.data.mdx.frontmatter.excerpt}
+      description={props.data.mdx.excerpt}
       customImage={image.images.fallback.src}
     >
       <meta property="og:type" content="article" />
