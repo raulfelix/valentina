@@ -91,7 +91,6 @@ export const pageQuery = graphql`
 
 export const Head = (props: HeadProps) => {
   const image = getImage(props.data.mdx.frontmatter.hero_image);
-  console.log(props.data.mdx);
   return (
     <SEO
       title={`${props.data.mdx.frontmatter.title} - Blog, Valentina Carrizo`}
