@@ -18,8 +18,7 @@ export const UsydFashion = () => (
             </Styled.UsydBladeHashTag>
             <Styled.UsydBladeText>
               I lead a team of creatives in photographing the best outfits on
-              campus and bringing these to a wider audience. Currently producing
-              and editing our inaugural print publication.
+              campus and bringing these to a wider audience.
             </Styled.UsydBladeText>
             <Styled.UsydBladeImages>
               <div>

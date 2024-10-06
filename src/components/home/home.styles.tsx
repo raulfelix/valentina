@@ -103,3 +103,28 @@ export const HomeSubStackMessage = styled.div`
     width: 50%;
   }
 `;
+
+export const HomeFlipBlade = styled.div`
+  background-color: #393939;
+`;
+
+export const HomeFlip = styled.div`
+  background-color: #fff2c5;
+  position: relative;
+  padding-top: max(60%, 326px);
+  height: 0;
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+
+  iframe {
+    position: absolute;
+    border: none;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+`;

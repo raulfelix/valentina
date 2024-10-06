@@ -82,35 +82,47 @@ const IndexPage = ({ data }: PageProps<DataProps>) => {
         </Grid>
       </Styled.HomeSection>
       <UsydFashion />
+      <Styled.HomeFlipBlade>
+        <Styled.HomeFlip>
+          <iframe
+            allow="clipboard-write"
+            sandbox="allow-top-navigation allow-top-navigation-by-user-activation allow-downloads allow-scripts allow-same-origin allow-popups allow-modals allow-popups-to-escape-sandbox allow-forms"
+            allowFullScreen
+            src="https://e.issuu.com/embed.html?d=singlepages22x28cm&u=usydfashion"
+          ></iframe>
+        </Styled.HomeFlip>
+      </Styled.HomeFlipBlade>
     </Layout>
   );
 };
 
-export const query = graphql`{
-  allMdx(
-    limit: 3
-    sort: {frontmatter: {date: DESC}}
-    filter: {internal: {contentFilePath: {regex: "/blog/"}}}
-  ) {
-    nodes {
-      id
-      excerpt
-      frontmatter {
-        slug
-        hero_image_credit_link
-        hero_image_credit_text
-        date
-        title
-        categories
-        hero_image {
-          childImageSharp {
-            gatsbyImageData(width: 800, placeholder: BLURRED, layout: FIXED)
+export const query = graphql`
+  {
+    allMdx(
+      limit: 3
+      sort: { frontmatter: { date: DESC } }
+      filter: { internal: { contentFilePath: { regex: "/blog/" } } }
+    ) {
+      nodes {
+        id
+        excerpt
+        frontmatter {
+          slug
+          hero_image_credit_link
+          hero_image_credit_text
+          date
+          title
+          categories
+          hero_image {
+            childImageSharp {
+              gatsbyImageData(width: 800, placeholder: BLURRED, layout: FIXED)
+            }
           }
         }
       }
     }
   }
-}`;
+`;
 
 export default IndexPage;
 
