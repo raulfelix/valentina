@@ -114,7 +114,7 @@ export const HomeFlip = styled.div`
   padding-top: max(60%, 326px);
   height: 0;
   width: 100%;
-  max-width: 1100px;
+  max-width: 800px;
   margin: auto;
 
   iframe {

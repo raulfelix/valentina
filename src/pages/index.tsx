@@ -84,12 +84,7 @@ const IndexPage = ({ data }: PageProps<DataProps>) => {
       <UsydFashion />
       <Styled.HomeFlipBlade>
         <Styled.HomeFlip>
-          <iframe
-            allow="clipboard-write"
-            sandbox="allow-top-navigation allow-top-navigation-by-user-activation allow-downloads allow-scripts allow-same-origin allow-popups allow-modals allow-popups-to-escape-sandbox allow-forms"
-            allowFullScreen
-            src="https://e.issuu.com/embed.html?d=singlepages22x28cm&u=usydfashion"
-          ></iframe>
+          <iframe src="https://heyzine.com/flip-book/5ff6ebebfe.html"></iframe>
         </Styled.HomeFlip>
       </Styled.HomeFlipBlade>
     </Layout>
